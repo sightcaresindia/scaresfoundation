@@ -1107,8 +1107,7 @@
     .left-content,
     .right-content {
         width: 50%;
-        background: url(/images/became-a-volunteer.jpeg) no-repeat;
-        background-position: right;
+        background: url(/images/vb1.jpg) no-repeat;
         position: relative;
         z-index: 1;
         text-align: center;
@@ -1118,7 +1117,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;   
+        flex-direction: column;
 
         @media (max-width:767px) {
             width: 100%;
@@ -1159,11 +1158,6 @@
             text-transform: capitalize;
         }
     }
-
-    .right-content{
-        background: url(/images/donation.jpg) no-repeat;
-        background-position: left;
-    } 
 
     .right-content {
         &::before {
