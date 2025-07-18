@@ -1,0 +1,25 @@
+{
+    "cSpell.ignoreWords": [
+        "Bannet",
+        "Cyberattack",
+        "Dwarka",
+        "Quate",
+        "Vihar",
+        "adipiscing",
+        "amet",
+        "docomunt",
+        "flaticon",
+        "fullwidth",
+        "persistor",
+        "setcart",
+        "underserved"
+    ],
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:sightcare}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
+}

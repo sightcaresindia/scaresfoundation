@@ -1,0 +1,9 @@
+# Custom Dictionary Words
+hclass
+pagesub
+funfact
+pagetitle
+ReactToastify
+flaticon_aidus
+themify
+topbar
