@@ -43,7 +43,7 @@ const HeaderS3 = (props) => {
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                                         <li><Link onClick={ClickHandler} className="active" href="/">Home</Link></li>
-                                        <li><Link onClick={ClickHandler} href="about-us">About Us</Link></li>
+                                        <li><Link onClick={ClickHandler} href="/about-us">About Us</Link></li>
                                         <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} href="#">Programs <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">

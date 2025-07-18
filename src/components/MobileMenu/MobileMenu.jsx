@@ -14,7 +14,7 @@ const menus = [
     {
         id: 2,
         title: 'About Us',
-        link: 'about-us',
+        link: '/about-us',
         submenu: ""
     },
 
