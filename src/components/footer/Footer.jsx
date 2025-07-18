@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import Services from '../../api/Services';
 
 import shape1 from '/public/images/f-shape1.svg';
 import shape2 from '/public/images/f-shape-2.svg';
@@ -41,9 +40,11 @@ const Footer = (props) => {
                                     <h3>Services</h3>
                                 </div>
                                 <ul>
-                                    {Services.slice(0, 5).map((service, Sitem) => (
-                                        <li key={Sitem}><Link onClick={ClickHandler} href={'/service-single/[slug]'} as={`/service-single/${service.slug}`}>{service.title}</Link></li>
-                                    ))}
+                                    <li><Link onClick={ClickHandler} href="#">Subsidized Surgeries</Link></li>
+                                    <li><Link onClick={ClickHandler} href="#">Pre and post-surgery</Link></li>
+                                    <li><Link onClick={ClickHandler} href="#">Medicines & Assistive Devices</Link></li>
+                                    <li><Link onClick={ClickHandler} href="#">Eye Camps & Screenings</Link></li>
+                                    <li><Link onClick={ClickHandler} href="#">Awareness & Advocacy</Link></li>
                                 </ul>
                             </div>
                         </div>
