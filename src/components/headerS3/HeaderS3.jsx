@@ -43,17 +43,7 @@ const HeaderS3 = (props) => {
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                                         <li><Link onClick={ClickHandler} className="active" href="/">Home</Link></li>
-                                        <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} href="about-us">About Us <FontAwesome name="caret-down" /></Link>
-                                            <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="#">Mission & Vision</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Our Story</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Leadership & Team</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Partners & Collaborators</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Where We Work</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Our Future Plan</Link></li>
-                                            </ul>
-                                        </li>
+                                        <li><Link onClick={ClickHandler} href="about-us">About Us</Link></li>
                                         <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} href="#">Programs <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">
@@ -87,11 +77,12 @@ const HeaderS3 = (props) => {
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} href="#">Get Involved <FontAwesome name="caret-down" /></Link>
+                                            <Link onClick={ClickHandler} href="/get-involved">Get Involved <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="#">Volunteer Opportunities</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Corporate Partnerships</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Internship Programs</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/get-involved/volunteer-opportunities">Volunteer Opportunities</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/get-involved/corporate-partnerships">Corporate Partnerships</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/get-involved/fundraising-and-campaigns">Fundraising & Campaigns</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/get-involved/internship-programs">Internship Programs</Link></li>
                                             </ul>
                                         </li>
                                         <li><Link onClick={ClickHandler} href="#">Contact</Link></li>

@@ -39,7 +39,7 @@ const about = (props) => {
                             <p>Founded with a deep sense of empathy and purpose, the organization works to reach underserved rural and urban populations who are often neglected by the mainstream healthcare system.</p>
                             <p>With a focus on awareness, accessibility, and affordability, the Foundation guides individuals in need through the entire journey of eye care—right from diagnosis to surgery, recovery, and post-surgery support. </p>
                             <div className="about-btn">
-                                <Link onClick={ClickHandler} href="/about" className="theme-btn">About Us</Link>
+                                <Link onClick={ClickHandler} href="/about-us" className="theme-btn">About Us</Link>
                             </div>
                         </div>
                     </div>

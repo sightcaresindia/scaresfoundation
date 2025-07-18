@@ -15,38 +15,7 @@ const menus = [
         id: 2,
         title: 'About Us',
         link: 'about-us',
-        submenu: [
-            {
-                id: 21,
-                title: 'Mission & Vision',
-                link: '#'
-            },
-            {
-                id: 22,
-                title: 'Our Story',
-                link: '#'
-            },
-            {
-                id: 23,
-                title: 'Leadership & Team',
-                link: '#'
-            },
-            {
-                id: 24,
-                title: 'Partners & Collaborators',
-                link: '#'
-            },
-            {
-                id: 25,
-                title: 'Where We Work',
-                link: '#'
-            },
-            {
-                id: 26,
-                title: 'Our Future Plan',
-                link: '#'
-            },
-        ]
+        submenu: ""
     },
 
     {
@@ -123,77 +92,69 @@ const menus = [
             },
         ]
     },
-  
     {
-        id: 7,
-        title: 'Shop',
+        id: 5,
+        title: 'Resources',
         link: '#',
         submenu: [
             {
-                id: 71,
-                title: 'Shop',
-                link: '/shop'
+                id: 51,
+                title: 'FAQs on Eye Health',
+                link: '#',
             },
             {
-                id: 72,
-                title: 'Shop Single',
-                link: '/shop-single/prayer-mat'
+                id: 52,
+                title: 'Government Schemes & Support',
+                link: '#',
             },
             {
-                id: 73,
-                title: 'Cart',
-                link: '/cart'
+                id: 53,
+                title: 'Medical & Surgery Process Guide',
+                link: '#',
             },
             {
-                id: 74,
-                title: 'Checkout',
-                link: '/checkout'
+                id: 54,
+                title: 'Blog & News Updates',
+                link: '#',
             },
-          
+            {
+                id: 55,
+                title: 'Photo Gallery',
+                link: '#',
+            },
         ]
     },
-
     {
         id: 6,
-        title: 'Blog',
-        link: '/blog',
+        title: 'Get Involved',
+        link: '/get-involved',
         submenu: [
             {
                 id: 61,
-                title: 'Blog',
-                link: '/blog'
+                title: 'Volunteer Opportunities',
+                link: '/get-involved/volunteer-opportunities'
             },
             {
                 id: 62,
-                title: 'Blog Left sidebar',
-                link: '/blog-left-sidebar'
+                title: 'Corporate Partnerships',
+                link: '/get-involved/corporate-partnerships'
             },
             {
                 id: 63,
-                title: 'Blog full width',
-                link: '/blog-fullwidth'
+                title: 'Fundraising & Campaigns',
+                link: '/get-involved/fundraising-and-campaigns'
             },
             {
                 id: 64,
-                title: 'Blog single',
-                link: '/blog-single/Why-Industry-Are-A-Juicy-Target-For-Cyberattack'
-            },
-            {
-                id: 65,
-                title: 'Blog single Left sidebar',
-                link: '/blog-single-left-sidebar/Why-Industry-Are-A-Juicy-Target-For-Cyberattack'
-            },
-            {
-                id: 66,
-                title: 'Blog details fullwidth',
-                link: '/blog-single-fullwidth/Why-Industry-Are-A-Juicy-Target-For-Cyberattack'
+                title: 'Internship Programs',
+                link: '/get-involved/internship-programs'
             },
         ]
     },
     {
         id: 88,
         title: 'Contact',
-        link: '/contact',
+        link: '#',
     }
 
 
