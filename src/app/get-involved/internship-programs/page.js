@@ -5,7 +5,7 @@ import PageTitle from '@/components/pagetitle/PageTitle'
 import InternshipPrograms from '@/components/InternshipPrograms/InternshipPrograms';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
-import Scrollbar from '@/components/scrollbar/scrollbar';
+import Scrollbar from '@/components/scrollbar/Scrollbar';
 
 import Logo from '/public/images/sight_care_logo.png'
 
