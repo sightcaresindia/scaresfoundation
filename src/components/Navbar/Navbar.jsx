@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
-import Header from '../header/Header';
+//import Header from '../header/Header';
+
 
 export default function Navbar(props) {
   const [scroll, setScroll] = React.useState(0);
@@ -16,7 +17,7 @@ export default function Navbar(props) {
 
   return (
     <div className={className}>
-      <Header hclass={props.hclass} Logo={props.Logo} topbarClass={props.topbarClass} />
+      
     </div>
   );
 }

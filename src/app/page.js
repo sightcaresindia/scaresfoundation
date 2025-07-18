@@ -3,7 +3,6 @@ import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
 import Hero from '@/components/hero/hero';
 import About from '@/components/about/about';
-import CtaSection from '@/components/CtaSection/CtaSection';
 import Impact from '@/components/Impact/Impact';
 import Testimonial from '@/components/Testimonial/Testimonial';
 import BecomeSectionS2 from '@/components/BecomeSectionS2/BecomeSectionS2';
