@@ -23,37 +23,16 @@ const Footer = (props) => {
     };
     return (
         <footer className="wpo-site-footer">
-            <div className="footer-socialicon">
-                <ul>
-                    <li><i className="flaticon-facebook-app-symbol"></i> <span>Facebook</span></li>
-                    <li><i className="flaticon-twitter"></i> <span>Twitter</span></li>
-                    <li><i className="ti-pinterest-alt"></i> <span>Pinterest</span></li>
-                    <li><i className="flaticon-youtube"></i> <span>youtube</span></li>
-                    <li><i className="flaticon-vimeo"></i> <span>Vimeo</span></li>
-                </ul>
-            </div>
             <div className="wpo-upper-footer">
                 <div className="container">
                     <div className="row">
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget newsletter-s2">
                                 <div className="widget-title">
-                                    <h3>Subscribe Newsletter</h3>
+                                    <h3>Sight Cares India Foundation</h3>
                                 </div>
-                                <p>These agencies specialize leveraging various digital channels, such as social media
-                                    advertising</p>
-                                <form className="form-fild">
-                                    <input
-                                        className="fild"
-                                        type="text"
-                                        placeholder="Your email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                    />
-                                    <button type="button" onClick={handleReset}>
-                                        <i className="flaticon-right-arrow"></i>
-                                    </button>
-                                </form>
+                                <p>Sight Cares India Foundation is a non-profit organization committed to transforming lives by restoring vision and ensuring accessible eye care for underprivileged communities across India.</p>
+                                
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
@@ -75,10 +54,10 @@ const Footer = (props) => {
                                 </div>
                                 <ul>
                                     <li><Link onClick={ClickHandler} href="/">Home</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/about">about us</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/service">service</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/blog">blog</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/contact">contact us</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/about-us">about us</Link></li>
+                                    <li><Link onClick={ClickHandler} href="#">Resources</Link></li>
+                                    <li><Link onClick={ClickHandler} href="#">Campaigns</Link></li>
+                                    <li><Link onClick={ClickHandler} href="#">contact us</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -87,12 +66,11 @@ const Footer = (props) => {
                                 <div className="widget-title">
                                     <h3>Locations</h3>
                                 </div>
-                                <p>55 Main Street, 2nd block
-                                    Malborne, Australia</p>
+                                <p>4C shiv vihar, sewak park , Dwarka more, New Delhi - 110059</p>
                                 <ul>
                                     <li>Contact</li>
-                                    <li>support@logistika.com</li>
-                                    <li>+880 (123) 456 88</li>
+                                    <li>info@sightcares.org</li>
+                                    <li>+91-931-060-6469</li>
                                 </ul>
                             </div>
                         </div>
@@ -103,8 +81,7 @@ const Footer = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col col-xs-12">
-                            <p className="copyright"> &copy; 2025 <Link onClick={ClickHandler} href="/">wpOcean</Link> - non profit. All
-                                rights reserved.</p>
+                            <p className="copyright"> &copy; 2025 Sight Cares India Foundation. All rights reserved.</p>
                         </div>
                     </div>
                 </div>
