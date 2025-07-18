@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import HeaderS3 from '@/components/HeaderS3/HeaderS3';
+import HeaderS3 from '@/components/headerS3/HeaderS3';
 
 export default function Navbar(props) {
     const [scroll, setScroll] = React.useState(0);
