@@ -31,15 +31,15 @@ const CampaignsByCategoryList = ({ hclass, category }) => {
         <section className={hclass}>
             <div className='container'>
                 <div className='row'>
-                    <div className='col col-lg-10 col-md-10 col-sm-12'>
+                    <div className='col col-lg-12 col-md-12 col-sm-12'>
                         <div className='category-description mb-5 pb-3'>
                             <div dangerouslySetInnerHTML={{ __html: categoryDescription }}></div>
                         </div>
                     </div>
-                    <div className="col col-lg-10 col-md-10 col-sm-12" >
+                    <div className="col col-lg-12 col-md-12 col-sm-12 mt-4" >
                        <div className='row'>
                             {campaigns.map((campaign) => (
-                                <div key={campaign.id} className='col-md-4'>
+                                <div key={campaign.id} className='col-md-3'>
                                     <div className="causes-card">
                                         <div className="image">
                                             <Link href={`/campaign/${campaign.slug}`}><img src={Cimg1.src} alt={campaign.project_name} /></Link>
