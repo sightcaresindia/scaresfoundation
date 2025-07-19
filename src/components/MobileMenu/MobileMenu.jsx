@@ -100,7 +100,7 @@ const menus = [
             {
                 id: 51,
                 title: 'FAQs on Eye Health',
-                link: '#',
+                link: '/faqs',
             },
             {
                 id: 52,

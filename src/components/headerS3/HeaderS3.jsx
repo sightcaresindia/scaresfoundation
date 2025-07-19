@@ -69,7 +69,7 @@ const HeaderS3 = (props) => {
                                         <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} href="#">Resources <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="#">FAQs on Eye Health</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/faqs">FAQs on Eye Health</Link></li>
                                                 <li><Link onClick={ClickHandler} href="#">Government Schemes & Support</Link></li>
                                                 <li><Link onClick={ClickHandler} href="#">Medical & Surgery Process Guide</Link></li>
                                                 <li><Link onClick={ClickHandler} href="#">Blog & News Updates</Link></li>
