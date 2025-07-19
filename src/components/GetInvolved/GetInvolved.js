@@ -20,29 +20,6 @@ const GetInvolved = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="container">
-                <div className="service-wrap">
-                    {Services.slice(0, 4).map((service, index) => (
-                        <div className="item" key={index}>
-                            <div className="visible-content">
-                                <div className="icon">
-                                    <i className={service.icon}></i>
-                                </div>
-                                <div className="text">
-                                    <h2><Link onClick={ClickHandler} href={'/service-single/[slug]'} as={`/service-single/${service.slug}`}>{service.title}</Link></h2>
-                                </div>
-                            </div>
-                            <div className="hover-content">
-                                <div className="text">
-                                    <h2><Link onClick={ClickHandler} href={'/service-single/[slug]'} as={`/service-single/${service.slug}`}>{service.title}</Link></h2>
-                                    <span>{service.subtitle}</span>
-                                    <Link onClick={ClickHandler} href={'/service-single/[slug]'} as={`/service-single/${service.slug}`}>Read More<i className="flaticon-right-arrow-1"></i></Link>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
         </section>
     );
 }

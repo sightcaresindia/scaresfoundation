@@ -1,0 +1,32 @@
+.accordion-item{
+    margin-bottom: 10px;
+    .accordion-header{
+        .accordion-button{
+            font-weight: 600;
+            font-size: 1.1rem;
+
+            &:not(.collapsed){
+                color: #ecf4ff;
+                background-color: #1d6db4;
+            }
+        }
+    }
+}
+
+.category-description{
+    p{
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+    ul{
+        list-style: disc;
+        padding-left: 30px;
+        margin-bottom: 15px;
+        li{
+            margin-bottom: 5px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    }
+}
