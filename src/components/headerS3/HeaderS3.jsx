@@ -34,7 +34,7 @@ const HeaderS3 = (props) => {
                             </div>
                             <div className="col-lg-2 col-md-6 col-6">
                                 <div className="navbar-header">
-                                    <Link onClick={ClickHandler} className="navbar-brand" href="/home"><Image src={props.Logo}
+                                    <Link onClick={ClickHandler} className="navbar-brand" href="/"><Image src={props.Logo}
                                         alt="logo" /></Link>
                                 </div>
                             </div>
