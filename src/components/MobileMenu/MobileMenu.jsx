@@ -58,7 +58,7 @@ const menus = [
     {
         id: 4,
         title: 'Campaigns',
-        link: '#',
+        link: '/our-campaigns',
         submenu: [
             {
                 id: 41,
@@ -105,12 +105,12 @@ const menus = [
             {
                 id: 52,
                 title: 'Government Schemes & Support',
-                link: '#',
+                link: '/resources/government-schemes-and-support',
             },
             {
                 id: 53,
                 title: 'Medical & Surgery Process Guide',
-                link: '#',
+                link: '/resources/medical-and-surgery-process-guide',
             },
             {
                 id: 54,

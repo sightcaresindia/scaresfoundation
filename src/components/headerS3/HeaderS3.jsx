@@ -56,7 +56,7 @@ const HeaderS3 = (props) => {
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} href="#">Campaigns <FontAwesome name="caret-down" /></Link>
+                                            <Link onClick={ClickHandler} href="/our-campaigns">Campaigns <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">
                                                <li><Link onClick={ClickHandler} href="#">Medical Guidance</Link></li>
                                                 <li><Link onClick={ClickHandler} href="#">Subsidized Surgeries</Link></li>
@@ -70,8 +70,8 @@ const HeaderS3 = (props) => {
                                             <Link onClick={ClickHandler} href="#">Resources <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href="/faqs">FAQs on Eye Health</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Government Schemes & Support</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Medical & Surgery Process Guide</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/resources/government-schemes-and-support">Government Schemes & Support</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/resources/medical-and-surgery-process-guide">Medical & Surgery Process Guide</Link></li>
                                                 <li><Link onClick={ClickHandler} href="#">Blog & News Updates</Link></li>
                                                 <li><Link onClick={ClickHandler} href="#">Photo Gallery</Link></li>
                                             </ul>
