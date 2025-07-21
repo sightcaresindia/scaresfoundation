@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import PrivacyPolicyPage from '@/components/Policies/PrivacyPolicy/privacyPolicyPage';
+import PrivacyPolicyPage from '@/components/Policies/PrivacyPolicy/PrivacyPolicyPage';
 
 const Page = () => {
     return (
