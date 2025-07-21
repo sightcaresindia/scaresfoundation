@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import DonationForm from './DonationForm';
-
 const CampaignDetails = ({ hclass}) => {
     const [campaign, setCampaign] = useState([]);
     const params = useParams();
@@ -31,7 +29,7 @@ const CampaignDetails = ({ hclass}) => {
                 <div className='row'>
                     <div className='col-md-8'>
                         <h2>{campaign.project_name}</h2>
-                        <DonationForm preferred_slot={preferred_slot} campaign_id={campaign.id}  />
+                        
                     </div>
                     <div className='col-md-4'></div>
                 </div>
