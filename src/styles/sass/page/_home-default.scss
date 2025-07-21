@@ -1184,7 +1184,7 @@ ul li{
     border-radius: 13px;
     background: #FFF;
     box-shadow: 0px 6px 41px 0px rgb(0 0 0 / 7%);
-
+    height: 725px;
 
     .image {
         position: relative;
@@ -2481,15 +2481,117 @@ ul li{
 .funfact-section .content h3 span {
     color: #6fc030;
 }
-.features-section .feature-card {
-    border-radius: 9px;
-    background: #F6F6F6;
-    padding: 30px 20px;
-    display: block !important;
-    align-items: center;
+.funfact {
+  background: #fff;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 350px;
 }
-.features-section .feature-card .content {
-    width: calc(100% - 100px);
-    padding-right: 0px;
-    margin-top: 15px !important;
-} 
+
+.funfact:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+.funfact .steps {
+    border-radius: 100px;
+    background: linear-gradient(107deg, rgba(247, 79, 34, 0.12) 38.02%, rgba(247, 79, 34, 0) 89.08%);
+    margin-bottom: 20px;
+}
+.funfact .steps h3 { 
+    color: #F74F22;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: -0.92px;
+    margin-bottom: 0;
+    padding: 5px 30px;
+    padding-bottom: 4px;
+}
+.funfact p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #535353;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    padding-left: 10px;
+}
+.funfact ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+.funfact ul li{
+    color: #535353 !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+}
+.cta-section-s3 p{
+    color: #fff;
+    font-size: 25px;
+    line-height: 45px;
+}
+.cta-section-s3 {
+    position: relative;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    z-index: 11;
+}
+
+    .program {
+      display: flex;
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .program:hover {
+      transform: scale(1.01);
+    }
+
+    .icon {
+      flex: 0 0 60px;
+      margin-right: 20px;
+      align-self: flex-start;
+    }
+
+    .icon img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .content h3 {
+    color: #1d6db2;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 30px;
+    text-transform: capitalize;
+    }
+   .content a {
+        color: #6fc030 !important;
+    }
+    .content p {
+      margin: 0;
+      color: #444;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    @media (max-width: 768px) {
+      .program {
+        flex-direction: column;
+      }
+
+      .icon {
+        margin-bottom: 10px;
+      }
+    }				   

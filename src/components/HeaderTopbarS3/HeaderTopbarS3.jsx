@@ -15,7 +15,7 @@ const HeaderTopbarS3 = () => {
                         <ul className="contact-info">
                             <li>
                                 <Link onClick={ClickHandler} href="tel:+8406938482">
-                                    <i className="flaticon-maps-and-flags"></i><span>4C shiv vihar, sewak park , Dwarka more, New Delhi - 110059</span>
+                                    <i className="flaticon-maps-and-flags"></i><span>4C Shiv Vihar, Sewak Park , Dwarka More, New Delhi - 110059</span>
                                 </Link>
                             </li>
                             <li>

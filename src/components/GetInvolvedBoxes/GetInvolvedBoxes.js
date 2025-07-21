@@ -9,7 +9,7 @@ const FeaturesSection = () => {
     return (
         <section className="features-section mb-5">
             <div className="container">
-                <div className="wrapper">
+                <div className="wrapper mt-4">
                     <div className="row">
                         {/* Feature Card 1 */}
                         <div className="col-lg-3 col-md-6 col-12">

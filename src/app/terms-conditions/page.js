@@ -2,27 +2,25 @@
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
 import PageTitle from '@/components/pagetitle/PageTitle'
-import MedicalGuide from '@/components/MedicalGuide/MedicalGuide';
+import TermsCondition from '@/components/TermsCondition/termscondtion';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';
-import MedicalSteps from '@/components/MedicalSteps/MedicalSteps';
-import NeedHelp from '@/components/NeedHelp/NeedHelp';
+
 import Logo from '/public/images/sight_care_logo.png'
 
 
-const MedicalPage = () => {
+const TermConditionPage = () => {
     return (
-       <Fragment>
+        <Fragment>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Medical & Surgery Process Guide'} pagesub={'Medical & Surgery Process Guide'} />
-            <MedicalGuide hclass={'about-section-s4 section-padding'} />
-            <MedicalSteps hclass={'about-section section-padding'}/>
-            <NeedHelp hclass={'about-section section-padding'}/>
+            {/* <PageTitle pageTitle={'About Us'} pagesub={'About'} /> */}
+            <TermsCondition hclass={'about-section-s4 pt-4'} />
             <CtaSection hclass={'cta-section'} />
             <Footer />
             <Scrollbar />
+
         </Fragment>
     )
 };
-export default MedicalPage;
+export default TermConditionPage;

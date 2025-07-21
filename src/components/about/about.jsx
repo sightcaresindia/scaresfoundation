@@ -33,7 +33,6 @@ const about = (props) => {
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="about-content">
-                            <h2>Lorem ipsum dolor sit amet</h2>
                             <h3>Sight Cares <span>India</span> Foundation</h3>
                              <p><strong>Sight Cares India Foundation</strong> is a non-profit organization committed to transforming lives by restoring vision and ensuring accessible eye care for underprivileged communities across India. Our mission is to restore vision, dignity, and opportunity to those affected by avoidable visual impairments.</p>
                             <p>Founded with a deep sense of empathy and purpose, the organization works to reach underserved rural and urban populations who are often neglected by the mainstream healthcare system.</p>

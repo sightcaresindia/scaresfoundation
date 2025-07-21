@@ -8,6 +8,7 @@ import "@/styles/themify-icons.css";
 import "@/styles/sass/style.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Script from 'next/script';
 import Providers from './Providers';
 
 export const metadata = {
@@ -28,6 +29,11 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Providers>{children}</Providers>
+         {/* Load Bootstrap JS from CDN */}
+        <Script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

@@ -45,10 +45,10 @@ const Hero = (props) => {
                                     <span>Sight Cares India Foundation</span>
                                 </div>
                                 <div className="slide-sub-title">
-                                    <h2>Lore ipsum dolor, sit <span>consectetur</span>, <span className="text">adipiscing </span> elit.</h2>
+                                    <h2>We are committed to <span className="text">transforming lives </span></h2>
                                 </div>
                                 <div data-swiper-parallax="500" className="slide-btns">
-                                    <Link onClick={ClickHandler} href="/about" className="theme-btn">About Us</Link>
+                                    <Link onClick={ClickHandler} href="/about-us" className="theme-btn">About Us</Link>
                                     <div className="call">
                                         <div className="icon">
                                             <i className="flaticon-phone"></i>
@@ -87,10 +87,10 @@ const Hero = (props) => {
                                     <span>Sight Cares India Foundation</span>
                                 </div>
                                 <div className="slide-sub-title">
-                                    <h2>Lore ipsum dolor, sit <span>consectetur</span>, <span className="text">adipiscing </span> elit.</h2>
+                                    <h2>Our mission is to restore, <span className="text">vision dignity, and opportunity.</span> </h2>
                                 </div>
                                 <div data-swiper-parallax="500" className="slide-btns">
-                                    <Link onClick={ClickHandler} href="/about" className="theme-btn">About Us</Link>
+                                    <Link onClick={ClickHandler} href="/about-us" className="theme-btn">About Us</Link>
                                     <div className="call">
                                         <div className="icon">
                                             <i className="flaticon-phone"></i>

@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Services from '../../api/Services';
 
 import shape1 from '/public/images/f-shape1.svg';
 import shape2 from '/public/images/f-shape-2.svg';
@@ -37,7 +38,7 @@ const Footer = (props) => {
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget link-widget ">
                                 <div className="widget-title">
-                                    <h3>Services</h3>
+                                    <h3>Programs</h3>
                                 </div>
                                 <ul>
                                     <li><Link onClick={ClickHandler} href="#">Subsidized Surgeries</Link></li>
@@ -67,7 +68,7 @@ const Footer = (props) => {
                                 <div className="widget-title">
                                     <h3>Locations</h3>
                                 </div>
-                                <p>4C shiv vihar, sewak park , Dwarka more, New Delhi - 110059</p>
+                                <p>4C Shiv Vihar, Sewak Park , Dwarka More, New Delhi - 110059</p>
                                 <ul>
                                     <li>Contact</li>
                                     <li>info@sightcares.org</li>
