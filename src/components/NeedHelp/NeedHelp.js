@@ -20,7 +20,7 @@ const CtaSectionS3 = () => {
                         <div className="col-lg-12 col-12">
                             <div className="content text-center">
                                 <h3>Need Help?</h3>
-                                <p>We are here to accompany you on your journey. Please write to us at&nbsp;<strong>info@sightcaresfoundation.org&nbsp;</strong>or call us at&nbsp;<strong>+91</strong>&nbsp;___________________</p>
+                                <p style={{color:'#FFF'}}>We are here to accompany you on your journey. Please write to us at&nbsp;<strong><a href="mailto:info@sightcaresfoundation.org" style={{textDecoration:'underline'}}>info@sightcaresfoundation.org</a></strong> or call us at <strong>+91-9310606469</strong>.</p>
                             </div>
                         </div>
                     </div>
