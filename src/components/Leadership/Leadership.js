@@ -12,7 +12,7 @@ const FunFact = (props) => {
                     <div class="card">
                     <h2>Leadership & Team</h2>
                     <p>
-                        Led by Ms Tanu Singh, the team includes healthcare professionals, social workers, and volunteers passionate about creating eye health equity across India.
+                        Led by Ms Tannu Singh, the team includes healthcare professionals, social workers, and volunteers passionate about creating eye health equity across India.
                     </p>
                     </div>
 
