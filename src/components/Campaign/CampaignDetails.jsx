@@ -32,7 +32,7 @@ const CampaignDetails = ({ hclass}) => {
                     <div className='col-md-8'>
                         <h2 className='campaign_heading'>{campaign.project_name}</h2>
                         { campaign.banner_image && (
-                            <img src={process.env.NEXT_PUBLIC_IMAGE_URL + campaign.banner_image} alt={campaign.project_name} className='img-fluid campaign_image' />
+                            <img src={process.env.NEXT_PUBLIC_IMAGE_URL +"/"+ campaign.banner_image} alt={campaign.project_name} className='img-fluid campaign_image' />
                         )}
                         <DonationForm preferred_slot={preferred_slot} campaign_id={campaign.id}  />
                     </div>
