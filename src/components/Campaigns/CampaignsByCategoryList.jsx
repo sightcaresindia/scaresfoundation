@@ -42,7 +42,7 @@ const CampaignsByCategoryList = ({ hclass, category }) => {
                        <div className='row justify-content-center'>
                             {campaigns.map((campaign) => (
                                 <div key={campaign.id} className='col-md-4'>
-                                    <div className="causes-card">
+                                    <div className="causes-card CampaignsSubCategoryCard">
                                         <div className="image">
                                             <Link href={`/campaign/${campaign.slug}`}><img src={Cimg1.src} alt={campaign.project_name} /></Link>
                                         </div>

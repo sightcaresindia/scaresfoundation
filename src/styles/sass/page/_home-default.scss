@@ -1211,18 +1211,20 @@ ul li{
 
 
     .text {
-        padding: 25px;
-        padding-top: 10px;
+        padding: 15px;
+        padding-top: 0px;
 
         h2 {
             margin-bottom: 8px;
+            line-height: 24px;
 
             a {
                 color: $heading-color;
                 font-family: $heading-font;
-                font-size: 22px;
-                font-weight: 800;
+                font-size: 18px;
+                font-weight: 700;
                 text-transform: capitalize;
+                color:#1e6db2;
             }
         }
 
@@ -1349,12 +1351,20 @@ ul li{
     }
 }
 
+.CampaignsCategoryCard{
+    height: auto;
+}
+
+.CampaignsSubCategoryCard{
+    height: 470px;
+}
+
 /* 3.8 cta */
 .cta-section {
     position: relative;
     text-align: center;
     padding: 140px 0 190px;
-    background: url(/images/cta-1.jpg) center / cover no-repeat;
+    background: url(/images/cta-2.jpg) center / cover no-repeat;
     z-index: 1;
 
     @media (max-width:991px) {
@@ -2785,13 +2795,13 @@ background: #F1EBE9;
 }
 .vision-impact {
   background: #f8f9fb;
-  padding: 80px 20px 0px 20px;
+  padding: 80px 20px 0px 20px;;
   font-family: 'Segoe UI', sans-serif;
   color: #212121;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 

@@ -35,7 +35,7 @@ const CampaignsCategoryList = ({ hclass }) => {
                        <div className='row'>
                             {campaigns.map((campaign) => (
                                 <div key={campaign.id} className='col-md-3'>
-                                    <div className="causes-card">
+                                    <div className="causes-card CampaignsCategoryCard">
                                         <div className="image">
                                             <Link href={`/campaigns/${campaign.slug}`}><img src={Cimg1.src} alt={campaign.name} /></Link>
                                         </div>
