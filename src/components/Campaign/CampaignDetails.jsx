@@ -8,7 +8,7 @@ const CampaignDetails = ({ hclass}) => {
     const [campaign, setCampaign] = useState([]);
     const params = useParams();
     const slug = params.slug;
-    
+    console.log(slug);
     useEffect(() => {
         const fetchCampaign = async () => {
             try {
