@@ -13,7 +13,7 @@ const CampaignsByCategoryList = ({ hclass, category }) => {
     const categorySlug = params.slug;
     const categoryDescription = category.description || "";
     const categoryBrief = category.brief || "";
-
+    console.log(categorySlug);
     useEffect(() => {
         const fetchCampaigns = async () => {
             try {
