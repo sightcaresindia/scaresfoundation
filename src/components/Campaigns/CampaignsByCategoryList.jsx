@@ -13,7 +13,8 @@ const CampaignsByCategoryList = ({ hclass, category }) => {
     const categorySlug = params.slug;
     const categoryDescription = category.description || "";
     const categoryBrief = category.brief || "";
-    console.log(categorySlug);
+    
+
     useEffect(() => {
         const fetchCampaigns = async () => {
             try {
@@ -44,7 +45,16 @@ const CampaignsByCategoryList = ({ hclass, category }) => {
                                 <div key={campaign.id} className='col-md-4'>
                                     <div className="causes-card CampaignsSubCategoryCard">
                                         <div className="image">
-                                            <Link href={`/campaign/${campaign.slug}`}><img src={Cimg1.src} alt={campaign.project_name} /></Link>
+                                            <Link href={`/campaign/${campaign.slug}`}>
+                                                <img 
+                                                src={
+                                                    campaign.thumbnail_image 
+                                                    ? process.env.NEXT_PUBLIC_IMAGE_URL + campaign.thumbnail_image 
+                                                    : Cimg1.src
+                                                } 
+                                                alt={campaign.project_name} 
+                                                />
+                                            </Link>
                                         </div>
                                         <div className="text">
                                             <h2><Link href={`/campaign/${campaign.slug}`}>{campaign.project_name}</Link></h2>
