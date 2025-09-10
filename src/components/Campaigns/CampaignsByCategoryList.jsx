@@ -49,7 +49,7 @@ const CampaignsByCategoryList = ({ hclass, category }) => {
                                                 <img 
                                                 src={
                                                     campaign.thumbnail_image 
-                                                    ? process.env.NEXT_PUBLIC_IMAGE_URL + campaign.thumbnail_image 
+                                                    ? process.env.NEXT_PUBLIC_IMAGE_URL +"/"+ campaign.thumbnail_image 
                                                     : Cimg1.src
                                                 } 
                                                 alt={campaign.project_name} 
