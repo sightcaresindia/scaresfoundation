@@ -19,14 +19,14 @@ const BecomeSection = (props) => {
                     <Image src={Icon1} alt="" />
                 </div>
                 <h2>Become an volunteer?</h2>
-                <Link onClick={ClickHandler} href="/contact">Contact With us <Image src={Arrow} alt="" /></Link>
+                <Link onClick={ClickHandler} href="/get-involved/volunteer-opportunities">Contact With us <Image src={Arrow} alt="" /></Link>
             </div>
             <div className="right-content">
                 <div className="icon">
                     <Image src={Icon2} alt="" />
                 </div>
                 <h2>Make donation to us?</h2>
-                <Link onClick={ClickHandler} href="/donate">donation <Image src={Arrow} alt="" /></Link>
+                <Link onClick={ClickHandler} href="/our-campaigns">donation <Image src={Arrow} alt="" /></Link>
             </div>
 
         </section>

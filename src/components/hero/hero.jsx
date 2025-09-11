@@ -55,7 +55,7 @@ const Hero = (props) => {
                                         </div>
                                         <div className="text">
                                             <h3>Call Us Now</h3>
-                                            <span>+91 840 693 8482</span>
+                                            <span>+91 931 060 6469</span>
                                         </div>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@ const Hero = (props) => {
                                         </div>
                                         <div className="text">
                                             <h3>Call Us Now</h3>
-                                            <span>+91 840 693 8482</span>
+                                            <span>+91 931 060 6469</span>
                                         </div>
                                     </div>
                                 </div>

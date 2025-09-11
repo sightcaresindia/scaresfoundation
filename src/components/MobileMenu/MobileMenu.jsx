@@ -17,44 +17,6 @@ const menus = [
         link: '/about-us',
         submenu: ""
     },
-
-    {
-        id: 3,
-        title: 'Programs',
-        link: '#',
-        submenu: [
-            {
-                id: 31,
-                title: 'Medical Guidance',
-                link: '#',
-            },
-            {
-                id: 32,
-                title: 'Subsidized Surgeries',
-                link: '#',
-            },
-            {
-                id: 33,
-                title: 'Pre and post-surgery',
-                link: '#',
-            },
-            {
-                id: 34,
-                title: 'Medicines & Assistive Devices',
-                link: '#',
-            },
-            {
-                id: 35,
-                title: 'Eye Camps & Screenings',
-                link: '#',
-            },
-            {
-                id: 36,
-                title: 'Awareness & Advocacy',
-                link: '#',
-            }, 
-        ]
-    },
     {
         id: 4,
         title: 'Campaigns',
@@ -62,33 +24,23 @@ const menus = [
         submenu: [
             {
                 id: 41,
-                title: 'Medical Guidance',
-                link: '#',
+                title: 'Awareness & Advocacy',
+                link: '/campaigns/awareness-advocacy',
             },
             {
                 id: 42,
-                title: 'Subsidized Surgeries',
-                link: '#',
+                title: 'Eye Camps & Screenings',
+                link: '/campaigns/eye-health-camps-mobile-vision-clinics',
             },
             {
                 id: 43,
-                title: 'Pre and post-surgery',
-                link: '#',
+                title: 'Subsidized Surgeries',
+                link: '/campaigns/subsidised-surgeries',
             },
             {
                 id: 44,
                 title: 'Medicines & Assistive Devices',
-                link: '#',
-            },
-            {
-                id: 45,
-                title: 'Eye Camps & Screenings',
-                link: '#',
-            },
-            {
-                id: 46,
-                title: 'Awareness & Advocacy',
-                link: '#',
+                link: '/campaigns/medicines-assistive-devices',
             },
         ]
     },
@@ -111,16 +63,6 @@ const menus = [
                 id: 53,
                 title: 'Medical & Surgery Process Guide',
                 link: '/resources/medical-and-surgery-process-guide',
-            },
-            {
-                id: 54,
-                title: 'Blog & News Updates',
-                link: '#',
-            },
-            {
-                id: 55,
-                title: 'Photo Gallery',
-                link: '#',
             },
         ]
     },
@@ -154,7 +96,7 @@ const menus = [
     {
         id: 88,
         title: 'Contact',
-        link: '#',
+        link: '/contact-us',
     }
 
 

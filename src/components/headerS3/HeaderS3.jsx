@@ -39,12 +39,12 @@ const HeaderS3 = (props) => {
                                 </div>
                             </div>
                             <div className="col-lg-8 col-md-1 col-1">
-                                <div id="navbar" className="collapse navbar-collapse navigation-holder">
+                                <div id="navbar" className="collapse navbar-collapse navigation-holder justify-content-center">
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                                         <li><Link onClick={ClickHandler} className="active" href="/">Home</Link></li>
                                         <li><Link onClick={ClickHandler} href="/about-us">About Us</Link></li>
-                                        <li className="menu-item-has-children">
+                                        {/* <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} href="#">Programs <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href="#">Medical Guidance</Link></li>
@@ -54,16 +54,16 @@ const HeaderS3 = (props) => {
                                                 <li><Link onClick={ClickHandler} href="#">Eye Camps & Screenings</Link></li>
                                                 <li><Link onClick={ClickHandler} href="#">Awareness & Advocacy</Link></li>
                                             </ul>
-                                        </li>
+                                        </li>*/}
                                         <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} href="/our-campaigns">Campaigns <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">
-                                               <li><Link onClick={ClickHandler} href="#">Medical Guidance</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Subsidized Surgeries</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Pre and post-surgery</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Medicines & Assistive Devices</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Eye Camps & Screenings</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Awareness & Advocacy</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/campaigns/awareness-advocacy">Awareness & Advocacy</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/campaigns/eye-health-camps-mobile-vision-clinics">Eye Camps & Screenings</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/campaigns/subsidised-surgeries">Subsidized Surgeries</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/campaigns/medicines-assistive-devices">Medicines & Assistive Devices</Link></li>
+                                                {/* <li><Link onClick={ClickHandler} href="#">Medical Guidance</Link></li>
+                                                <li><Link onClick={ClickHandler} href="#">Pre and post-surgery</Link></li>*/}
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children">
@@ -72,8 +72,8 @@ const HeaderS3 = (props) => {
                                                 <li><Link onClick={ClickHandler} href="/faqs">FAQs on Eye Health</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/resources/government-schemes-and-support">Government Schemes & Support</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/resources/medical-and-surgery-process-guide">Medical & Surgery Process Guide</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Blog & News Updates</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Photo Gallery</Link></li>
+                                                {/* <li><Link onClick={ClickHandler} href="#">Blog & News Updates</Link></li>
+                                                <li><Link onClick={ClickHandler} href="#">Photo Gallery</Link></li>*/}
                                             </ul>
                                         </li>
                                         <li className="menu-item-has-children">
@@ -85,7 +85,7 @@ const HeaderS3 = (props) => {
                                                 <li><Link onClick={ClickHandler} href="/get-involved/internship-programs">Internship Programs</Link></li>
                                             </ul>
                                         </li>
-                                        <li><Link onClick={ClickHandler} href="#">Contact</Link></li>
+                                        <li><Link onClick={ClickHandler} href="/contact-us">Contact</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -103,7 +103,4 @@ const HeaderS3 = (props) => {
         </header>
     )
 }
-
-
-
 export default HeaderS3;
