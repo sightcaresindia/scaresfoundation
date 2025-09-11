@@ -76,9 +76,7 @@ export default function CategoriesWithPosts() {
 
       <div className="tab-content mt-3">
         {categories.map((cat) => (
-          <div key={cat.id}
-            className={`tab-pane fade ${activeTab === cat.id ? 'show active' : ''}`}
-          >
+          <div key={cat.id} className={`tab-pane fade ${activeTab === cat.id ? 'show active' : ''}`}>
             <div className='row'>
               {cat.posts.map((post) => (
                 <div key={post.id} className='col-md-4'>
