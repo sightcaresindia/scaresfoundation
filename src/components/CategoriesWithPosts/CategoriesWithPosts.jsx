@@ -13,36 +13,36 @@ export default function CategoriesWithPosts() {
       id: 1,
       name: "Awareness & Advocacy",
       posts: [
-        { id: 101, title: "Let Awareness Turn into Action.", image : Cimg1, docomunt: "Anil runs a small tea stall. Over the past year, he had noticed a fogginess in his vision but assumed it was due to fatigue or old age. He ignored it until one of our awareness sessions reached his neighbourhood.", progress: 25, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai"  },
-        { id: 102, title: "Give Sunita her sight back", image : Cimg2, docomunt: "Sunita is a mother of three who works as a daily wage tailor. During our weekly mobile eye health camp in Narela, she walked in with complaints of headaches and blurred vision. After a check-up, she was diagnosed with progressive cataracts in both eyes.", progress: 55, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
-        { id: 103, title: "Help Preeti See Her Dreams", image : Cimg3, docomunt: "Preeti is a cheerful schoolgirl who suddenly started struggling to read and write. Her father brought her to one of our camps after a local volunteer encouraged them to do so.", progress: 55, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
+        { id: 101, title: "Let Awareness Turn into Action.", image : Cimg1, docomunt: "Anil runs a small tea stall. Over the past year, he had noticed a fogginess in his vision but assumed it was due to fatigue or old age. He ignored it until one of our awareness sessions reached his neighbourhood.", progress: 25, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
+        { id: 102, title: "Give Sunita her sight back", image : Cimg2, docomunt: "Sunita is a mother of three who works as a daily wage tailor. During our weekly mobile eye health camp in Narela, she walked in with complaints of headaches and blurred vision. After a check-up, she was diagnosed with progressive cataracts in both eyes.", progress: 55, goal: 5000, raised: 3750, targetGoal: 10000, slug: "sunita-s-world-is-fading-help-her-see-again" },
+        { id: 103, title: "Help Preeti See Her Dreams", image : Cimg3, docomunt: "Preeti is a cheerful schoolgirl who suddenly started struggling to read and write. Her father brought her to one of our camps after a local volunteer encouraged them to do so.", progress: 55, goal: 5000, raised: 3750, targetGoal: 10000, slug: "preeti-can-be-saved-from-going-blind-but-time-is-running-out" },
       ],
     },
     {
       id: 2,
       name: "Eye Health Camps",
       posts: [
-        { id: 201, title: "Help Preeti See Her Dreams", image : Cimg4, docomunt: "Preeti is a cheerful schoolgirl who suddenly started struggling to read and write. Her father brought her to one of our camps after a local volunteer encouraged them to do so.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
-        { id: 202, title: "Give Sunita her sight back", image : Cimg2, docomunt: "Sunita is a mother of three who works as a daily wage tailor. During our weekly mobile eye health camp in Narela, she walked in with complaints of headaches and blurred vision. After a check-up, she was diagnosed with progressive cataracts in both eyes.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
-        { id: 203, title: "Give Mohan the confidence he needs.", image : Cimg1, docomunt: "Mohan has lost most of his vision due to untreated glaucoma.on loss. During our follow-up camp, our doctors confirmed that he requires a white cane, a speech-enabled watch, and low-vision glasses for partial vision loss.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
+        { id: 201, title: "Help Preeti See Her Dreams", image : Cimg4, docomunt: "Preeti is a cheerful schoolgirl who suddenly started struggling to read and write. Her father brought her to one of our camps after a local volunteer encouraged them to do so.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "preeti-can-be-saved-from-going-blind-but-time-is-running-out" },
+        { id: 202, title: "Give Sunita her sight back", image : Cimg2, docomunt: "Sunita is a mother of three who works as a daily wage tailor. During our weekly mobile eye health camp in Narela, she walked in with complaints of headaches and blurred vision. After a check-up, she was diagnosed with progressive cataracts in both eyes.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "sunita-s-world-is-fading-help-her-see-again" },
+        { id: 203, title: "Give Mohan the confidence he needs.", image : Cimg1, docomunt: "Mohan has lost most of his vision due to untreated glaucoma.on loss. During our follow-up camp, our doctors confirmed that he requires a white cane, a speech-enabled watch, and low-vision glasses for partial vision loss.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "a-white-cane-and-glasses-could-give-mohan-his-dignity-back" },
       ],
     },
     {
       id: 3,
       name: "Subsidised Surgeries",
       posts: [
-        { id: 301, title: "Let Awareness Turn into Action.", image : Cimg1, docomunt: "Anil runs a small tea stall. Over the past year, he had noticed a fogginess in his vision but assumed it was due to fatigue or old age. He ignored it until one of our awareness sessions reached his neighbourhood.", progress: 25, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
-        { id: 302, title: "Give Mohan the confidence he needs.", image : Cimg2, docomunt: "Mohan has lost most of his vision due to untreated glaucoma.on loss. During our follow-up camp, our doctors confirmed that he requires a white cane, a speech-enabled watch, and low-vision glasses for partial vision loss.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
-        { id: 303, title: "Give Sunita her sight back", image : Cimg3, docomunt: "Sunita is a mother of three who works as a daily wage tailor. During our weekly mobile eye health camp in Narela, she walked in with complaints of headaches and blurred vision. After a check-up, she was diagnosed with progressive cataracts in both eyes.", progress: 10, goal: 5000, raised: 5000, targetGoal: 250000, slug: "latest-in-ai" },
+        { id: 301, title: "Let Awareness Turn into Action.", image : Cimg1, docomunt: "Anil runs a small tea stall. Over the past year, he had noticed a fogginess in his vision but assumed it was due to fatigue or old age. He ignored it until one of our awareness sessions reached his neighbourhood.", progress: 25, goal: 5000, raised: 3750, targetGoal: 10000, slug: "anil-thought-he-was-going-blind-forever-he-just-needed-to-know-better" },
+        { id: 302, title: "Give Mohan the confidence he needs.", image : Cimg2, docomunt: "Mohan has lost most of his vision due to untreated glaucoma.on loss. During our follow-up camp, our doctors confirmed that he requires a white cane, a speech-enabled watch, and low-vision glasses for partial vision loss.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "a-white-cane-and-glasses-could-give-mohan-his-dignity-back" },
+        { id: 303, title: "Give Sunita her sight back", image : Cimg3, docomunt: "Sunita is a mother of three who works as a daily wage tailor. During our weekly mobile eye health camp in Narela, she walked in with complaints of headaches and blurred vision. After a check-up, she was diagnosed with progressive cataracts in both eyes.", progress: 10, goal: 5000, raised: 5000, targetGoal: 250000, slug: "sunita-s-world-is-fading-help-her-see-again" },
       ],
     },
     {
       id: 4,
       name: "Medicines & Assistive Devices",
       posts: [
-        { id: 401, title: "Let Awareness Turn into Action.", image : Cimg4, docomunt: "Anil runs a small tea stall. Over the past year, he had noticed a fogginess in his vision but assumed it was due to fatigue or old age. He ignored it until one of our awareness sessions reached his neighbourhood.", progress: 25, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
-        { id: 402, title: "Help Preeti See Her Dreams", image : Cimg1, docomunt: "Preeti is a cheerful schoolgirl who suddenly started struggling to read and write. Her father brought her to one of our camps after a local volunteer encouraged them to do so.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
-        { id: 403, title: "Give Mohan the confidence he needs.", image : Cimg2, docomunt: "Mohan has lost most of his vision due to untreated glaucoma.on loss. During our follow-up camp, our doctors confirmed that he requires a white cane, a speech-enabled watch, and low-vision glasses for partial vision loss.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "latest-in-ai" },
+        { id: 401, title: "Let Awareness Turn into Action.", image : Cimg4, docomunt: "Anil runs a small tea stall. Over the past year, he had noticed a fogginess in his vision but assumed it was due to fatigue or old age. He ignored it until one of our awareness sessions reached his neighbourhood.", progress: 25, goal: 5000, raised: 3750, targetGoal: 10000, slug: "anil-thought-he-was-going-blind-forever-he-just-needed-to-know-better" },
+        { id: 402, title: "Help Preeti See Her Dreams", image : Cimg1, docomunt: "Preeti is a cheerful schoolgirl who suddenly started struggling to read and write. Her father brought her to one of our camps after a local volunteer encouraged them to do so.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "preeti-can-be-saved-from-going-blind-but-time-is-running-out" },
+        { id: 403, title: "Give Mohan the confidence he needs.", image : Cimg2, docomunt: "Mohan has lost most of his vision due to untreated glaucoma.on loss. During our follow-up camp, our doctors confirmed that he requires a white cane, a speech-enabled watch, and low-vision glasses for partial vision loss.", progress: 75, goal: 5000, raised: 3750, targetGoal: 10000, slug: "a-white-cane-and-glasses-could-give-mohan-his-dignity-back" },
       ],
     },
   ];
@@ -76,8 +76,7 @@ export default function CategoriesWithPosts() {
 
       <div className="tab-content mt-3">
         {categories.map((cat) => (
-          <div
-            key={cat.id}
+          <div key={cat.id}
             className={`tab-pane fade ${activeTab === cat.id ? 'show active' : ''}`}
           >
             <div className='row'>
@@ -88,7 +87,7 @@ export default function CategoriesWithPosts() {
                           <Image src={post.image} alt="" />
                       </div>
                       <div className="text">
-                          <h2><Link href="#">{post.title}</Link></h2>
+                          <h2><Link href={`/campaign/${post.slug}`}>{post.title}</Link></h2>
                           <p>{post.docomunt}</p>
                       </div>
                       <div className="progress-wrap">
@@ -102,15 +101,11 @@ export default function CategoriesWithPosts() {
                           <ul>
                               <li>
                                   <span className="title">Goal:</span>
-                                  <span>₹{post.goal}</span>
+                                  <span>₹{post.targetGoal}</span>
                               </li>
                               <li>
                                   <span className="title">Raised:</span>
                                   <span>₹{post.raised}</span>
-                              </li>
-                              <li>
-                                  <span className="title">Goal:</span>
-                                  <span>₹{post.targetGoal}</span>
                               </li>
                           </ul>
                       </div>
