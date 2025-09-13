@@ -33,7 +33,7 @@ const RefundPolicyContent =({hclass}) => {
                         <p className="mb-0"><strong>Need Help? Contact Us</strong></p>
                         <p>If you have any queries related to your donation, transaction confirmation, or receipt, feel free to contact our support team:</p>
                         <p><strong>Sight Cares India Foundation</strong></p>
-                        <p><strong>Contact Person: </strong><em>Ms. Tannu Singh</em><strong><br /></strong><a href="mailto:info@sightcares.org"><strong>info@sightcares.org</strong></a><strong>+91-9310606469<br /></strong><a href="https://sightcares.org/">sightcares.org</a></p>
+                        <p><strong>Contact Person: </strong><em>Ms. Tannu Singh</em><strong><br /></strong><a href="mailto:info@sightcares.org"><strong>info@sightcares.org</strong></a><br /><strong>+91-9310606469<br /></strong><a href="https://sightcares.org/">sightcares.org</a></p>
                         <p className="mb-0"><strong>Thank You for Your Support</strong></p>
                         <p>We truly appreciate your generosity. Your contribution helps us create lasting impact in the lives of those who need it most.</p>
                     </div>
