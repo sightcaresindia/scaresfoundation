@@ -26,10 +26,10 @@ const HeaderTopbarS3 = () => {
                     <div className="col-lg-4 col-12">
                         <div className="contact-into">
                             <ul className="social-media">
-                                <li><Link onClick={ClickHandler} href="#"><i className="flaticon-facebook-app-symbol"></i></Link></li>
-                                <li><Link onClick={ClickHandler} href="#"><i className="flaticon-linkedin"></i></Link></li>
-                                <li><Link onClick={ClickHandler} href="#"><i className="flaticon-camera"></i></Link></li>
-                                <li><Link onClick={ClickHandler} href="#"><i className="flaticon-vimeo"></i></Link></li>
+                                <li><Link onClick={ClickHandler} href="https://www.facebook.com/SightCares" target='_blank'><i className="flaticon-facebook-app-symbol"></i></Link></li>
+                                <li><Link onClick={ClickHandler} href="https://www.linkedin.com/company/sight-cares/" target='_blank'><i className="flaticon-linkedin"></i></Link></li>
+                                <li><Link onClick={ClickHandler} href="https://www.instagram.com/sightcaresindia/" target='_blank'><i className="flaticon-camera"></i></Link></li>
+                                <li><Link onClick={ClickHandler} href="https://x.com/SightCares" target='_blank'><i className="flaticon-twitter"></i></Link></li>
                             </ul>
                         </div>
                     </div>
