@@ -41,11 +41,11 @@ const Footer = (props) => {
                                     <h3>Programs</h3>
                                 </div>
                                 <ul>
-                                    <li><Link onClick={ClickHandler} href="#">Subsidized Surgeries</Link></li>
-                                    <li><Link onClick={ClickHandler} href="#">Pre and post-surgery</Link></li>
-                                    <li><Link onClick={ClickHandler} href="#">Medicines & Assistive Devices</Link></li>
-                                    <li><Link onClick={ClickHandler} href="#">Eye Camps & Screenings</Link></li>
-                                    <li><Link onClick={ClickHandler} href="#">Awareness & Advocacy</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/programs/medical-guidance">Medical Guidance</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/programs/subsidized-surgeries">Subsidized Surgeries</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/programs/medicines-assistive-devices">Medicines & Assistive Devices</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/programs/eye-camps-screenings">Eye Camps & Screenings</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/programs/awareness-advocacy">Awareness & Advocacy</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -56,10 +56,10 @@ const Footer = (props) => {
                                 </div>
                                 <ul>
                                     <li><Link onClick={ClickHandler} href="/">Home</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/about-us">about us</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/faqs">FAQs on Eye Health</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/about-us">About us</Link></li>
                                     <li><Link onClick={ClickHandler} href="/our-campaigns">Campaigns</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/contact-us">contact us</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/contact-us">Contact us</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/faqs">FAQs on Eye Health</Link></li>
                                 </ul>
                             </div>
                         </div>
