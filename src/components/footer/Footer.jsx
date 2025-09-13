@@ -84,9 +84,9 @@ const Footer = (props) => {
                     <div className="row">
                         <div className="col col-xs-12">
                              <p className='mb-1 policy-links'>
-                                <Link onClick={ClickHandler} href="/privacy-policy">Privacy Policy</Link> | 
-                                <Link onClick={ClickHandler} href="/terms-and-conditions">Terms & Conditions</Link> | 
-                                <Link onClick={ClickHandler} href="/refund-cancellation-policy">Refund Policy</Link> | 
+                                <Link onClick={ClickHandler} href="/privacy-policy">Privacy Policy</Link> |&nbsp;
+                                <Link onClick={ClickHandler} href="/terms-and-conditions">Terms & Conditions</Link> |&nbsp;
+                                <Link onClick={ClickHandler} href="/refund-cancellation-policy">Refund Policy</Link> &nbsp;|
                                 <Link onClick={ClickHandler} href="/shipping-delivery-policy ">Shipping Delivery Policy </Link>
                             </p>
                             <p className="copyright"> &copy; 2025 Sight Cares India Foundation. All rights reserved.</p>
