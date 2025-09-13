@@ -19,10 +19,6 @@
         content: '';
         background: rgba(27, 35, 36, 0.96);
     }
-
-
-
-
     ul {
         list-style: none;
     }
@@ -935,5 +931,10 @@
                 }
             }
         }
+    }
+}
+.policy-links{
+    a{
+        color: #fff;
     }
 }
