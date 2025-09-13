@@ -6,7 +6,7 @@ const TermContent =({hclass}) => {
                     <div className='col-md-12 policy-content'>
                         <h2 className='mb-4'>Privacy Policy</h2>
                         <p>At <strong>Sight Cares India Foundation</strong>, we are committed to protecting your personal information and respecting your privacy. This Privacy Policy outlines how we collect, use, and safeguard the data you provide to us when you visit our website or make a donation.</p>
-                        <p>By using our website <a href="http://www.sightcares.org/"><strong>www.sightcares.org</strong></a>, you agree to the terms mentioned in this Privacy Policy. If you do not agree with our practices, we kindly request you not to use the website.</p>
+                        <p>By using our website <a href="https://sightcares.org/"><strong>www.sightcares.org</strong></a>, you agree to the terms mentioned in this Privacy Policy. If you do not agree with our practices, we kindly request you not to use the website.</p>
                         <p className="mb-0"><strong>Who We Are</strong></p>
                         <p><strong>Sight Cares India Foundation</strong> is a non-profit organization working to support underprivileged individuals through health and welfare initiatives. This website is operated and managed by the organization.</p>
                         <p><strong>Contact Person:</strong> Ms. Tanu Singh<br />4C Shiv Vihar, Sewak Park, Dwarka More, New Delhi &ndash; 110059<br />+91-9310606469 | <a href="mailto:info@sightcares.org">info@sightcares.org</a></p>

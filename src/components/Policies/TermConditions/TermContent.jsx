@@ -30,7 +30,7 @@ const TermContent =({hclass}) => {
                         <p>Any dispute related to the use of this website will be governed by the laws of <strong>India</strong>. The courts of <strong>New Delhi</strong> shall have exclusive jurisdiction in case of any legal matter.</p>
                         <p className="mb-0"><strong>Contact Us</strong></p>
                         <p>If you have any questions about these Terms and Conditions, please contact:</p>
-                        <p><strong>Sight Cares India Foundation<br /></strong>Contact Person: <strong>Ms. Tanu Singh<br /></strong>4C Shiv Vihar, Sewak Park, Dwarka More, New Delhi &ndash; 110059<br />+91-9310606469<br /><a href="mailto:info@sightcares.org">info@sightcares.org</a><br /><a href="http://sightcares.org/">sightcares.org</a></p>
+                        <p><strong>Sight Cares India Foundation<br /></strong>Contact Person: <strong>Ms. Tannu Singh<br /></strong>4C Shiv Vihar, Sewak Park, Dwarka More, New Delhi &ndash; 110059<br />+91-9310606469<br /><a href="mailto:info@sightcares.org">info@sightcares.org</a><br /><a href="http://sightcares.org/">sightcares.org</a></p>
                     </div>
                 </div>
             </div>
