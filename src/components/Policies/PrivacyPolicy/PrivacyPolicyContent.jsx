@@ -60,12 +60,11 @@ const TermContent =({hclass}) => {
                         <p>We recommend reviewing this policy periodically to stay informed about how we are protecting your data.</p>
                         <p className="mb-0"><strong>Contact Us</strong></p>
                         <p>If you have any questions or concerns about this Privacy Policy, or if you would like to update or remove your personal data, please reach out to:</p>
-                        <p><strong>Sight Cares India Foundation<br /></strong><strong>Contact Person:</strong> Ms. Tanu Singh<br />4C Shiv Vihar, Sewak Park, Dwarka More, New Delhi &ndash; 110059<br />+91-9310606469<br />info@sightcares.org<br /><a href="https://sightcares.org/">sightcares.org</a></p>
+                        <p><strong>Sight Cares India Foundation<br /></strong><strong>Contact Person:</strong> Ms. Tannu Singh<br />4C Shiv Vihar, Sewak Park, Dwarka More, New Delhi &ndash; 110059<br />+91-9310606469<br />info@sightcares.org<br /><a href="https://sightcares.org/">sightcares.org</a></p>
                     </div>
                 </div>
             </div>
        </section>
     )
 }
-
 export default TermContent;

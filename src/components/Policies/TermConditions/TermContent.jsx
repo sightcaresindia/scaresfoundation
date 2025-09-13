@@ -37,5 +37,4 @@ const TermContent =({hclass}) => {
        </section>
     )
 }
-
 export default TermContent;

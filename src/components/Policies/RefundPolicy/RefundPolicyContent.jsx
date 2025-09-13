@@ -44,7 +44,7 @@ const RefundPolicyContent =({hclass}) => {
                         </ul>
                         <p className="mb-0"><strong>Contact Us</strong></p>
                         <p>For any donation-related issues or clarifications regarding this policy, please feel free to contact:</p>
-                        <p><strong>Sight Cares India Foundation<br /></strong><strong>Contact Person:</strong> Ms. Tanu Singh<br />4C Shiv Vihar, Sewak Park, Dwarka More, New Delhi &ndash; 110059<br />+91-9310606469<br /><a href="mailto:info@sightcares.org">info@sightcares.org</a><br /><a href="https://sightcares.org/">sightcares.org</a></p>
+                        <p><strong>Sight Cares India Foundation<br /></strong><strong>Contact Person:</strong> Ms. Tannu Singh<br />4C Shiv Vihar, Sewak Park, Dwarka More, New Delhi &ndash; 110059<br />+91-9310606469<br /><a href="mailto:info@sightcares.org">info@sightcares.org</a><br /><a href="https://sightcares.org/">sightcares.org</a></p>
                     </div>
                 </div>
             </div>
