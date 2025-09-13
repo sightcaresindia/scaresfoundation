@@ -44,17 +44,17 @@ const HeaderS3 = (props) => {
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                                         <li><Link onClick={ClickHandler} className="active" href="/">Home</Link></li>
                                         <li><Link onClick={ClickHandler} href="/about-us">About Us</Link></li>
-                                        {/* <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} href="#">Programs <FontAwesome name="caret-down" /></Link>
+                                        <li className="menu-item-has-children">
+                                            <Link onClick={ClickHandler} href="/programs">Programs <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="#">Medical Guidance</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Subsidized Surgeries</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Pre and post-surgery</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Medicines & Assistive Devices</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Eye Camps & Screenings</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Awareness & Advocacy</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/programs/medical-guidance">Medical Guidance</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/programs/subsidized-surgeries">Subsidized Surgeries</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/programs/pre-post-surgery-care">Pre and post-surgery</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/programs/medicines-assistive-devices">Medicines & Assistive Devices</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/programs/eye-camps-screenings">Eye Camps & Screenings</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/programs/awareness-advocacy">Awareness & Advocacy</Link></li>
                                             </ul>
-                                        </li>*/}
+                                        </li>
                                         <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} href="/our-campaigns">Campaigns <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">
