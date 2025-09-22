@@ -16,7 +16,7 @@ const ClickHandler = () => {
     window.scrollTo(10, 0);
 }
 
-const about = (props) => {
+const MedicalSteps = (props) => {
     return (
         <section className={"" +props.hclass}>
             <div className="container">
@@ -160,4 +160,4 @@ const about = (props) => {
     );
 };
 
-export default about;
+export default MedicalSteps;

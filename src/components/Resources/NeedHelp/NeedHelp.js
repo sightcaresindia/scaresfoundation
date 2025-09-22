@@ -11,7 +11,7 @@ import Image from 'next/image';
 const ClickHandler = () => {
     window.scrollTo(10, 0);
 }
-const CtaSectionS3 = () => {
+const NeedHelp = () => {
     return (
         <section className="cta-section-s3 section-padding bg-white">
             <div className="container">
@@ -36,4 +36,4 @@ const CtaSectionS3 = () => {
     );
 };
 
-export default CtaSectionS3;
+export default NeedHelp;

@@ -8,7 +8,7 @@ import AyushmanImage from '/public/images/government/pmjy.png';
 import BlindnessImage from '/public/images/government/npcvi.png';
 import RashtriyaImage from '/public/images/government/ran.png';
 import PradhanImage from '/public/images/government/pmbjp.png';
-const AboutS2 = (props) => {
+const GovernmentScheme = (props) => {
 
     const [activeTab, setActiveTab] = useState(0);
     const handleTabClick = (index) => {
@@ -71,11 +71,11 @@ const AboutS2 = (props) => {
             <div className="shape-3">
                 <Image src={Shape8} alt="" />
             </div>
-        </section >
+        </section>
     )
 }
 
-export default AboutS2;
+export default GovernmentScheme;
 
 
 

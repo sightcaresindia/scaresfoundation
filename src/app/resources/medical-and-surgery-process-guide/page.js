@@ -2,12 +2,12 @@
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
 import PageTitle from '@/components/pagetitle/PageTitle'
-import MedicalGuide from '@/components/MedicalGuide/MedicalGuide';
+import MedicalGuide from '@/components/Resources/MedicalGuide/MedicalGuide';
+import MedicalSteps from '@/components/Resources/MedicalSteps/MedicalSteps';
+import NeedHelp from '@/components/Resources/NeedHelp/NeedHelp';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';
-import MedicalSteps from '@/components/MedicalSteps/MedicalSteps';
-import NeedHelp from '@/components/NeedHelp/NeedHelp';
 import Logo from '/public/images/sight_care_logo.png'
 
 

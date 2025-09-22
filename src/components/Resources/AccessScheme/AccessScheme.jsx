@@ -8,7 +8,7 @@ import AyushmanImage from '/public/images/government/pmjy.png';
 import BlindnessImage from '/public/images/government/npcvi.png';
 import RashtriyaImage from '/public/images/government/ran.png';
 import PradhanImage from '/public/images/government/pmbjp.png';
-const AboutS2 = (props) => {
+const AccessScheme = (props) => {
 
     const [activeTab, setActiveTab] = useState(0);
     const handleTabClick = (index) => {
@@ -64,7 +64,7 @@ const AboutS2 = (props) => {
     )
 }
 
-export default AboutS2;
+export default AccessScheme;
 
 
 

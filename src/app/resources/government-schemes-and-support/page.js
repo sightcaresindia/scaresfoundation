@@ -2,10 +2,10 @@
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
 import PageTitle from '@/components/pagetitle/PageTitle'
-import GovernmentScheme from '@/components/GovernmentScheme/GovernmentScheme';
-import HealthProgram from '@/components/HealthProgram/HealthProgram';
-import AccessScheme from '@/components/AccessScheme/AccessScheme';
-import CharitySection from '@/components/CharitySection/CharitySection';
+import GovernmentScheme from '@/components/Resources/GovernmentScheme/GovernmentScheme';
+import HealthProgram from '@/components/Resources/HealthProgram/HealthProgram';
+import AccessScheme from '@/components/Resources/AccessScheme/AccessScheme';
+import CharitySection from '@/components/Resources/CharitySection/CharitySection';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';

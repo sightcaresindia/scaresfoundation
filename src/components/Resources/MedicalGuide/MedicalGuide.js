@@ -5,7 +5,7 @@ import Image from 'next/image';
 import MedicalImage from '/public/images/medical/medical.png';
 
 
-const Medical = (props) => {
+const MedicalGuide = (props) => {
 
     return (
         <section className="funfact-section section-padding">
@@ -32,4 +32,4 @@ const Medical = (props) => {
 
 }
 
-export default Medical;
+export default MedicalGuide;

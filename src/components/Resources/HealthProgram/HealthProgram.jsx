@@ -1,12 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import shapeArrow from '/public/images/process-arrow-shape.svg';
-import shape1 from '/public/images/process/shape1.svg';
-import shape2 from '/public/images/process/shape2.svg';
-import shape3 from '/public/images/process/shape3.svg';
-import shape4 from '/public/images/process/shape4.svg';
-import shape5 from '/public/images/process/shape5.svg';
+
 import img1 from '/public/images/government/delhi.png';
 import img2 from '/public/images/government/haryana.png';
 import img3 from '/public/images/government/bihar.png';
@@ -20,7 +15,7 @@ import img10 from '/public/images/government/andhrapradesh.png';
 import img11 from '/public/images/government/telangana.png';
 import img12 from '/public/images/government/kerala.png';
 
-const ProcessSection = () => {
+const HealthProgram = () => {
   return (
     <section className="health-section section-padding">
       <div className="container">
@@ -147,4 +142,4 @@ const ProcessSection = () => {
   );
 };
 
-export default ProcessSection;
+export default HealthProgram;
