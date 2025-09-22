@@ -3,7 +3,7 @@ import Shape from '/public/images/funfuck-shape.svg';
 import Image from 'next/image';
 import CorporateImage from '/public/images/corporate/corporate.png'
 
-const Corporate = (props) => {
+const CorporatePartnership = (props) => {
 
     return (
         <section className="funfact-section section-padding">
@@ -31,4 +31,4 @@ const Corporate = (props) => {
 
 }
 
-export default Corporate;
+export default CorporatePartnership;

@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
 import PageTitle from '@/components/pagetitle/PageTitle'
-import InternshipPrograms from '@/components/InternshipPrograms/InternshipPrograms';
+import InternshipPrograms from '@/components/GetInvolved/InternshipPrograms/InternshipPrograms';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';

@@ -3,7 +3,7 @@ import Shape from '/public/images/funfuck-shape.svg';
 import Image from 'next/image';
 import InternshipImage from '/public/images/internship/internship.png'
 
-const Internship = (props) => {
+const InternshipPrograms = (props) => {
 
     return (
         <section className="funfact-section section-padding">
@@ -32,4 +32,4 @@ const Internship = (props) => {
 
 }
 
-export default Internship;
+export default InternshipPrograms;
