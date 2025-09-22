@@ -1,6 +1,4 @@
 import React from "react";
-import Link from 'next/link'
-import Services from "../../api/Services";
 
 const ClickHandler = () => {
     window.scrollTo(10, 0);

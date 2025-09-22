@@ -4,7 +4,6 @@ import Link from 'next/link';
 /* image */
 import Img1 from '/public/images/about/about-1.jpg'
 import Img2 from '/public/images/about/about-2.jpg'
-import CEO from '/public/images/about/ceo.jpg'
 import shape1 from '/public/images/about/shape1.svg'
 import shape3 from '/public/images/about/shape3.svg'
 import shape4 from '/public/images/about/shape4.svg'

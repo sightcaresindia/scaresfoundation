@@ -1,10 +1,5 @@
 'use client'
 import React from 'react';
-import Link from 'next/link'
-import Services from "../../api/Services";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image';
 
 import impact1 from '/public/images/impact/route.png';
@@ -13,10 +8,7 @@ import impact3 from '/public/images/impact/patient.png';
 import impact4 from '/public/images/impact/healthcare.png';
 
 import shape1 from '/public/images/about/shape1.svg'
-import shape3 from '/public/images/about/shape3.svg'
 import shape4 from '/public/images/about/shape4.svg'
-import shape5 from '/public/images/about/shape5.svg'
-import shape6 from '/public/images/about/shape6.svg'
 
 const Impact = (props) => {
     return (

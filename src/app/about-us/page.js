@@ -2,10 +2,10 @@
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
 import PageTitle from '@/components/pagetitle/PageTitle'
-import SightCare from '@/components/SightCare/SightCare';
-import MissionVision from '@/components/MissionVision/MissionVision';
-import Story from '@/components/Story/Story';
-import Leadership from '@/components/Leadership/Leadership';
+import SightCare from '@/components/AboutUs/SightCare/SightCare';
+import MissionVision from '@/components/AboutUs/MissionVision/MissionVision';
+import Story from '@/components/AboutUs/Story/Story';
+import Leadership from '@/components/AboutUs/Leadership/Leadership';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';
