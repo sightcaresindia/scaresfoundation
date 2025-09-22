@@ -12,7 +12,7 @@ import img3 from '/public/images/sightcare/sustainable-partnerships.png'
 import img4 from '/public/images/sightcare/fututre.png'
 import Image from 'next/image';
 
-const ProcessSection = () => {
+const AboutSightCare = () => {
     return (
         <section className="process-section">
             <div className="container">
@@ -86,4 +86,4 @@ const ProcessSection = () => {
     );
 };
 
-export default ProcessSection;
+export default AboutSightCare;

@@ -5,7 +5,7 @@ import img3 from '/public/images/get-involved/fundraising.png';
 import img4 from '/public/images/get-involved/internship.png';
 import Image from 'next/image';
 
-const FeaturesSection = () => {
+const GetInvolvedBoxes = () => {
     return (
         <section className="features-section mb-5">
             <div className="container">
@@ -78,4 +78,4 @@ const FeaturesSection = () => {
     );
 };
 
-export default FeaturesSection;
+export default GetInvolvedBoxes;
