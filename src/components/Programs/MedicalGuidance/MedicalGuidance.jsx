@@ -3,7 +3,7 @@ import Shape from '/public/images/funfuck-shape.svg';
 import Image from 'next/image';
 import MedicalImage from '/public/images/programs/medicial.png'
 
-const Medical = (props) => {
+const MedicalGuidance = (props) => {
 
     return (
         <section className="funfact-section section-padding">
@@ -31,4 +31,4 @@ const Medical = (props) => {
 
 }
 
-export default Medical;
+export default MedicalGuidance;

@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
 import PageTitle from '@/components/pagetitle/PageTitle'
-import SubsidizedSurgeries from '@/components/SubsidizedSurgeries/SubsidizedSurgeries';
+import SubsidizedSurgeries from '@/components/Programs/SubsidizedSurgeries/SubsidizedSurgeries';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';

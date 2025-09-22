@@ -3,7 +3,7 @@ import Shape from '/public/images/funfuck-shape.svg';
 import Image from 'next/image';
 import PrePostImage from '/public/images/programs/pre-post-surgery.png'
 
-const PrePost = (props) => {
+const PrePostSurgery = (props) => {
 
     return (
         <section className="funfact-section section-padding">
@@ -31,4 +31,4 @@ const PrePost = (props) => {
 
 }
 
-export default PrePost;
+export default PrePostSurgery;

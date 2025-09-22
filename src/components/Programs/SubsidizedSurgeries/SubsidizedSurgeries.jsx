@@ -3,7 +3,7 @@ import Shape from '/public/images/funfuck-shape.svg';
 import Image from 'next/image';
 import SubsidizedImage from '/public/images/programs/subsidized-surgery.png'
 
-const Subsidized = (props) => {
+const SubsidizedSurgeries = (props) => {
 
     return (
         <section className="funfact-section section-padding">
@@ -31,4 +31,4 @@ const Subsidized = (props) => {
 
 }
 
-export default Subsidized;
+export default SubsidizedSurgeries;
