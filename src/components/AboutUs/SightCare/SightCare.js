@@ -5,7 +5,6 @@ import shape1 from '/public/images/process/shape1.svg'
 import shape2 from '/public/images/process/shape2.svg'
 import shape3 from '/public/images/process/shape3.svg'
 import shape4 from '/public/images/process/shape4.svg'
-import shape5 from '/public/images/process/shape5.svg'
 import img1 from '/public/images/sightcare/guided-medical.png'
 import img2 from '/public/images/sightcare/community-centered.png'
 import img3 from '/public/images/sightcare/sustainable-partnerships.png'
@@ -78,9 +77,6 @@ const AboutSightCare = () => {
             </div>
             <div className="shape-4">
                 <Image src={shape4} alt="" />
-            </div>
-            <div className="shape-5">
-                <Image src={shape5} alt="" />
             </div>
         </section>
     );

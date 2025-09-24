@@ -1757,12 +1757,14 @@ ul li{
 
 .process-section {
     position: relative;
-    background: #F1EBE9;
-    padding-top: 340px;
+    background-color: #F1EBE9;
+    padding-top: 100px;
     padding-bottom: 90px;
     overflow: hidden;
-    z-index: -1;
-    margin-top: -220px;
+    background-image: url('/images/process/shape5.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
     @media (max-width:991px) {
         padding-bottom: 60px;
@@ -1978,13 +1980,6 @@ ul li{
         bottom: 0;
         z-index: 1;
         animation: leafAniamtion 12s ease-in infinite;
-    }
-
-    .shape-5 {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
     }
 }
 

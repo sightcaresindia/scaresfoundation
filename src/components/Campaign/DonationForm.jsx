@@ -90,7 +90,7 @@ const DonationForm = ({preferred_slot, campaign_id}) =>{
             donation_amount: totalPrice || 0
         }
     });
-     const is80GSelected = watch("form_80G") === "1";
+    const is80GSelected = watch("form_80G") === "1";
     const [loading, setLoading] = useState(false); 
     const [currentUrl, setCurrentUrl] = useState('');
 
@@ -124,10 +124,120 @@ const DonationForm = ({preferred_slot, campaign_id}) =>{
    
 
     const onSubmit = async (data) => {
-        data.donation_amount = selectedSlotAmount || Number(customAmount) || 0;
-        data.campaign_id = campaign_id;
-        console.log(data);
-    };
+    setLoading(true);
+    try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/save-project-data`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                full_name: data.full_name,
+                emailid: data.emailid,
+                donation_amount: data.donation_amount,
+                contributor_name_display: "full_name",
+                pan: data.pan,
+                address: data.address,
+                country: data.country,
+                state: data.state,
+                city: data.city,
+                zip: data.zip,
+                phone: data.phone,
+                form_80G: data.form_80G,
+                frm_products: data.frm_products,
+                campaign_id: data.campaign_id,
+                utm_source,
+                utm_medium,
+                utm_campaign,
+                utm_content,
+                utm_id,
+                utm_term,
+                sourceUrl: currentUrl,
+            }),
+        });
+
+        if (!response.ok) {
+            setLoading(false);
+            console.error("Error:", response.status, response.statusText);
+            return;
+        }
+
+        const resJson = await response.json();
+        setLoading(false);
+
+        const order_id = resJson.data?.order_id;
+        const saveData_id = resJson.data?.saveData_id;
+        const uuid = resJson.data?.uuid;
+
+        const amountInPaise = resJson.data?.donation_amount
+            ? Number(resJson.data.donation_amount)
+            : Number(data.donation_amount) * 100;
+
+        const options = {
+            key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+            amount: amountInPaise, // ✅ should match backend
+            currency: "INR",
+            name: "Sight Cares India Foundation",
+            description: "Donation",
+            image: "/images/sight_care_logo.png",
+            order_id: order_id,
+            handler: async function (razorpayResponse) {
+                try {
+                    const updateResponse = await fetch(
+                        `${process.env.NEXT_PUBLIC_API_BASE_URL}/update-donation-status`,
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({
+                                order_id: razorpayResponse.razorpay_order_id,
+                                payment_id: razorpayResponse.razorpay_payment_id,
+                                signature: razorpayResponse.razorpay_signature,
+                                saveData_id: saveData_id,
+                            }),
+                        }
+                    );
+
+                    if (updateResponse.ok) {
+                        const updateData = await updateResponse.json();
+                        console.log("Donation successful:", updateData);
+
+                        setLoading(false);
+                        window.location.href = `/thank-you?donation-id=${uuid}`;
+                        //console.log("Donation successful:", updateData);
+                    } else {
+                        console.error(
+                            "Error updating donation:",
+                            updateResponse.status,
+                            updateResponse.statusText
+                        );
+                    }
+                } catch (error) {
+                    console.error("Something went wrong. Please try again.", error);
+                }
+            },
+            prefill: {
+                name: data.full_name,
+                email: data.emailid,
+                contact: data.phone,
+            },
+            theme: {
+                color: "#F37254",
+            },
+        };
+
+        // ✅ Load Razorpay SDK once
+        const rzp1 = new window.Razorpay(options);
+        rzp1.open();
+    } catch (error) {
+        console.error("Error:", error);
+        setLoading(false);
+    } finally {
+        setLoading(false);
+    }
+};
+
 
     return(
         <div className="DonationForm_div">
