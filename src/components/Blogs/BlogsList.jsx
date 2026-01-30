@@ -60,7 +60,7 @@ const BlogsList = ({ hclass }) => {
                     <div className="col col-lg-12 col-md-12 col-sm-12 mt-4" >
                         <div className='row'>
                         {blogs && blogs.map((blog) => (
-                            <div key={blog.id} className='col-md-4'>
+                            <div key={blog.id} className='col-md-4mb-4'>
                                 <div className="blog-card">
                                     <div className="image">
                                         <Link href={`/blog/${blog.slug}`}>
