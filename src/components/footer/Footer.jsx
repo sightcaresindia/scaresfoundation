@@ -95,7 +95,7 @@ const Footer = (props) => {
                                 <Link onClick={ClickHandler} href="/refund-cancellation-policy">Refund Policy</Link> |&nbsp;
                                 <Link onClick={ClickHandler} href="/shipping-delivery-policy ">Shipping Delivery Policy </Link>
                             </p>
-                            <p className="copyright"> &copy; 2025 Sight Cares India Foundation. All rights reserved.</p>
+                            <p className="copyright"> &copy; {new Date().getFullYear()} Sight Cares India Foundation. All rights reserved.</p>
                         </div>
                     </div>
                 </div>
