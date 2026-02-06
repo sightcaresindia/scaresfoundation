@@ -36,9 +36,8 @@
 
 
         .content {
-            width: calc(100% - 100px);
+            width: calc(100% - 80px);
             padding-right: 0px;
-            text-align: center;
             padding-top: 15px;
 
             @media (max-width:1399px) {
