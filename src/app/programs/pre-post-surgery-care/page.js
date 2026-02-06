@@ -1,25 +1,15 @@
-'use client'
-import React, { Fragment } from 'react';
-import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle'
-import PrePostSurgery from '@/components/Programs/PrePostSurgery/PrePostSurgery';
-import CtaSection from '@/components/CtaSection/CtaSection';
-import Footer from '@/components/footer/Footer';
-import Scrollbar from '@/components/scrollbar/scrollbar';
+import React from "react";
+import PrePostSurgeryIndexPage from "@/components/Programs/PrePostSurgery";
 
-import Logo from '/public/images/sight_care_logo.png'
-
-
-const CorporatePage = () => {
-    return (
-       <Fragment>
-            <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Pre-Surgery & Post-Surgery Care'} pagesub={'Pre-Surgery & Post-Surgery Care'} />
-            <PrePostSurgery hclass={'about-section-s4 section-padding'} />
-            <CtaSection hclass={'cta-section'} />
-            <Footer />
-            <Scrollbar />
-        </Fragment>
-    )
+export const metadata = {
+  title: 'Pre & Post Surgery Care Program | Sight Cares India Foundation',
+  description: 'Comprehensive pre- and post-operative eye-care support with assessments, follow-ups, medicines and free care for under-privileged patients.',
 };
-export default CorporatePage;
+
+const Page = () => {
+    return (
+        <PrePostSurgeryIndexPage />
+    );
+};
+
+export default Page;

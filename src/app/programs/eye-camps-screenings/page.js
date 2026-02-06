@@ -1,25 +1,15 @@
-'use client'
-import React, { Fragment } from 'react';
-import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle'
-import EyeCamp from '@/components/Programs/EyeCamp/EyeCamp';
-import CtaSection from '@/components/CtaSection/CtaSection';
-import Footer from '@/components/footer/Footer';
-import Scrollbar from '@/components/scrollbar/scrollbar';
+import React from "react";
+import EyeCampPage from "@/components/Programs/EyeCamp";
 
-import Logo from '/public/images/sight_care_logo.png'
-
-
-const CorporatePage = () => {
-    return (
-       <Fragment>
-            <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Eye Camps & Screenings'} pagesub={'Eye Camps & Screenings'} />
-            <EyeCamp hclass={'about-section-s4 section-padding'} />
-            <CtaSection hclass={'cta-section'} />
-            <Footer />
-            <Scrollbar />
-        </Fragment>
-    )
+export const metadata = {
+  title: 'Free Eye Camps & Screenings by Sight Cares India Foundation',
+  description: 'Free screenings, vision tests & cataract checks across underserved areas. Book now with Sight Cares India Foundation.',
 };
-export default CorporatePage;
+
+const Page = () => {
+    return (
+        <EyeCampPage />
+    );
+};
+
+export default Page
