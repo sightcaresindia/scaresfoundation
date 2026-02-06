@@ -31,7 +31,14 @@ const Footer = (props) => {
                                     <h3>Sight Cares India Foundation</h3>
                                 </div>
                                 <p>Sight Cares India Foundation is a non-profit organization committed to transforming lives by restoring vision and ensuring accessible eye care for underprivileged communities across India.</p>
-                                
+                                <div className='footerSocialLinks'>
+                                    <ul>
+                                        <li><Link onClick={ClickHandler} href="https://www.facebook.com/SightCares" target='_blank'><i className="flaticon-facebook-app-symbol"></i></Link></li>
+                                        <li><Link onClick={ClickHandler} href="https://www.linkedin.com/company/sight-cares/" target='_blank'><i className="flaticon-linkedin"></i></Link></li>
+                                        <li><Link onClick={ClickHandler} href="https://www.instagram.com/sightcaresindia/" target='_blank'><i className="flaticon-camera"></i></Link></li>
+                                        <li><Link onClick={ClickHandler} href="https://x.com/SightCares" target='_blank'><i className="flaticon-twitter"></i></Link></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
@@ -67,7 +74,7 @@ const Footer = (props) => {
                                 <div className="widget-title">
                                     <h3>Locations</h3>
                                 </div>
-                                <p>4C Shiv Vihar, Sewak Park , Dwarka More, New Delhi - 110059</p>
+                                <p>KH NO. 18/19, 3rd Floor, Village Burari, Street no.19 Block- A1, Amrit Vihar, North Delhi- 110084</p>
                                 <ul>
                                     <li>Contact</li>
                                     <li>info@sightcares.org</li>
@@ -110,10 +117,3 @@ const Footer = (props) => {
 }
 
 export default Footer;
-
-
-
-
-
-
-

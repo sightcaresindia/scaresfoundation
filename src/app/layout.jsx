@@ -12,8 +12,8 @@ import Script from 'next/script';
 import Providers from './Providers';
 
 export const metadata = {
-  title: 'Sight Cares India Foundation',
-  description: 'Sight Cares India Foundation is a non-profit organization committed to transforming lives by restoring vision',
+  title: 'Sight Cares India Foundation | Restoring Sight with Free Eye Care Support',
+  description: 'Sight Cares India Foundation - restoring vision for underserved communities in India. Get free eye screenings & support today.',
 };
 
 export default function RootLayout({ children }) {

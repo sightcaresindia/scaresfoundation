@@ -11,11 +11,11 @@ const HeaderTopbarS3 = () => {
         <div className="topbar">
             <div className="container-fluid">
                 <div className="row align-items-center">
-                    <div className="col-lg-8 col-12">
+                    <div className="col-lg-10 col-12">
                         <ul className="contact-info">
                             <li>
                                 <Link onClick={ClickHandler} href="tel:+8406938482">
-                                    <i className="flaticon-maps-and-flags"></i><span>4C Shiv Vihar, Sewak Park , Dwarka More, New Delhi - 110059</span>
+                                    <i className="flaticon-maps-and-flags"></i><span>KH NO. 18/19, 3rd Floor, Village Burari, Street no.19 Block- A1, Amrit Vihar, North Delhi- 110084</span>
                                 </Link>
                             </li>
                             <li>
@@ -23,7 +23,7 @@ const HeaderTopbarS3 = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-2 col-12">
                         <div className="contact-into">
                             <ul className="social-media">
                                 <li><Link onClick={ClickHandler} href="https://www.facebook.com/SightCares" target='_blank'><i className="flaticon-facebook-app-symbol"></i></Link></li>
