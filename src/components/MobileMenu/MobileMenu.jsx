@@ -94,6 +94,11 @@ const menus = [
         ]
     },
     {
+        id: 77,
+        title: 'Blogs',
+        link: '/blogs',
+    },
+    {
         id: 88,
         title: 'Contact',
         link: '/contact-us',

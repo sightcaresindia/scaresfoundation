@@ -997,7 +997,7 @@
 
 			>ul>li>a {
 				font-size: 16px;
-				padding: 35px 20px;
+				padding: 35px 12px;
 				display: block;
 				color: $white;
 				position: relative;
@@ -1005,7 +1005,7 @@
 				text-transform: capitalize;
 
 				@media(max-width:1870px) {
-					padding: 35px 18px;
+					padding: 35px 14px;
 				}
 			}
 
@@ -1378,7 +1378,7 @@
 @media(max-width: 440px) {
 	.wpo-site-header .navbar-header .navbar-brand {
 		img {
-			max-width: 170px;
+			max-width: 88px;
 		}
 	}
 }
@@ -1386,7 +1386,7 @@
 @media(max-width: 370px) {
 	.wpo-site-header .navbar-header .navbar-brand {
 		img {
-			max-width: 140px;
+			max-width: 88px;
 		}
 	}
 }
@@ -1596,7 +1596,7 @@
 		color: $heading-color;
 
 		@media screen and (min-width: 1400px) {
-			padding: 35px 15px;
+			padding: 35px 12px;
 		}
 
 		@media screen and (max-width: 1399px) {
@@ -1843,6 +1843,7 @@
     color: #fff;
     position: relative;
     font-size: 13px;
+	margin-bottom: 0;
 }
 
 .responsivemenu ul p i{
@@ -1904,6 +1905,8 @@
         display: block;
     }
 }
+
+
 
 .middle-header-3 .showmenu {
     top: 36px;

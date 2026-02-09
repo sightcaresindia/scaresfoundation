@@ -38,7 +38,7 @@ const HeaderS3 = (props) => {
                                         alt="logo" /></Link>
                                 </div>
                             </div>
-                            <div className="col-lg-8 col-md-1 col-1">
+                            <div className="col-lg-8 col-md-1 col-1 px-0">
                                 <div id="navbar" className="collapse navbar-collapse navigation-holder justify-content-center">
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
@@ -85,6 +85,7 @@ const HeaderS3 = (props) => {
                                                 <li><Link onClick={ClickHandler} href="/get-involved/internship-programs">Internship Programs</Link></li>
                                             </ul>
                                         </li>
+                                        <li><Link onClick={ClickHandler} className="active" href="/blogs">Blogs</Link></li>
                                         <li><Link onClick={ClickHandler} href="/contact-us">Contact</Link></li>
                                     </ul>
                                 </div>
