@@ -12,6 +12,7 @@ const HeaderTopbarS3 = () => {
             <div className="container-fluid">
                 <div className="row align-items-center">
                     <div className="col-lg-10 col-12">
+                        {/*
                         <ul className="contact-info">
                             <li>
                                 <Link onClick={ClickHandler} href="tel:+8406938482">
@@ -22,6 +23,7 @@ const HeaderTopbarS3 = () => {
                                 <i className="ti-email"></i><span>info@sightcares.org</span>
                             </li>
                         </ul>
+                        */}
                     </div>
                     <div className="col-lg-2 col-12">
                         <div className="contact-into">

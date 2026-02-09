@@ -1514,8 +1514,11 @@
 	}
 
 	.topbar .social-media li a {
-		padding: 0 8px;
-		color: $white;
+		background: #d2ffaf;
+		padding: 6px 8px;
+		margin: 0px 8px;
+		border-radius: 5px;
+		color: #2c3129;
 
 		&:hover {
 			color: #FFB302;
@@ -1692,22 +1695,19 @@
 			right: -20px;
 		}
 	}
-
 }
 
 /* header-s3 */
 
 .header-s3 {
-
-
 	.topbar {
 		background: #6cbf2c;
+		padding: 5px 0px;
 	}
 
 	.topbar .contact-info li i {
 		color: $white;
 	}
-
 
 	.topbar .social-media {
 		margin-right: 0;
@@ -1716,7 +1716,6 @@
 		padding: 0px;
 		padding-bottom: 0px;
 	}
-
 
 	.wpo-site-header {
 		padding: 0 255px;
@@ -1905,8 +1904,6 @@
         display: block;
     }
 }
-
-
 
 .middle-header-3 .showmenu {
     top: 36px;

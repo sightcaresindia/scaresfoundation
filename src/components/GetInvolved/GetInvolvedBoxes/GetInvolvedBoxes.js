@@ -4,6 +4,7 @@ import img2 from '/public/images/get-involved/corporate-partner.png';
 import img3 from '/public/images/get-involved/fundraising.png';
 import img4 from '/public/images/get-involved/internship.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const GetInvolvedBoxes = () => {
     return (
@@ -18,14 +19,12 @@ const GetInvolvedBoxes = () => {
                                     <Image src={img1} alt="Healthcare" />
                                 </div>
                                 <div className="content">
-                                    <a href="#">
+                                    <Link href="/get-involved/volunteer-opportunities">
                                     <h3>Volunteer Opportunities</h3>
-                                    </a>
+                                    </Link>
                                 </div>
-                               
                             </div>
                         </div>
-
                         {/* Feature Card 2 */}
                         <div className="col-lg-3 col-md-6 col-12">
                             <div className="feature-card">
@@ -33,14 +32,12 @@ const GetInvolvedBoxes = () => {
                                      <Image src={img2} alt="Healthcare" />
                                 </div>
                                 <div className="content">
-                                     <a href="#">
+                                    <Link href="/get-involved/corporate-partnerships">
                                     <h3>Corporate Partnerships</h3>
-                                    </a>
+                                    </Link>
                                 </div>
-                               
                             </div>
                         </div>
-
                         {/* Feature Card 3 */}
                         <div className="col-lg-3 col-md-6 col-12">
                             <div className="feature-card">
@@ -48,15 +45,12 @@ const GetInvolvedBoxes = () => {
                                      <Image src={img3} alt="Healthcare" />
                                 </div>
                                 <div className="content">
-                                    
-                                    <a href="#">
+                                    <Link href="/get-involved/fundraising-and-campaigns">
                                     <h3>Fundraising & Campaigns</h3>
-                                    </a>
-                                </div>
-                                
+                                    </Link>
+                                </div>  
                             </div>
                         </div>
-
                          {/* Feature Card 4 */}
                         <div className="col-lg-3 col-md-6 col-12">
                             <div className="feature-card">
@@ -64,11 +58,10 @@ const GetInvolvedBoxes = () => {
                                      <Image src={img4} alt="Healthcare" />
                                 </div>
                                 <div className="content">
-                                     <a href="#">
+                                    <Link href="/get-involved/internship-programs">
                                     <h3>Internship Programs</h3>
-                                    </a>
+                                    </Link>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
