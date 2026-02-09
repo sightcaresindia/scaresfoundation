@@ -1,30 +1,14 @@
-'use client'
-import React, { Fragment } from 'react';
-import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle'
-import GovernmentScheme from '@/components/Resources/GovernmentScheme/GovernmentScheme';
-import HealthProgram from '@/components/Resources/HealthProgram/HealthProgram';
-import AccessScheme from '@/components/Resources/AccessScheme/AccessScheme';
-import CharitySection from '@/components/Resources/CharitySection/CharitySection';
-import CtaSection from '@/components/CtaSection/CtaSection';
-import Footer from '@/components/footer/Footer';
-import Scrollbar from '@/components/scrollbar/scrollbar';
-import Logo from '/public/images/sight_care_logo.png'
+import React from 'react';
+import ResourcePage from '@/components/Resources';
 
-
-const Page = () => {
-    return (
-        <Fragment>
-            <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Government Schemes & Support'} pagesub={'About'} />
-            <GovernmentScheme hclass={'about-section-s4 section-padding'} />
-            <HealthProgram hclass={'about-section-s4 section-padding'} />
-            <AccessScheme hclass={'about-section-s4 section-padding'} />
-            <CharitySection hclass={'about-section-s4 section-padding'} />
-            <CtaSection hclass={'cta-section'} />
-            <Footer />
-            <Scrollbar />
-        </Fragment>
-    )
+export const metadata = {
+    title: 'Government Schemes & Support | Eye Care & Disability Aid | Sight Cares India Foundation',
+    description: 'Explore government schemes for subsidized eye care, disability support, free surgeries & benefits in India.',
 };
+const Page = () => {
+    return(
+       <ResourcePage />
+    );
+};
+
 export default Page;
