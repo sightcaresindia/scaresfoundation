@@ -62,7 +62,7 @@ export default async function sitemap() {
   const json = await res.json();
 
   const dynamicUrls = json.data.map((post) => ({
-    url: `${baseUrl}/${post.slug}`, // adjust route if needed
+    url: `${baseUrl}/blog/${post.slug}`, // adjust route if needed
     lastModified: new Date(), // since API has no updatedAt
     changeFrequency: "weekly",
     priority: 0.7,
