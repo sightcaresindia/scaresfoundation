@@ -13,7 +13,7 @@ const TermPage = () => {
     return(
         <>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle="" pagesub="" />
+            <PageTitle pageTitle="Terms and Conditions" pagesub="" />
             <TermContent hclass={'mt-5 pt-3'} />
             <CtaSection hclass={'cta-section'} />
             <Footer />
