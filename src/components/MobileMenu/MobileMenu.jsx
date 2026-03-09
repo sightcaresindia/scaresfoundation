@@ -81,16 +81,6 @@ const menus = [
                 title: 'Corporate Partnerships',
                 link: '/get-involved/corporate-partnerships'
             },
-            {
-                id: 63,
-                title: 'Fundraising & Campaigns',
-                link: '/get-involved/fundraising-and-campaigns'
-            },
-            {
-                id: 64,
-                title: 'Internship Programs',
-                link: '/get-involved/internship-programs'
-            },
         ]
     },
     {

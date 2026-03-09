@@ -81,8 +81,6 @@ const HeaderS3 = (props) => {
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href="/get-involved/volunteer-opportunities">Volunteer Opportunities</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/get-involved/corporate-partnerships">Corporate Partnerships</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/get-involved/fundraising-and-campaigns">Fundraising & Campaigns</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/get-involved/internship-programs">Internship Programs</Link></li>
                                             </ul>
                                         </li>
                                         <li><Link onClick={ClickHandler} className="active" href="/blogs">Blogs</Link></li>
