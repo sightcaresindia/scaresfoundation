@@ -13,7 +13,7 @@ const MedicalGuidance = (props) => {
                         <div className="content">
                             <h2>Programs</h2>
                             <h3>Medical <span>Guidance</span></h3>
-                            <p>At Sight Cares India Foundation, we provide end-to-end medical guidance for individuals suffering from visual impairment. Our team helps patients and families understand eye conditions, find timely diagnoses, and connect with qualified eye specialists in both government and private hospitals. From initial consultations to navigating complex treatment options, we ensure that no one is left confused or unsupported on their journey to better vision.</p>
+                            <p>At Sight Cares India Foundation, we provide end-to-end medical guidance to individuals with visual impairment. Our team helps patients and families understand eye conditions, find timely diagnoses, and connect with qualified eye specialists in both government and private hospitals. From initial consultations to navigating complex treatment options, we ensure that no one is left confused or unsupported on their journey to better vision.</p>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12">

@@ -13,7 +13,7 @@ const AwarenessAdvocacy = (props) => {
                         <div className="content">
                             <h2>Programs</h2>
                             <h3>Awareness & <span>Advocacy</span></h3>
-                            <p>Awareness is the first step toward prevention and timely treatment. We conduct educational programs and workplaces to raise awareness about preventable blindness, the importance of eye hygiene, and early signs of vision loss. Additionally, we advocate for better access to inclusive eye healthcare and policies that support the visually impaired.</p>
+                            <p>Awareness is the first step toward prevention and timely treatment. We conduct educational programs and workshops to raise awareness about preventable blindness, the importance of eye hygiene, and early signs of vision loss. Additionally, we advocate for better access to inclusive eye healthcare and policies that support the visually impaired.</p>
                         </div>
                         <p><strong>Procedure:</strong></p>
                         <ul>

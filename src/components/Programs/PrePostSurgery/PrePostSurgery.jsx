@@ -13,7 +13,7 @@ const PrePostSurgery = (props) => {
                         <div className="content">
                             <h2>Programs</h2>
                             <h3>Pre-Surgery & <span>Post-Surgery Care</span></h3>
-                            <p>Successful eye treatment involves more than just the surgery. We support patients at every stage — from arranging pre-surgical assessments and ensuring they are medically fit, to post-surgery follow-ups, wound care, and recovery support. We also provide necessary medications and assistive tools like spectacles, magnifiers, or eye shields to aid healing and rehabilitation.</p>
+                            <p>Successful eye treatment involves more than just the surgery. We support patients at every stage — from arranging pre-surgical assessments and ensuring they are medically fit, to post-surgery follow-ups, wound care, and recovery support. We also provide necessary medications and assistive devices such as spectacles, magnifiers, and eye shields to aid healing and rehabilitation.</p>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12">
