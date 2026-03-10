@@ -5,23 +5,31 @@ const TermContent =({hclass}) => {
                 <div className='row'>
                     <div className='col-md-12 policy-content'>
                         <p><strong>Sight Cares India Foundation</strong></p>
-                        <p>Thank you for choosing to support Sight Cares India Foundation. Your donation is essential for providing crucial eye care, treatment access, and rehabilitation support to individuals with visual impairments. Before contributing, we request you go through the terms outlined below kindly:</p>
-                        <p><strong>1. Allocation of Donations</strong></p>
-                        <p>We strive to allocate your donation toward the campaign or initiative you have selected. However, if a particular project has already been fully funded or completed, the Foundation reserves the right to allocate the donation to other ongoing or upcoming programs that align with our broader mission. This flexibility allows us to utilize resources effectively and respond to areas of greater need.</p>
-                        <p><strong>2. Non-Refund Policy</strong></p>
-                        <p>All donations made to Sight Cares India Foundation are considered final. As a policy, we do not process refunds under any circumstances.</p>
-                        <p><strong>3.Tax Benefits</strong></p>
-                        <p>If donations qualify under <strong>Section 80G of the Income Tax Act, 1961</strong>, these are eligible for tax exemption. Donors will receive an official receipt, along with <strong>Form 10BE</strong> (where applicable), for their records and tax filings.</p>
-                        <p><strong>4. Donor Information</strong></p>
-                        <p>To ensure accurate documentation and timely issuance of tax receipts, donors are requested to provide correct personal details, including their <strong>Permanent Account Number (PAN)</strong></p>
-                        <p><strong>5. Privacy &amp; Confidentiality</strong></p>
-                        <p>We value and protect your privacy. All donor information is treated as confidential and used solely for internal documentation, compliance, and communication purposes. We do not share donor data with third parties without consent.</p>
-                        <p><strong> Commitment to Transparency</strong></p>
-                        <p>Sight Cares India Foundation is committed to financial accountability. Regular updates on our programs, fund utilization, and impact stories are made available through our official website, reports, and other communication channels.</p>
-                        <p><strong>Contact Us</strong></p>
-                        <p>If you have any queries or would like to learn more about our donation process, please feel free to contact us at email <a href="mailto:info@sightcares.org">info@sightcares.org</a></p>
-                        <p>or phone number +91-9310606469</p>
-                        <p>We also welcome visits to our centre. Kindly book an appointment in advance to ensure we maintain a comfortable and undisturbed environment for our visually impaired residents.</p>
+                        <p>By participating in any activity involving interviews, testimonials, photographs, videos, audio recordings, or related media facilitated by Sight Cares India Foundation, individuals provide their informed consent for the following:</p>
+                        <ol>
+                        <li><strong>Permission for Use:</strong>
+                        <p>The individual authorizes the Foundation to use, reproduce, and distribute any content featuring their image, voice, name, or statements. This content may be published across various mediums &mdash; including print, digital, and broadcast &mdash; such as the Foundation&rsquo;s website, social media channels, newsletters, reports, brochures, presentations, press releases, or fundraising materials.</p>
+                        </li>
+                        <li><strong>Editorial &amp; Public Sharing:</strong>
+                        <p>The participant acknowledges and accepts that the shared content may be edited for clarity or format and may be made publicly available to support the organization&rsquo;s awareness, outreach, or promotional efforts.</p>
+                        </li>
+                        <li><strong>No Monetary Compensation:</strong>
+                        <p>Sight Cares India Foundation or its employees will not provide any financial remuneration or benefits for the creation, use, or publication of the content.</p>
+                        </li>
+                        <li><strong>Voluntary Consent:</strong>
+                        <p>The consent is granted willingly, without any form of pressure or obligation. The participant (or legal guardian, where applicable) affirms that they understand the nature and purpose of the content usage agreement.</p>
+                        </li>
+                        <li><strong>Respect &amp; Sensitivity:</strong>
+                        <p>The Foundation commits to handling all content with care and dignity, particularly when it involves beneficiaries who are blind or visually impaired. Sight Cares India Foundation will ensure that the content is used respectfully and aligns with the Foundation&rsquo;s values.</p>
+                        </li>
+                        <li><strong>Irrevocability &amp; Withdrawal Conditions:</strong>
+                        <p>Consent granted under this agreement is considered final and binding. However, individuals may request withdrawal of consent in writing, providing a valid reason. Such requests, if accepted, will apply only to future use of the content. Any material already published or shared before the withdrawal request cannot be removed or retracted.</p>
+                        </li>
+                        <li><strong>Implied Agreement:</strong>
+                        <p>By participating in any content-related activity, the individual is deemed to have agreed to these terms unless a prior written objection has been submitted and acknowledged by the Foundation.</p>
+                        </li>
+                        </ol>
+<p>For questions or requests regarding content usage or withdrawal of consent, please contact us at <a href="mailto:info@sightcares.org">info@sightcares.org</a> or call +91-9310606469</p>
                     </div>
                 </div>
             </div>
