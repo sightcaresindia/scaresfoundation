@@ -8,11 +8,12 @@ import { useParams } from 'next/navigation';
 import Cimg1 from '/public/images/causes/camp1.jpg';
 
 const CampaignsByCategoryList = ({ hclass, category }) => {
+    
     const [campaigns, setCampaigns] = useState([]);
     const params = useParams();
     const categorySlug = params.slug;
-    const categoryDescription = category.description || "";
-    const categoryBrief = category.brief || "";
+    const categoryDescription = category?.description || "";
+    const categoryBrief = category?.brief || "";
     
 
     useEffect(() => {

@@ -9,7 +9,7 @@ import Scrollbar from '@/components/scrollbar/scrollbar';
 
 import Logo from '/public/images/sight_care_logo.png';
 
-const CampaignsByCategoryPage = ({ categoryInfo }) => {
+const CampaignsByCategoryPage = ({ categoryInfo}) => {
     
     return (
         <>
@@ -22,5 +22,5 @@ const CampaignsByCategoryPage = ({ categoryInfo }) => {
         </>
     );
 }
-category
+
 export default CampaignsByCategoryPage;
