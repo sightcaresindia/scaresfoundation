@@ -2,8 +2,8 @@ import React from "react";
 import MedicalPage from "@/components/Resources/MedicalPage";
 
 export const metadata = {
-    title: 'Medical & Surgery Process Guide | Eye Care & Pre - Post Surgery Steps | Sight Cares India Foundation',    
-    description: 'Comprehensive eye surgery guide by Sight Cares - from pre-op to post-op care. Understand each step, prepare well & stay safe.',
+    title: 'Eye Surgery Process Guide | Cataract Treatment Support',    
+    description: 'Understand the eye surgery process including diagnosis, treatment and recovery for cataract patients in India.',
 };
 
 const Page = () => {

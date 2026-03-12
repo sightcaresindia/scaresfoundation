@@ -2,8 +2,8 @@ import React from 'react';
 import ResourcePage from '@/components/Resources';
 
 export const metadata = {
-    title: 'Government Schemes & Support | Eye Care & Disability Aid | Sight Cares India Foundation',
-    description: 'Explore government schemes for subsidized eye care, disability support, free surgeries & benefits in India.',
+    title: 'Government Eye Care Schemes in India | Sight Cares Guide',
+    description: 'Learn about government eye care schemes in India and how Sight Cares helps patients access treatment and surgery support.',
 };
 const Page = () => {
     return(
