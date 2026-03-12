@@ -1,26 +1,15 @@
-'use client'
-import React, { Fragment } from 'react';
-import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle'
-import Volunteer from '@/components/GetInvolved/Volunteer/Volunteer';
-import CtaSection from '@/components/CtaSection/CtaSection';
-import Footer from '@/components/footer/Footer';
-import Scrollbar from '@/components/scrollbar/scrollbar';
+import React from "react";
+import VolunteerPage from "@/components/GetInvolved/Volunteer";
 
-import Logo from '/public/images/sight_care_logo.png'
-
-
-const VolunteerPage = () => {
-    return (
-       <Fragment>
-            <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Volunteer Opportunities'} pagesub={'Volunteer Opportunities'} />
-            <Volunteer hclass={'about-section-s4 section-padding'} />
-            <CtaSection hclass={'cta-section'} />
-            <Footer />
-            <Scrollbar />
-
-        </Fragment>
-    )
+export const metadata = {
+  title: 'Get Involved with Sight Cares | Support Eye Care in India',
+  description: 'Join Sight Cares to support eye health programs, volunteer initiatives and campaigns that help prevent blindness in India.',
 };
-export default VolunteerPage;
+
+const Page = () => {
+    return(
+        <VolunteerPage />
+    );
+};
+
+export default Page;
