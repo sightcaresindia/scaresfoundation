@@ -2,25 +2,22 @@
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
 import PageTitle from '@/components/pagetitle/PageTitle'
-import Volunteer from '@/components/GetInvolved/Volunteer/Volunteer';
-import CtaSection from '@/components/CtaSection/CtaSection';
+import Contactpage from '@/components/Contactpage/Contactpage';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';
 
 import Logo from '/public/images/sight_care_logo.png'
 
 
-
-const VolunteerPage = () => {
+const ContactUsPage = () => {
     return (
-       <Fragment>
+        <Fragment>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Volunteer Opportunities'} pagesub={'Volunteer Opportunities'} />
-            <Volunteer hclass={'about-section-s4 section-padding'} />
-            <CtaSection hclass={'cta-section'} />
+            <PageTitle pageTitle={'Contact Us'} pagesub={'Contact'} />
+            <Contactpage hclass={'section-padding'} />
             <Footer />
             <Scrollbar />
         </Fragment>
     )
 };
-export default VolunteerPage;
+export default ContactUsPage;

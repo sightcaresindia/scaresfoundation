@@ -2,8 +2,8 @@ import React from "react";
 import VolunteerPage from "@/components/GetInvolved/Volunteer";
 
 export const metadata = {
-  title: 'Get Involved with Sight Cares | Support Eye Care in India',
-  description: 'Join Sight Cares to support eye health programs, volunteer initiatives and campaigns that help prevent blindness in India.',
+  title: 'Volunteer for Eye Care NGO in India | Sight Cares',
+  description: 'Become a volunteer with Sight Cares and help support eye camps, awareness drives and blindness prevention programs.',
 };
 
 const Page = () => {
