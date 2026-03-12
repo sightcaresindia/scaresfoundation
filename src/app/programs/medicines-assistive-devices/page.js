@@ -2,8 +2,8 @@ import React from "react";
 import AssistivePage from "@/components/Programs/MedicinesAssistive";
 
 export const metadata = {
-  title: 'Medicines & Assistive Devices | Sight Cares India Foundation',
-  description: 'Free medicines, eye-care devices & vision support for underprivileged individuals. Join us in restoring sight today.',
+  title: 'Eye Care Medicines & Vision Assistive Devices | Sight Cares',
+  description: 'Sight Cares provides medicines and assistive vision devices to support treatment and improve eye health for patients.',
 };
 
 const Page = () => {

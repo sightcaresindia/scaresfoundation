@@ -1,8 +1,8 @@
 import React from 'react';
 import AboutPage from '@/components/AboutUs';
 export const metadata = {
-  title: 'About Sight Cares India Foundation | Eye Care Support for Communities',
-  description: 'Learn about Sight Cares India Foundation, its mission, eye care programs and community support for better vision health.',
+  title: 'About Sight Cares | Eye Care NGO Preventing Blindness in India',
+  description: 'Learn about Sight Cares, an eye care NGO in India working to prevent blindness through eye camps, screenings and surgery support.',
 };
 
 const page = () => {

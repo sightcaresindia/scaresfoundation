@@ -2,8 +2,8 @@ import React from "react";
 import AdvocacyPage from "@/components/Programs/AwarenessAdvocacy";
 
 export const metadata = {
-  title: 'Awareness & Advocacy | Sight Cares India Foundation Initiative',
-  description: 'Promoting eye-health awareness and community advocacy via camps, screenings and outreach - join Sight Cares today.',
+  title: 'Eye Health Awareness Programs in India | Sight Cares NGO',
+  description: 'Sight Cares promotes eye health awareness through education and outreach to help communities prevent blindness.',
 };
 
 const Page = () => {

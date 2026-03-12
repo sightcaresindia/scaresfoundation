@@ -3,8 +3,8 @@ import ProgramsPage from '@/components/ProgramSection';
 
 
 export const metadata = {
-  title: 'Eye Care & Vision Restoration Programs | Sight Cares India Foundation',
-  description: 'Free eye camps, screenings, surgeries and vision support for underserved communities. Empowering sight & hope.',
+  title: 'Sight Cares Programs | Eye Health & Blindness Prevention India',
+  description: 'Explore Sight Cares eye health programs including awareness, screenings, eye camps and cataract surgery support in India.',
 };
 const Page = () => {
     return (

@@ -2,8 +2,8 @@ import React from "react";
 import PrePostSurgeryIndexPage from "@/components/Programs/PrePostSurgery";
 
 export const metadata = {
-  title: 'Pre & Post Surgery Care Program | Sight Cares India Foundation',
-  description: 'Comprehensive pre- and post-operative eye-care support with assessments, follow-ups, medicines and free care for under-privileged patients.',
+  title: 'Pre & Post Eye Surgery Care Support | Sight Cares India',
+  description: 'Sight Cares offers pre and post surgery eye care support ensuring safe recovery and better vision after treatment.',
 };
 
 const Page = () => {

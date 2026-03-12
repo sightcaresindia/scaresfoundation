@@ -2,8 +2,8 @@ import React from 'react';
 import MedicalGuidanceIndexPage from '@/components/Programs/MedicalGuidance';
 
 export const metadata = {
-  title: 'Medical Guidance & Eye Care Support | Sight Cares India Foundation',
-  description: 'Get end-to-end medical guidance, subsidised eye care & free support for visual impairment. Learn more now.',
+  title: 'Eye Care Medical Guidance in India | Sight Cares India Foundation Support',
+  description: 'Sight Cares offers medical guidance for eye care patients in India helping them understand treatment and vision care options.',
 };
 
 const Page = () => {

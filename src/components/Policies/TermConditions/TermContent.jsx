@@ -29,7 +29,7 @@ const TermContent =({hclass}) => {
                         <p>By participating in any content-related activity, the individual is deemed to have agreed to these terms unless a prior written objection has been submitted and acknowledged by the Foundation.</p>
                         </li>
                         </ol>
-<p>For questions or requests regarding content usage or withdrawal of consent, please contact us at <a href="mailto:info@sightcares.org">info@sightcares.org</a> or call +91-9310606469</p>
+                        <p>For questions or requests regarding content usage or withdrawal of consent, please contact us at <a href="mailto:info@sightcares.org">info@sightcares.org</a> or call +91-9310606469</p>
                     </div>
                 </div>
             </div>

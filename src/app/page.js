@@ -1,8 +1,8 @@
 import React from 'react';
 import HomePage from '@/components/HomePage';
 export const metadata = {
-  title: 'Sight Cares India Foundation | Restoring Sight with Free Eye Care Support',
-  description: 'Sight Cares India Foundation - restoring vision for underserved communities in India. Get free eye screenings & support today.',
+  title: 'Eye Care NGO India | Free Eye Camps & Cataract Surgery | Sight Cares India Foundation',
+  description: 'Sight Cares is an eye care NGO in India providing free eye camps, vision tests and cataract surgery support to prevent blindness.',
 };
 const Home = () => {
     return (
