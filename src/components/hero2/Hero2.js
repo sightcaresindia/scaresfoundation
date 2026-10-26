@@ -1,7 +1,7 @@
 ﻿'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { A11y } from 'swiper';
+import { A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Link from 'next/link';
@@ -105,9 +105,14 @@ export default function Hero2() {
             <Swiper
                 id="hero-slides"
                 className={styles.slider}
-                modules={[A11y]}
+                modules={[A11y, Autoplay]}
                 slidesPerView={1}
                 rewind
+                autoplay={{
+                    delay: 6000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                }}
                 speed={650}
                 autoHeight
                 onSwiper={(swiper) => { slider.current = swiper; }}
@@ -154,4 +159,3 @@ export default function Hero2() {
         </section>
     );
 }
-
