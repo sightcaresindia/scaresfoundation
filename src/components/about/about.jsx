@@ -33,9 +33,11 @@ const about = (props) => {
                     <div className="col-lg-6 col-12">
                         <div className="about-content">
                             <h3>Sight Cares <span>India</span> Foundation</h3>
-                             <p><strong>Sight Cares India Foundation</strong> is a non-profit organization committed to transforming lives by restoring vision and ensuring accessible eye care for underprivileged communities across India. Our mission is to restore vision, dignity, and opportunity to those affected by avoidable visual impairments.</p>
-                            <p>Founded with a deep sense of empathy and purpose, the organization works to reach underserved rural and urban populations who are often neglected by the mainstream healthcare system.</p>
-                            <p>With a focus on awareness, accessibility, and affordability, the Foundation guides individuals in need through the entire journey of eye care—right from diagnosis to surgery, recovery, and post-surgery support. </p>
+                            <p style={{ borderLeft: 'none', fontWeight: 'bold', color: '#1d6db2' }}>Sight Cares India Foundation aims to bridge this gap through medical crowdfunding, connecting people in need with those who can help.</p>
+                            <p>Providing crowdfunding services for medical, social and charitable causes. We facilitate transactions between contributors and campaigners.</p>
+                            <p>We support fundraising for a wide range of medical and healthcare needs, including illnesses, surgeries, accidents, Our focus is on individuals and families who cannot afford these essential expenses and need financial support.</p>
+                            <p>Through crowdfunding, we give eligible cases a chance to reach compassionate donors who can help meet their needs. Every campaign represents a real person, a family facing difficult circumstances and a need for support.</p>
+                            <p>We believe everyone deserves access to appropriate care and to live with dignity, regardless of financial circumstances.</p>
                             <div className="about-btn">
                                 <Link onClick={ClickHandler} href="/about-us" className="theme-btn">About Us</Link>
                             </div>

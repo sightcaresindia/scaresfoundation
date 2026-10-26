@@ -30,7 +30,7 @@ const Footer = (props) => {
                                 <div className="widget-title">
                                     <h3>Sight Cares India Foundation</h3>
                                 </div>
-                                <p>Sight Cares India Foundation is a non-profit organization committed to transforming lives by restoring vision and ensuring accessible eye care for underprivileged communities across India.</p>
+                                <p>Providing crowdfunding services for medical, social and charitable causes. We facilitate transactions between contributors and campaigners.</p>
                                 <div className='footerSocialLinks'>
                                     <ul>
                                         <li><Link onClick={ClickHandler} href="https://www.facebook.com/SightCares" target='_blank'><i className="flaticon-facebook-app-symbol"></i></Link></li>
