@@ -20,11 +20,11 @@ const ServiceSection = (props) => {
                             <div className="service-left">
                                 <div class="text-box">
                                     <h3>Our Mission</h3>
-                                    <p>To provide comprehensive eye care support to underserved communities, restoring sight and improving quality of life.</p>
+                                    <p>To help people who cannot afford essential medical care and disability-related support by connecting them with compassionate donors through responsible and transparent crowdfunding.</p>
                                 </div>
-                                 <div class="text-box">
+                                <div class="text-box">
                                     <h3>Our Vision</h3>
-                                    <p>A future where no one in India suffers from preventable blindness due to lack of access or awareness.</p>
+                                    <p>A society where financial hardship does not prevent people from seeking essential healthcare, managing disabilities or accessing the support they need to live with dignity.</p>
                                 </div>
                                 <div className="shape">
                                     <svg width="58" height="59" viewBox="0 0 58 59" fill="none">

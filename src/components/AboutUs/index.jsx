@@ -6,6 +6,7 @@ import SightCare from '@/components/AboutUs/SightCare/SightCare';
 import MissionVision from '@/components/AboutUs/MissionVision/MissionVision';
 import Story from '@/components/AboutUs/Story/Story';
 import Leadership from '@/components/AboutUs/Leadership/Leadership';
+import Support from '@/components/AboutUs/Support/Support';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';
@@ -22,6 +23,7 @@ const AboutPage = () => {
             <MissionVision hclass={'section-padding'} />
             <Story hclass={'section-padding'} />
             <Leadership />
+            <Support />
             <CtaSection hclass={'cta-section'} />
             <Footer />
             <Scrollbar />

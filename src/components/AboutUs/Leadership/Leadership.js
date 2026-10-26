@@ -8,19 +8,16 @@ const FunFact = (props) => {
     return (
         <section className="funfact-section section-padding">
             <div className="container">
-                 <div class="section-wrapper">
+                <div class="section-wrapper">
                     <div class="card">
-                    <h2>Leadership & Team</h2>
-                    <p>
-                        Led by Ms Tannu Singh, the team includes healthcare professionals, social workers, and volunteers passionate about creating eye health equity across India.
-                    </p>
+                        <h2>Leadership & Team</h2>
+                        <p>Under Ms Tannu Singh's leadership, Sight Cares India Foundation is committed to making medical and disability-related support more accessible to people facing financial hardship.</p>
+                        <p>Through its crowdfunding initiative, the Foundation aims to highlight genuine needs for compassionate donors, encourage collective support, and promote responsible fundraising practices. Its work is guided by empathy, dignity, transparency and a commitment to help patients and their families navigate difficult circumstances with greater hope.</p>
                     </div>
 
                     <div class="card">
-                    <h2>Where We Work</h2>
-                    <p>
-                        Sight Cares India Foundation operates across India, with a focus on rural villages and urban slums where access to medical facilities is limited or non-existent.
-                    </p>
+                        <h2>Where We Work</h2>
+                        <p>Sight Cares India Foundation operates across India, focusing on rural villages and urban slums where access to medical facilities is limited or nonexistent.</p>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,120 @@
+.section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #ebf8f3;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &::before {
+        left: 0;
+        top: 18%;
+        width: clamp(100px, 12vw, 180px);
+        height: 235px;
+        background-image: url('/images/service/shape-1.svg');
+        opacity: .65;
+        transform: rotate(-12deg);
+    }
+
+    &::after {
+        right: 0;
+        bottom: 0;
+        width: clamp(160px, 18vw, 260px);
+        height: 380px;
+        background-image: url('/images/service/shape-2.svg');
+        background-position: right bottom;
+        opacity: .4;
+    }
+}
+
+.panel {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: clamp(28px, 5vw, 64px);
+    border-radius: 11px;
+    background: rgba(238, 233, 233, .94);
+    text-align: center;
+
+    h2 {
+        margin: 22px 0 26px;
+        color: #123b5d;
+        font-size: clamp(28px, 3vw, 40px);
+        font-weight: 800;
+        line-height: 1.25;
+        text-transform: none;
+    }
+
+    p {
+        max-width: 790px;
+        margin: 0 auto 20px;
+        color: #4c5c69;
+        font-size: 17px;
+        line-height: 1.85;
+    }
+
+    .message { color: #123b5d; margin-top: 28px; }
+}
+
+.accent {
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background: #fbad17;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.campaigns, .donate {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 15px 26px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: background .2s, color .2s;
+    &:focus-visible { outline: 3px solid #1d6db2; outline-offset: 4px; }
+}
+
+.campaigns {
+    background: #123b5d;
+    color: #fff;
+    &:hover { background: #1d6db2; color: #fff; }
+}
+
+.donate {
+    background: #fbad17;
+    color: #123b5d;
+    &:hover { background: #f7c35b; color: #123b5d; }
+}
+
+@media (max-width: 575px) {
+    .section::before { top: 24px; width: 90px; height: 120px; opacity: .35; }
+    .section::after { width: 130px; height: 220px; opacity: .25; }
+    .panel { padding: 30px 22px; p { font-size: 15px; } }
+    .actions { flex-direction: column; a { width: 100%; } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .campaigns, .donate { transition: none; }
+}
