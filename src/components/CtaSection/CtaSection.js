@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 import Shape from '/public/images/cta-shap.svg'
-import Shape2 from '/public/images/curved_shape.svg'
 import Shape3 from '/public/images/arrow1.svg'
 import Image from 'next/image';
 
@@ -22,9 +21,6 @@ const CtaSection = (props) => {
             </div>
             <div className="shape">
                 <Image src={Shape} alt="" />
-            </div>
-            <div className="shape-1">
-                <Image src={Shape2} alt="" />
             </div>
             <div className="shape-2">
                 <Image src={Shape3} alt="" />
