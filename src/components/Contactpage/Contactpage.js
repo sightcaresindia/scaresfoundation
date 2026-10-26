@@ -18,8 +18,7 @@ const Contactpage = () => {
                                 </div>
                                 <div className="office-info-text">
                                     <h2>address line</h2>
-                                    <p>4C Shiv Vihar,
-                                        <br />Sewak Park, Dwarka More, <br />New Delhi - 110059</p>
+                                    <p>KH NO. 18/19, 3rd Floor, Village Burari, Street no.19 Block- A1, Amrit Vihar, North Delhi- 110084</p>
                                 </div>
                             </div>
                         </div>
