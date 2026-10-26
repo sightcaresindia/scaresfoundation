@@ -26,8 +26,8 @@
         :global(.icon) {
             display: grid;
             place-items: center;
-            width: 56px;
-            height: 56px;
+            width: 70px;
+            height: 70px;
             max-width: none;
             max-height: none;
             margin: 0 0 14px;
@@ -37,8 +37,8 @@
             border: 1px solid #dce6ee;
 
             img {
-                width: 30px;
-                height: 30px;
+                width: 42px;
+                height: 42px;
                 object-fit: contain;
             }
 
