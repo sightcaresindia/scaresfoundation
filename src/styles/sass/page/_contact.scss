@@ -1,15 +1,15 @@
 	/*20. contact-page */
 	.office-info {
-	    padding-bottom: 120px;
+	    padding-bottom: 60px;
 	    margin: 0 -10px;
 
 	    @media(max-width:1199px) {
 	        margin: 0px;
-	        padding-bottom: 80px;
+	        padding-bottom: 60px;
 	    }
 
 	    @media(max-width:767px) {
-	        padding-bottom: 60px;
+	        padding-bottom: 40px;
 	    }
 
 	    .col {
@@ -288,4 +288,37 @@
 	    :-moz-placeholder {
 	        color: #636776;
 	    }
+	}
+
+	.contact-input-items {
+		margin-bottom: 15px;
+	}
+
+	.contact-form-field{
+		width: 100%;
+		height: 40px;
+		padding: 5px 10px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		font-size: 16px;
+		transition: border-color 0.3s ease;
+		&:focus {
+			outline: none;
+			border-color: $theme-primary-color;
+		}
+	}
+
+	.contact-form-field-textarea{
+		width: 100%;
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		font-size: 16px;
+		transition: border-color 0.3s ease;
+		resize: none;
+		height: 100px;
+		&:focus {
+			outline: none;
+			border-color: $theme-primary-color;
+		}	
 	}

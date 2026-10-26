@@ -2221,7 +2221,7 @@ ul li{
         line-height: 25px;
    }
    .blogBtn{
-        color: #6cbf2c;
+        color: #FBAD17;
         font-size: 15px;
         font-weight: bold;
    }
@@ -2262,7 +2262,7 @@ ul li{
     line-height: 20px;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    background-color: #6cbf2c;
+    background-color: #FBAD17;
 }
 .process-section .item h2 {
     color: #101212;
@@ -2675,7 +2675,7 @@ background: #F1EBE9;
   margin: 0 auto;
 }
 .vision-impact {
-  background: #f8f9fb;
+  /*background: #f8f9fb;*/
   padding: 80px 20px 0px 20px;;
   font-family: 'Segoe UI', sans-serif;
   color: #212121;
@@ -2691,12 +2691,12 @@ background: #F1EBE9;
   margin-bottom: 50px;
 }
 
-.vision-cards {
+/*.vision-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin-bottom: 60px;
-}
+}*/
 
 .vision-box {
   background: #ffffff;
@@ -2705,6 +2705,7 @@ background: #F1EBE9;
   text-align: center;
   border: 1px solid #e0e0e0;
   transition: transform 0.3s ease;
+  height: 280px;
 }
 
 .vision-box:hover {
@@ -2754,7 +2755,7 @@ font-size: 22px;
   border: 1px solid #e0e0e0;
   padding: 20px 15px;
   border-radius: 10px;
-  width: 240px;
+  width: 270px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.04);
   text-align: left;
   display: flex;
@@ -2800,7 +2801,7 @@ font-size: 22px;
 }
 .impact-card{
     height: 410px;
-    background: #6cbf2c;
+    background: #FBAD17;
     padding: 10px 15px;
     text-align: center;
     box-shadow: 0px 0px 10px 7px #e4e4e4;
