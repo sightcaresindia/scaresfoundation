@@ -55,17 +55,7 @@ const HeaderS3 = (props) => {
                                                 <li><Link onClick={ClickHandler} href="/programs/awareness-advocacy">Awareness & Advocacy</Link></li>
                                             </ul>
                                         </li>
-                                        <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} href="/our-campaigns">Campaigns <FontAwesome name="caret-down" /></Link>
-                                            <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="/campaigns/awareness-advocacy">Awareness & Advocacy</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/campaigns/eye-health-camps-mobile-vision-clinics">Eye Camps & Screenings</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/campaigns/subsidised-surgeries">Subsidized Surgeries</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/campaigns/medicines-assistive-devices">Medicines & Assistive Devices</Link></li>
-                                                {/* <li><Link onClick={ClickHandler} href="#">Medical Guidance</Link></li>
-                                                <li><Link onClick={ClickHandler} href="#">Pre and post-surgery</Link></li>*/}
-                                            </ul>
-                                        </li>
+                                        <li><Link onClick={ClickHandler} href="/our-campaigns">Campaigns</Link></li>
                                         <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} href="#">Resources <FontAwesome name="caret-down" /></Link>
                                             <ul className="sub-menu">
@@ -81,6 +71,8 @@ const HeaderS3 = (props) => {
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href="/get-involved/volunteer-opportunities">Volunteer Opportunities</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/get-involved/corporate-partnerships">Corporate Partnerships</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/get-involved/fundraising-and-campaigns">Fundraising & Campaigns</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/get-involved/internship-programs">Internship Programs</Link></li>
                                             </ul>
                                         </li>
                                         <li><Link onClick={ClickHandler} className="active" href="/blogs">Blogs</Link></li>

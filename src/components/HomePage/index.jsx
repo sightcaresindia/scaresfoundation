@@ -5,7 +5,7 @@ import Hero2 from '@/components/hero2/Hero2';
 import About from '@/components/about/about';
 import Impact from '@/components/Impact/Impact';
 import Testimonial from '@/components/Testimonial/Testimonial';
-import CategoriesWithPosts from '@/components/CategoriesWithPosts/CategoriesWithPosts';
+import ProjectList from '@/components/ProjectList/ProjectList';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';
 
@@ -18,7 +18,7 @@ const HomePage = () => {
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
             <Hero2 />
             <About hclass={'about-section section-padding'}/>
-            <CategoriesWithPosts />
+            <ProjectList limit={3} />
             <Impact hclass={"impact-section service-section-s5 pt-5"} />
             <Testimonial tClass={'testimonial-section'} />
             <Footer />

@@ -21,28 +21,7 @@ const menus = [
         id: 4,
         title: 'Campaigns',
         link: '/our-campaigns',
-        submenu: [
-            {
-                id: 41,
-                title: 'Awareness & Advocacy',
-                link: '/campaigns/awareness-advocacy',
-            },
-            {
-                id: 42,
-                title: 'Eye Camps & Screenings',
-                link: '/campaigns/eye-health-camps-mobile-vision-clinics',
-            },
-            {
-                id: 43,
-                title: 'Subsidized Surgeries',
-                link: '/campaigns/subsidised-surgeries',
-            },
-            {
-                id: 44,
-                title: 'Medicines & Assistive Devices',
-                link: '/campaigns/medicines-assistive-devices',
-            },
-        ]
+        submenu: ""
     },
     {
         id: 5,
@@ -80,6 +59,16 @@ const menus = [
                 id: 62,
                 title: 'Corporate Partnerships',
                 link: '/get-involved/corporate-partnerships'
+            },
+            {
+                id: 63,
+                title: 'Fundraising & Campaigns',
+                link: '/get-involved/fundraising-and-campaigns'
+            },
+            {
+                id: 64,
+                title: 'Internship Programs',
+                link: '/get-involved/internship-programs'
             },
         ]
     },

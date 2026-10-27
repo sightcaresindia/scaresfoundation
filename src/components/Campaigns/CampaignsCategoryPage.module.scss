@@ -1,0 +1,138 @@
+.page {
+    color: #153d58;
+    a:focus-visible { outline: 3px solid #efad27; outline-offset: 5px; }
+}
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 30px 0 80px;
+    background: #11384e;
+    color: #fff;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background: url('/images/slider/sightcares-1.jpg') center 45% / cover;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(90deg, rgba(9, 39, 58, .97) 0%, rgba(9, 39, 58, .91) 35%, rgba(9, 39, 58, .35) 75%, rgba(9, 39, 58, .18));
+    }
+}
+.breadcrumb {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    font-size: 13px;
+    color: #d6e4e9;
+    a { color: #fff; }
+}
+.eyebrow {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    line-height: 1.7;
+}
+.heroContent {
+    max-width: 630px;
+    padding-top: 62px;
+    .eyebrow { color: #f6c45e; margin-bottom: 18px; }
+    h1 {
+        color: #fff;
+        font-size: clamp(40px, 4.7vw, 66px);
+        font-weight: 800;
+        line-height: 1.12;
+        letter-spacing: -1.9px;
+        margin-bottom: 24px;
+        em { color: #f6c45e; font-style: normal; }
+    }
+    > p:not(.eyebrow) { max-width: 480px; color: #e0e9ef; line-height: 1.8; font-size: 17px; margin-bottom: 30px; }
+}
+.primaryLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 34px;
+    padding: 15px 23px;
+    border-radius: 7px;
+    background: #f5b631;
+    color: #15384c;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background .2s;
+    span { font-size: 22px; line-height: 1; }
+    &:hover { color: #15384c; background: #ffca59; }
+}
+.photoCaption {
+    position: absolute;
+    right: max(24px, calc((100vw - 1140px) / 2));
+    bottom: 30px;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    span { color: #f5b631; font-size: 24px; }
+}
+.campaigns {
+    position: relative;
+    isolation: isolate;
+    background: #f3f8f7;
+    scroll-margin-top: 25px;
+    padding: 78px 0 32px;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: url('/images/service/shape-1.svg') left 30px / 150px auto no-repeat,
+                    url('/images/service/shape-2.svg') right 92% / 180px auto no-repeat;
+        opacity: .22;
+        pointer-events: none;
+    }
+}
+.introduction {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 70px;
+    align-items: end;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #dbe5e3;
+    .eyebrow { color: #237b6a; margin: 0 0 14px; }
+    h2 { color: #153d58; font-size: clamp(28px, 3vw, 38px); font-weight: 800; line-height: 1.23; letter-spacing: -.8px; margin: 0; span { color: #237b6a; } }
+    > p { font-size: 15px; line-height: 1.9; color: #5a6d75; margin: 0; }
+}
+.support { padding: 64px 0 80px; background: #fff; }
+.supportPanel { display: grid; grid-template-columns: 1.1fr 1fr; overflow: hidden; border-radius: 16px; background: #e8f2ef; }
+.supportContent {
+    padding: 48px;
+    .eyebrow { color: #237b6a; margin-bottom: 13px; }
+    h2 { font-size: clamp(28px, 3vw, 38px); line-height: 1.2; font-weight: 800; color: #153d58; margin-bottom: 18px; }
+    > p:not(.eyebrow) { max-width: 390px; font-size: 15px; line-height: 1.8; color: #526a73; margin-bottom: 24px; }
+}
+.supportPhoto { min-height: 300px; background: url('/images/slider/sightcares-2.jpg') center / cover; }
+@media (max-width: 991px) {
+    .heroContent { max-width: 550px; }
+    .hero::after { background: linear-gradient(90deg, rgba(9,39,58,.95), rgba(9,39,58,.65)); }
+    .introduction { gap: 32px; }
+    .supportContent { padding: 34px; }
+}
+@media (max-width: 767px) {
+    .hero { padding: 24px 0 70px; }
+    .heroContent { padding-top: 38px; h1 { letter-spacing: -1px; } > p:not(.eyebrow) { font-size: 16px; } }
+    .photoCaption { position: static; margin-top: 30px; font-size: 11px; }
+    .campaigns { padding: 48px 0 20px; }
+    .introduction { grid-template-columns: 1fr; gap: 20px; padding-bottom: 24px; }
+    .support { padding: 40px 0; }
+    .supportPanel { grid-template-columns: 1fr; }
+    .supportContent { padding: 30px 24px; }
+    .supportPhoto { min-height: 240px; }
+}
+@media (prefers-reduced-motion: reduce) { .primaryLink { transition: none; } }
