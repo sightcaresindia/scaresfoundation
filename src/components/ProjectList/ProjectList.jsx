@@ -17,7 +17,7 @@ const getAmount = (value) => {
     return Number.isFinite(amount) && amount >= 0 ? amount : null;
 };
 
-export default function ProjectList({ limit = 3, paginated = false, showTitle = true, appearance = 'default' }) {
+export default function ProjectList({ limit = 3, paginated = false, showTitle = true, appearance = 'default', showFunding = false }) {
     const [page, setPage] = useState(1);
     const [projects, setProjects] = useState([]);
     const [total, setTotal] = useState(0);
@@ -77,14 +77,14 @@ export default function ProjectList({ limit = 3, paginated = false, showTitle = 
     };
 
     return (
-        <section className={appearance === 'campaigns' ? styles.campaignList : "section-padding service-section-s5 pt-5"} aria-label="Campaigns">
+        <section className={appearance === 'campaigns' && paginated ? styles.campaignList : "section-padding service-section-s5 pt-5"} aria-label="Campaigns">
             <div className="container">
                 {showTitle && (
                     <div className="section-title text-center mb-5">
                         <h2>Our <span>Campaigns</span></h2>
                     </div>
                 )}
-                {appearance === 'campaigns' && !loading && !error && total > 0 && (
+                {appearance === 'campaigns' && paginated && !loading && !error && total > 0 && (
                     <div className={styles.listHeading}>
                         <h3>Find a campaign to support</h3>
                         <span>{total} {total === 1 ? 'campaign' : 'campaigns'} · Showing {(page - 1) * limit + 1}–{Math.min(page * limit, total)}</span>
@@ -129,21 +129,23 @@ export default function ProjectList({ limit = 3, paginated = false, showTitle = 
                                                 <h2><Link href={`/campaign/${project.slug}`}>{title}</Link></h2>
                                                 <p>{description}</p>
                                             </div>
-                                            <div className="progress-wrap">
-                                                {progress !== null && (
-                                                    <div className="progress-item">
-                                                        <div className="progress" role="progressbar" aria-label={`Funding progress for ${title}`} aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}>
-                                                            <div className="bar" style={{ width: `${progress}%` }}>
-                                                                <span className="cssProgress-label">{progress}%</span>
+                                            {showFunding && (
+                                                <div className="progress-wrap">
+                                                    {progress !== null && (
+                                                        <div className="progress-item">
+                                                            <div className="progress" role="progressbar" aria-label={`Funding progress for ${title}`} aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}>
+                                                                <div className="bar" style={{ width: `${progress}%` }}>
+                                                                    <span className="cssProgress-label">{progress}%</span>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                )}
-                                                <ul>
-                                                    <li><span className="title">Goal:</span><span>{goal !== null ? formatAmount(goal) : 'Unavailable'}</span></li>
-                                                    <li><span className="title">Raised:</span><span>{raised !== null ? formatAmount(raised) : 'Unavailable'}</span></li>
-                                                </ul>
-                                            </div>
+                                                    )}
+                                                    <ul>
+                                                        <li><span className="title">Goal:</span><span>{goal !== null ? formatAmount(goal) : 'Unavailable'}</span></li>
+                                                        <li><span className="title">Raised:</span><span>{raised !== null ? formatAmount(raised) : 'Unavailable'}</span></li>
+                                                    </ul>
+                                                </div>
+                                            )}
                                             {appearance === 'campaigns' && (
                                                 <Link href={`/campaign/${project.slug}`} className={styles.supportLink} aria-label={`Support ${title}`}>Support this campaign <span aria-hidden="true">↗</span></Link>
                                             )}

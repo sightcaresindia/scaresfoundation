@@ -1,7 +1,8 @@
 'use client'
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle'
+import Link from 'next/link';
+import styles from './AboutBanner.module.scss';
 import SightCare from '@/components/AboutUs/SightCare/SightCare';
 import MissionVision from '@/components/AboutUs/MissionVision/MissionVision';
 import Story from '@/components/AboutUs/Story/Story';
@@ -18,7 +19,20 @@ const AboutPage = () => {
     return (
         <Fragment>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'About Us'} pagesub={'About'} />
+            <section className={styles.hero} aria-labelledby="about-title">
+                <div className="container">
+                    <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+                        <Link href="/">Home</Link><span aria-hidden="true">/</span><span aria-current="page">About Us</span>
+                    </nav>
+                    <div className={styles.heroContent}>
+                        <p className={styles.eyebrow}>About Sight Cares India Foundation</p>
+                        <h1 id="about-title">Compassion that connects.<br />Care that brings <em>hope.</em></h1>
+                        <p>We connect people in need with people who care, supporting medical treatment, disability care and a brighter future through responsible crowdfunding.</p>
+                        <Link href="/our-campaigns" className={styles.primaryLink}>Explore our campaigns <span aria-hidden="true">↗</span></Link>
+                    </div>
+                    <div className={styles.photoCaption}><span aria-hidden="true">✦</span> People at the heart of everything we do.</div>
+                </div>
+            </section>
             <SightCare hclass={'section-padding'} />
             <MissionVision hclass={'section-padding'} />
             <Story hclass={'section-padding'} />
