@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import styles from './Donate.module.scss';
 
 const AboutS2 = (props) => {
 
@@ -11,14 +12,14 @@ const AboutS2 = (props) => {
     return (
 <section className="vision-impact">
   <div className="container">
-     <div class="section-title text-center">
+     <div className={`section-title text-center ${styles.heading}`}>
        <h2>Be the Reason Someone Sees Again</h2>
     </div>
-    <div className="vision-intro">
+    <div className={`vision-intro ${styles.intro}`}>
       <p>Millions in India live with preventable or treatable blindness &mdash; simply because they can&rsquo;t afford care. At Sight Cares India Foundation, your contribution directly supports eye screenings, medical guidance, subsidized surgeries, post-operative care, and assistive devices for underserved communities.</p>
       <p>Whether you choose to give once or commit monthly, every donation creates lasting impact.</p>
     </div>
-    <div className="vision-cards">
+    <div className={`vision-cards ${styles.cards}`}>
       <div className="vision-box">
         <div className="icon">💡</div>
         <h3>One-Time / Monthly Giving</h3>
