@@ -1,7 +1,7 @@
 'use client'
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle'
+import PageBanner from '@/components/PageBanner/PageBanner';
 import GovernmentScheme from '@/components/Resources/GovernmentScheme/GovernmentScheme';
 import HealthProgram from '@/components/Resources/HealthProgram/HealthProgram';
 import AccessScheme from '@/components/Resources/AccessScheme/AccessScheme';
@@ -16,7 +16,7 @@ const ResourcePage = () => {
     return (
         <Fragment>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Government Schemes & Support'} pagesub={'About'} />
+            <PageBanner title={'Government Schemes & Support'} />
             <GovernmentScheme hclass={'about-section-s4 section-padding'} />
             <HealthProgram hclass={'about-section-s4 section-padding'} />
             <AccessScheme hclass={'about-section-s4 section-padding'} />

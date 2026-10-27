@@ -1,7 +1,7 @@
 'use client'
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '../../components/pagetitle/PageTitle'
+import PageBanner from '@/components/PageBanner/PageBanner';
 import DonorTermsCondition from '../../components/DonationTermsCondition/donation-terms-condtions';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import Footer from '../../components/footer/Footer';
@@ -14,7 +14,7 @@ const DonationTermsCondition = () => {
     return (
         <Fragment>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            {/* <PageTitle pageTitle={'About Us'} pagesub={'About'} /> */}
+            <PageBanner title="Donor Terms & Conditions" />
             <DonorTermsCondition hclass={'about-section-s4 pt-4'} />
             <CtaSection hclass={'cta-section'} />
             <Footer />

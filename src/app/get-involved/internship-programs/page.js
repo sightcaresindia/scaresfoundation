@@ -1,7 +1,7 @@
 'use client'
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle'
+import PageBanner from '@/components/PageBanner/PageBanner';
 import InternshipPrograms from '@/components/GetInvolved/InternshipPrograms/InternshipPrograms';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
@@ -14,7 +14,7 @@ const InternshipPage = () => {
     return (
        <Fragment>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Internship Programs'} pagesub={'Internship Programs'} />
+            <PageBanner title={'Internship Programs'} />
             <InternshipPrograms hclass={'about-section-s4 section-padding'} />
             <CtaSection hclass={'cta-section'} />
             <Footer />

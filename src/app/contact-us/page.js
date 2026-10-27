@@ -1,15 +1,23 @@
-import React from "react";
-import ContactUsPage from "@/components/Contactpage";
+'use client'
+import React, { Fragment } from 'react';
+import NavbarS3 from '@/components/NavbarS3/NavbarS3'
+import PageBanner from '@/components/PageBanner/PageBanner';
+import Contactpage from '@/components/Contactpage/Contactpage';
+import Footer from '@/components/footer/Footer';
+import Scrollbar from '@/components/scrollbar/scrollbar';
 
-export const metadata = {
-  title: 'Partner with Sight Cares to support eye care programs, community eye camps and initiatives to prevent blindness in India.',
-  description: 'Contact Sight Cares for information about eye care programs, donations, partnerships and blindness prevention initiatives.',
+import Logo from '/public/images/sight_care_logo.png'
+
+
+const ContactUsPage = () => {
+    return (
+        <Fragment>
+            <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
+            <PageBanner title={'Contact Us'} />
+            <Contactpage hclass={'section-padding'} />
+            <Footer />
+            <Scrollbar />
+        </Fragment>
+    )
 };
-
-const Page = () => {
-    return(
-        <ContactUsPage />
-    );
-};
-
-export default Page;
+export default ContactUsPage;

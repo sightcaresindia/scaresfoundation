@@ -1,7 +1,7 @@
 'use client'
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle'
+import PageBanner from '@/components/PageBanner/PageBanner';
 import BlogCategoryList from '@/components/Blogs/BlogCategoryList';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
@@ -14,7 +14,7 @@ const BlogCategoryPage = ({categoryData}) => {
     return (
         <Fragment>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Blogs'} pagesub={'Blogs'} />
+            <PageBanner title={categoryData.name || 'Blogs'} eyebrow="Blogs" description={categoryData.brief} />
             <BlogCategoryList hclass={'wpo-blog-section py-5 mb-5'} categoryData = {categoryData} />
             <CtaSection hclass={'cta-section'} />
             <Footer />

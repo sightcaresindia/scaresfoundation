@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle'
+import PageBanner from '@/components/PageBanner/PageBanner';
 import CampaignsByCategoryList from './CampaignsByCategoryList';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
@@ -14,7 +14,7 @@ const CampaignsByCategoryPage = ({ categoryInfo}) => {
     return (
         <>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={categoryInfo.name} pagesub="Our Campaigns" />
+            <PageBanner title={categoryInfo.name} eyebrow="Our Campaigns" description={categoryInfo.brief} />
             <CampaignsByCategoryList hclass={'about-section-s4 mt-5 pt-3'} category={categoryInfo} />
             <CtaSection hclass={'cta-section'} />
             <Footer />

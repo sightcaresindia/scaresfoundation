@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3';
+import PageBanner from '@/components/PageBanner/PageBanner';
 import ProjectList from '@/components/ProjectList/ProjectList';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';
@@ -14,20 +15,7 @@ export default function CampaignsCategoryPage() {
         <>
             <NavbarS3 hclass="wpo-site-header" Logo={Logo} />
             <main className={styles.page}>
-                <section className={styles.hero} aria-labelledby="campaigns-title">
-                    <div className="container">
-                        <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-                            <Link href="/">Home</Link><span aria-hidden="true">/</span><span aria-current="page">Our Campaigns</span>
-                        </nav>
-                        <div className={styles.heroContent}>
-                            <p className={styles.eyebrow}>A little care. A brighter future.</p>
-                            <h1 id="campaigns-title">Be the reason<br />someone sees <em>hope.</em></h1>
-                            <p>Help bring eye care, treatment and independence within reach. Every campaign is a chance to change someone’s everyday life.</p>
-                            <a href="#active-campaigns" className={styles.primaryLink}>Explore campaigns <span aria-hidden="true">↗</span></a>
-                        </div>
-                        <div className={styles.photoCaption}><span aria-hidden="true">✦</span> Real care. Real communities. Lasting change.</div>
-                    </div>
-                </section>
+                <PageBanner title="Our Campaigns" />
 
                 <section className={styles.campaigns} id="active-campaigns" aria-labelledby="active-campaigns-title">
                     <div className="container">

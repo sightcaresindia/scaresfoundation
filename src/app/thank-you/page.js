@@ -1,7 +1,7 @@
 'use client'
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle'
+import PageBanner from '@/components/PageBanner/PageBanner';
 import ThankYou from '@/components/ThankYou/ThankYou';
 import CtaSection from '@/components/CtaSection/CtaSection';
 import Footer from '@/components/footer/Footer';
@@ -14,7 +14,7 @@ const AboutPage = () => {
     return (
         <Fragment>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Thank You'} pagesub={'Thank You'} />
+            <PageBanner title={'Thank You'} />
             <ThankYou hclass={'section-padding'} />
             <CtaSection hclass={'cta-section'} />
             <Footer />

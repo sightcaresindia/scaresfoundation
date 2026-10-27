@@ -1,7 +1,7 @@
 'use client'
 import React, { Fragment } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageTitle from '@/components/pagetitle/PageTitle';
+import PageBanner from '@/components/PageBanner/PageBanner';
 import BecomeVolunteerForm from '@/components/BecomeVolunteerForm/BecomeVolunteerForm'
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';
@@ -14,7 +14,7 @@ const HomePage4 = () => {
     return (
         <Fragment>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageTitle pageTitle={'Become Volunteer'} />
+            <PageBanner title={'Become Volunteer'} />
             <div className="volunteer-area">
                 <div className="volunteer-wrap">
                     <div className="container">
