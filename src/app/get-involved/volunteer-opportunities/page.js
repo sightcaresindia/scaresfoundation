@@ -1,9 +1,5 @@
-import React from "react";
+import VolunteerPage from '@/components/GetInvolved/Volunteer';
 
-const Page = () => {
-    return(
-        <></>
-    );
-};
-
-export default Page;
+export default function Page() {
+    return <VolunteerPage />;
+}
