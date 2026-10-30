@@ -112,7 +112,7 @@
 }
 .homeSection {
     padding: 88px 0 96px;
-    background: radial-gradient(ellipse at 95% 10%, #fff2d9 0, transparent 42%), #f2f8f6;
+    background: radial-gradient(ellipse at 95% 10%, rgba(251, 173, 23, .12) 0, transparent 42%), #f4f8fc;
 }
 .homeHeading {
     display: flex;
@@ -121,20 +121,20 @@
     gap: 40px;
     margin-bottom: 42px;
     h2 {
-        color: #123e50;
+        color: #114778;
         font-size: clamp(32px, 3.3vw, 48px);
         font-weight: 800;
         line-height: 1.16;
         letter-spacing: -1.5px;
         margin: 15px 0 0;
-        span { color: #25746c; }
+        span { color: #1D6EB1; }
     }
 }
 .eyebrow, .cardEyebrow {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #386c65;
+    color: #1D6EB1;
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 1.8px;
@@ -145,28 +145,28 @@
     width: 30px;
     height: 3px;
     border-radius: 3px;
-    background: #efa91e;
+    background: #FBAD17;
 }
 .headingIntro {
     max-width: 355px;
-    p { color: #5b7477; font-size: 15px; line-height: 1.8; margin: 0 0 16px; }
+    p { color: #506579; font-size: 15px; line-height: 1.8; margin: 0 0 16px; }
     a {
         display: inline-flex;
         gap: 24px;
         align-items: center;
-        color: #124f62;
+        color: #114778;
         font-size: 14px;
         font-weight: 700;
-        border-bottom: 1px solid #accac3;
+        border-bottom: 1px solid #b9d2e8;
         padding-bottom: 5px;
-        &:hover { color: #22766b; }
+        &:hover { color: #1D6EB1; }
         span { font-size: 22px; }
     }
 }
 .homeItem .campaignCard {
     border-radius: 22px;
-    border-color: #dce9e3;
-    box-shadow: 0 18px 50px rgba(24, 70, 58, .07);
+    border-color: #dce7f1;
+    box-shadow: 0 18px 50px rgba(17, 71, 120, .07);
     :global(.image) {
         position: relative;
         overflow: hidden;
@@ -174,18 +174,18 @@
             content: '';
             position: absolute;
             inset: 50% 0 0;
-            background: linear-gradient(transparent, rgba(6, 41, 43, .72));
+            background: linear-gradient(transparent, rgba(17, 71, 120, .72));
             pointer-events: none;
         }
         img { transition: transform .35s; }
     }
     :global(.text) {
         padding-top: 28px;
-        h2 { margin-top: 16px; letter-spacing: -.6px; }
-        p { font-size: 15px; line-height: 1.85; margin-bottom: 0; }
+        h2 { margin-top: 16px; letter-spacing: -.6px; a { color: #114778; &:hover { color: #1D6EB1; } } }
+        p { color: #506579; font-size: 15px; line-height: 1.85; margin-bottom: 0; }
     }
     .supportLink {
-        background: #155e60;
+        background: #1D6EB1;
         color: #fff;
         border: 0;
         border-radius: 10px;
@@ -200,10 +200,10 @@
             border-radius: 50%;
             background: rgba(255, 255, 255, .13);
         }
-        &:hover { background: #10494b; }
+        &:hover { background: #114778; }
     }
     &:hover :global(.image) img { transform: scale(1.025); }
-    a:focus-visible { outline: 3px solid #dc9714; outline-offset: 4px; }
+    a:focus-visible { outline: 3px solid #FBAD17; outline-offset: 4px; }
 }
 .cardEyebrow { font-size: 10px; line-height: 1.6; letter-spacing: 1.2px; }
 .imageCaption {
@@ -219,23 +219,23 @@
     font-size: 13px;
     font-weight: 600;
     pointer-events: none;
-    svg { width: 24px; height: 24px; flex-shrink: 0; color: #ffd279; }
+    svg { width: 24px; height: 24px; flex-shrink: 0; color: #FBAD17; }
 }
 .homeFunding {
     margin-top: 24px;
     padding-top: 20px;
-    border-top: 1px solid #e5eeea;
+    border-top: 1px solid #dce7f1;
     > div:first-child { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
-    strong { color: #155e60; font-size: 20px; }
-    span { color: #698080; font-size: 12px; }
+    strong { color: #114778; font-size: 20px; }
+    span { color: #506579; font-size: 12px; }
 }
 .fundingTrack {
     height: 6px;
     margin-top: 12px;
-    background: #e8f0ec;
+    background: #e4eef8;
     border-radius: 8px;
     overflow: hidden;
-    > span { display: block; height: 100%; background: #d9a13b; border-radius: inherit; }
+    > span { display: block; height: 100%; background: #FBAD17; border-radius: inherit; }
 }
 @media (max-width: 767px) {
     .homeSection { padding: 56px 0; }
