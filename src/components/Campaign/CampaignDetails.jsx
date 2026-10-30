@@ -193,7 +193,7 @@ export default function CampaignDetails({ project }) {
                     <div className={styles.process}><h2>Process</h2>{processSteps.map(([icon, title, description], i) => <div className={styles.processStep} key={title}><span className={styles.processIcon}><Icon name={icon} /></span><div><h3>{i + 1}. {title}</h3><p>{description}</p></div></div>)}</div>
                 </section>
                 {hasVisibleContent(project.terms_declarations) && <details className={styles.terms}><summary>◈ &nbsp;IMPORTANT TERMS &amp; DECLARATIONS</summary><div dangerouslySetInnerHTML={{ __html: project.terms_declarations }} /></details>}
-                {faqs.length > 0 && <section className={styles.faqs}><h2>FREQUENTLY ASKED QUESTIONS</h2>{faqs.slice(0, moreFaqs ? faqs.length : 4).map(faq => <details key={faq.id}><summary>{faq.question}</summary><div dangerouslySetInnerHTML={{ __html: faq.answer }} /></details>)}{faqs.length > 4 && <button className={styles.showMore} onClick={() => setMoreFaqs(!moreFaqs)}>{moreFaqs ? 'Show Less' : 'Show More'}</button>}</section>}
+                {faqs.length > 0 && <section className={styles.faqs}><h2>FREQUENTLY ASKED QUESTIONS</h2>{faqs.slice(0, moreFaqs ? faqs.length : 4).map(faq => <details key={faq.id}><summary>{faq.question}</summary><div className={styles.faqAnswer} dangerouslySetInnerHTML={{ __html: faq.answer }} /></details>)}{faqs.length > 4 && <button className={styles.showMore} onClick={() => setMoreFaqs(!moreFaqs)}>{moreFaqs ? 'Show Less' : 'Show More'}</button>}</section>}
             </main>
             <a href="#donation" className={styles.mobileDonate}>Donate Now</a>
         </div>

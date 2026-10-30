@@ -117,6 +117,21 @@ $green: #219967;
 .terms summary, .faqs summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; background: $teal; color: white; padding: 18px 25px; cursor: pointer; line-height: 1.5; &::-webkit-details-marker { display: none; } &::after { content: ''; border-right: 2px solid #163f49; border-bottom: 2px solid #163f49; width: 12px; height: 12px; transform: rotate(45deg); flex-shrink: 0; margin: -5px 5px 0 15px; } }
 .terms[open]>summary::after, .faqs details[open]>summary::after { transform: rotate(225deg); margin-top: 5px; }
 .faqs { max-width: 1450px; width: 85%; margin: 0 auto; padding-bottom: 22px; text-align: center; >h2 { font-size: clamp(24px, 1.8vw, 35px); line-height: 1.3; margin: 0 0 30px; } details { text-align: left; border-radius: 13px; overflow: hidden; margin-bottom: 11px; box-shadow: 0 4px 7px #20383c12; >p { background: white; margin: 0; padding: 24px; color: #65787f; } } summary { font-size: 1.05em; } }
+.faqAnswer {
+    padding: 22px 25px;
+    background: #fff;
+    color: #53636c;
+    text-align: left;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+    p { margin: 0 0 14px; line-height: 1.75; }
+    > :first-child { margin-top: 0; }
+    > :last-child { margin-bottom: 0; }
+    ul, ol { margin: 12px 0; padding-left: 24px; }
+    li { margin-bottom: 8px; }
+    img { max-width: 100%; height: auto; }
+}
+@media (max-width: 800px) { .faqAnswer { padding: 18px; } }
 .showMore { color: white; background: $teal; border: 0; border-radius: 6px; padding: 9px 15px; margin-top: 10px; font-size: .95em !important; &:hover { background: #20545e; } }
 .footer { background: #f8f9fa; margin-top: 0; }
 .footerInner { max-width: 1800px; width: 93%; margin: 0 auto; padding: 60px 0 80px; display: grid; grid-template-columns: 1.6fr .7fr; gap: 15%; font-size: .9em; >div:first-child { max-width: 720px; } img { width: 120px; height: 80px; object-fit: contain; object-position: left; margin-bottom: 25px; } h2 { font-size: 1.15em; margin: 3px 0 14px; } p { color: #474c50; margin-bottom: 12px; } a { font-weight: 600; } }
@@ -159,6 +174,13 @@ $green: #219967;
     strong span { color: #e93951; }
     &::before { top: 50px; left: -8px; right: auto; transform: rotate(-45deg); }
     &::after { top: 0; left: -13px; width: 13px; height: 100%; }
+}
+@media (max-width: 800px) {
+    .page { padding-top: 16px; }
+    .container { width: calc(100% - 20px); }
+    .storyCard, .donationCard { padding: 16px; }
+    .aboutProcess { padding: 18px; }
+    .faqAnswer { padding: 14px; }
 }
 @media (max-width: 600px) {
     .urgentTooltip {
