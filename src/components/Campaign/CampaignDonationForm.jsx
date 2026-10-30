@@ -5,7 +5,7 @@ import styles from './CampaignDetails.module.scss';
 
 const money = value => Number(value).toLocaleString('en-IN');
 
-export default function CampaignDonationForm({ project, onShare }) {
+export default function CampaignDonationForm({ project }) {
     let slots = [];
     try { slots = Array.isArray(project.preferred_slot) ? project.preferred_slot : JSON.parse(project.preferred_slot || '[]'); } catch {}
     const minimum = Math.max(1, Number(project.minimum_amount) || 1);
@@ -73,10 +73,7 @@ export default function CampaignDonationForm({ project, onShare }) {
         <aside className={styles.donationCard} id="donation" aria-labelledby="donation-title">
             <div className={styles.donationTitle}>
                 <h2 id="donation-title">{project.donation_form_heading || project.heading || project.project_name}</h2>
-                <button type="button" className={styles.shareLink} onClick={onShare}>⌯ Share <span aria-hidden="true">⌄</span></button>
             </div>
-            <div className={styles.goal}><span><b aria-hidden="true">◉</b> Target Goal</span><strong>₹{money(project.target_amount || 0)}</strong></div>
-            <p>₹{money(project.raised_amount || 0)} raised · {project.supporters_count || 0} donations</p>
             <form onSubmit={submit}>
                 <fieldset disabled={busy} style={{ border: 0, padding: 0, margin: 0, minWidth: 0 }}>
                 <div className={styles.amounts} role="group" aria-label="Donation amount">
