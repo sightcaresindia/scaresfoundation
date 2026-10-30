@@ -22,6 +22,7 @@ $green: #219967;
 .campaignLead { grid-area: lead; min-width: 0; > h1 { font-size: clamp(25px, 2.16vw, 42px); line-height: 1.16; margin: 28px 0 22px; } }
 .hero { position: relative; border: 9px solid white; border-radius: 20px; overflow: visible; background: #dce4e4; box-shadow: 0 7px 20px #20383c08; }
 .heroImage { border-radius: 11px; width: 100%; aspect-ratio: 2.03; object-fit: cover; display: block; }
+.heroVideo { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 11px; background: #000; }
 .urgent, .taxBadge { position: absolute; top: 0; color: #fff; font-size: clamp(11px, .88vw, 17px); font-weight: 800; padding: 8px 16px; line-height: 1.2; }
 .urgent { left: 0; background: #e93951; border-radius: 11px 0 5px 0; }
  .taxBenefit { position: absolute; top: 0; right: 0; z-index: 5; }
@@ -48,7 +49,13 @@ $green: #219967;
 .verified { display: flex; align-items: center; justify-content: center; gap: 12px; color: $green; font-size: .85em; font-weight: 750; span { border: 2px solid #8abb75; border-radius: 50%; width: 38px; height: 38px; display: grid; place-items: center; font-size: 22px; } }
 .shareStatus { font-size: .85em !important; color: $teal !important; margin: 12px 0 0 !important; }
 .donationCard { grid-area: donation; padding: 29px 26px 23px; position: sticky; top: 24px; min-width: 0; box-shadow: 0 15px 30px #20383c08; }
-.donationTitle { display: flex; align-items: center; justify-content: space-between; gap: 10px; h2 { font-size: clamp(19px, 1.36vw, 26px); line-height: 1.4; margin: 0; } }
+.donationTitle {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4edf5;
+    &::before { content: ''; display: block; width: 38px; height: 3px; margin-bottom: 14px; border-radius: 3px; background: #FBAD17; }
+    h2 { color: #114778; font-size: clamp(21px, 1.5vw, 28px); font-weight: 650; line-height: 1.4; letter-spacing: -.025em; margin: 0; text-wrap: pretty; }
+}
 .shareLink { border: 0; background: none; padding: 0; color: #4d5458; font-weight: 650 !important; font-size: .8em !important; white-space: nowrap; }
 .goal { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 19px 0 15px; border-bottom: 1px solid #e9edef; font-size: .9em; margin-bottom: 20px; > span { font-weight: 600; color: #86898d; b { color: #ffc53e; margin-right: 5px; } } strong { color: #41464b; font-size: 1.12em; font-weight: 800; } }
 .frequency { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid $orange; border-radius: 11px; overflow: hidden; margin-bottom: 19px; button { border: 0; background: #fff; color: $orange; padding: 12px 5px; font-weight: 800; line-height: 1.2; &.selected { background: $orange; color: white; } &:hover { box-shadow: inset 0 0 0 2px #ef801b40; } } }

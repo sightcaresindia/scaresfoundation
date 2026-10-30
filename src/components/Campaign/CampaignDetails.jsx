@@ -4,6 +4,24 @@ import React, { useEffect, useRef, useState } from 'react';
 import CampaignDonationForm from './CampaignDonationForm';
 import styles from './CampaignDetails.module.scss';
 
+const showCommunitySections = false;
+
+const getVideoId = value => {
+    if (typeof value !== 'string') return '';
+    const input = value.trim();
+    const validId = id => /^[A-Za-z0-9_-]{11}$/.test(id || '') ? id : '';
+    if (!/^https?:\/\//i.test(input)) return validId(input.split(/[?&#]/)[0]);
+    try {
+        const url = new URL(input);
+        const host = url.hostname.toLowerCase().replace(/^www\./, '');
+        if (host === 'youtu.be') return validId(url.pathname.split('/')[1]);
+        if (['youtube.com', 'm.youtube.com', 'youtube-nocookie.com'].includes(host)) {
+            return validId(url.searchParams.get('v') || (/^\/(embed|shorts|live)\//.test(url.pathname) ? url.pathname.split('/')[2] : ''));
+        }
+    } catch {}
+    return '';
+};
+
 const imageUrl = value => {
     if (!value) return '';
     if (/^https?:\/\//i.test(value)) return value;
@@ -32,7 +50,9 @@ function Icon({ name, ...props }) {
 }
 
 export default function CampaignDetails({ project }) {
-    const slides = [project.banner_image, ...(project.gallery_images || []).map(item => item.path), project.thumbnail_image]
+    const videoId = getVideoId(project.video_id);
+    const gallery = Array.isArray(project.gallery_images) ? project.gallery_images : [];
+    const slides = [project.banner_image, ...gallery.map(item => item.path), project.thumbnail_image]
         .filter((value, index, items) => value && items.indexOf(value) === index)
         .map(src => ({ src: imageUrl(src), alt: project.heading || project.project_name }));
     const faqs = project.faqs || [];
@@ -51,9 +71,9 @@ export default function CampaignDetails({ project }) {
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
     const [moreFaqs, setMoreFaqs] = useState(false);
-    const [shareStatus, setShareStatus] = useState('');
     const supportersRef = useRef(null);
     useEffect(() => {
+        if (!showCommunitySections) return;
         const controller = new AbortController();
         setDonorsLoading(true); setDonorsError('');
         const baseUrl = (process.env.NEXT_PUBLIC_API_BASE_URL || '').trim().replace(/\/$/, '');
@@ -65,12 +85,6 @@ export default function CampaignDetails({ project }) {
         return () => controller.abort();
     }, [project.slug, donorTab, page, donorRetry]);
 
-    async function share() {
-        try {
-            if (navigator.share) await navigator.share({ title: project.heading || project.project_name, url: window.location.href });
-            else { await navigator.clipboard.writeText(window.location.href); setShareStatus('Campaign link copied.'); }
-        } catch (error) { if (error.name !== 'AbortError') setShareStatus('Copy the page address to share this campaign.'); }
-    }
     function showDonors(type) {
         setDonorTab(type); setPage(0);
         supportersRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -82,7 +96,17 @@ export default function CampaignDetails({ project }) {
                 <div className={styles.layout}>
                     <div className={styles.campaignLead}>
                         <div className={styles.hero}>
-                            {slides.length > 0 && <img className={styles.heroImage} src={slides[slide].src} alt={slides[slide].alt} />}
+                            {videoId ? (
+                                <iframe
+                                    key={videoId}
+                                    className={styles.heroVideo}
+                                    src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+                                    title={`Campaign video: ${project.heading || project.project_name}`}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                />
+                            ) : slides.length > 0 && <img className={styles.heroImage} src={slides[slide].src} alt={slides[slide].alt} />}
                             <div style={{ display: project.is_urgent ? undefined : 'none' }} className={styles.urgentInfo} onMouseEnter={() => setUrgentOpen(true)} onMouseLeave={event => { if (!event.currentTarget.contains(document.activeElement)) setUrgentOpen(false); }} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setUrgentOpen(false); }} onKeyDown={event => { if (event.key === 'Escape') { setUrgentOpen(false); event.stopPropagation(); } }}>
                                 <button type="button" className={styles.urgent} aria-describedby={urgentOpen ? 'campaign-urgent-need' : undefined} onFocus={() => setUrgentOpen(true)} onClick={() => setUrgentOpen(true)}><span aria-hidden="true">⚠</span> &nbsp;URGENT</button>
                                 <div id="campaign-urgent-need" role="tooltip" className={styles.taxTooltip + ' ' + styles.urgentTooltip} hidden={!urgentOpen}>
@@ -97,18 +121,19 @@ export default function CampaignDetails({ project }) {
                                     <p>Donations made to this campaign are eligible for 80G Tax exemption for Indian citizens.</p>
                                 </div>
                             </div>
+                            {!videoId && <>
                             <button style={{ display: slides.length < 2 ? 'none' : undefined }} className={styles.previousSlide} aria-label="Previous campaign image" onClick={() => setSlide((slide + slides.length - 1) % slides.length)}>‹</button>
                             <button style={{ display: slides.length < 2 ? 'none' : undefined }} className={styles.nextSlide} aria-label="Next campaign image" onClick={() => setSlide((slide + 1) % slides.length)}>›</button>
                             <div className={styles.dots}>{slides.map((item, i) => <button key={item.src} onClick={() => setSlide(i)} aria-label={'Show campaign image ' + (i + 1)} aria-pressed={slide === i} className={slide === i ? styles.activeDot : ''} />)}</div>
+                            </>}
                         </div>
                         <h1>{project.heading || project.project_name}</h1>
                         <div className={styles.summaryCard}>
-                            <div className={styles.summaryActions}><button onClick={share}>⌯ Share ⌄</button><button onClick={() => showDonors('recent')}><span className={styles.blue}>◴</span> Recent Donors</button><button onClick={() => showDonors('top')}><span className={styles.gold}>🏆</span> Top Donors</button></div>
-                            <div className={styles.campaignMeta}><div><small>CAMPAIGN DETAILS</small><strong>{project.patient_name || project.project_name}</strong></div><div><small>HOSPITAL DETAILS</small><strong>{project.hospital_name || "—"}</strong></div><div style={{ display: project.is_verified ? undefined : 'none' }} className={styles.verified}><span>✓</span> Verified</div></div>
+                            {showCommunitySections && <div className={styles.summaryActions}><button onClick={() => showDonors('recent')}><span className={styles.blue}>◴</span> Recent Donors</button><button onClick={() => showDonors('top')}><span className={styles.gold}>🏆</span> Top Donors</button></div>}
+                            <div className={styles.campaignMeta}><div><small>CAMPAIGN DETAILS</small><strong>{project.patient_name || project.project_name}</strong></div><div><small>BENEFICIARY DETAILS</small><strong>{project.hospital_name || "—"}</strong></div><div style={{ display: project.is_verified ? undefined : 'none' }} className={styles.verified}><span>✓</span> Verified</div></div>
                         </div>
-                        {shareStatus && <p className={styles.shareStatus} role="status">{shareStatus}</p>}
                     </div>
-                    <CampaignDonationForm project={project} onShare={share} />
+                    <CampaignDonationForm project={project} />
                     <div className={styles.campaignBody}>
                         <div className={styles.tabs} role="tablist" aria-label="Campaign information">
                             {['Story', 'Documents', 'Updates'].map((label, i) => <button key={label} id={'tab-' + label} role="tab" aria-selected={tab === label} aria-controls="campaign-tabpanel" tabIndex={tab === label ? 0 : -1} className={tab === label ? styles.activeTab : ''} onClick={() => setTab(label)} onKeyDown={event => { const labels = ['Story', 'Documents', 'Updates']; let next; if (event.key === 'ArrowRight') next = (i + 1) % 3; else if (event.key === 'ArrowLeft') next = (i + 2) % 3; else if (event.key === 'Home') next = 0; else if (event.key === 'End') next = 2; if (next !== undefined) { event.preventDefault(); setTab(labels[next]); document.getElementById('tab-' + labels[next])?.focus(); } }}><Icon name={['story', 'document', 'update'][i]} />{label}</button>)}
@@ -123,7 +148,7 @@ export default function CampaignDetails({ project }) {
                             {tab === 'Documents' && <><h2>Campaign documents</h2>{project.campaign_documents?.length ? project.campaign_documents.map(item => <div className={styles.documentPlaceholder} key={item.path}><Icon name="document" /><a href={imageUrl(item.path)} target="_blank" rel="noopener noreferrer">{item.name}</a></div>) : <p>No documents have been published yet.</p>}</>}
                             {tab === 'Updates' && <><h2>Campaign updates</h2>{project.campaign_updates ? <div className={styles.update} dangerouslySetInnerHTML={{ __html: project.campaign_updates }} /> : <p>No updates have been published yet.</p>}</>}
                         </article>
-                        <section className={styles.supportersCard} ref={supportersRef} aria-labelledby="supporters-title">
+                        {showCommunitySections && <section className={styles.supportersCard} ref={supportersRef} aria-labelledby="supporters-title">
                             <h2 id="supporters-title"><Icon name="people" />Campaign Supporters</h2>
                             <div className={styles.donorTabs} role="group" aria-label="Sort campaign supporters"><button aria-pressed={donorTab === 'recent'} className={donorTab === 'recent' ? styles.donorSelected : ''} onClick={() => { setDonorTab('recent'); setPage(0); }}><span className={styles.blue}>◴</span> Recent Donors</button><button aria-pressed={donorTab === 'top'} className={donorTab === 'top' ? styles.donorSelected : ''} onClick={() => { setDonorTab('top'); setPage(0); }}><span className={styles.gold}>🏆</span> Top Donors</button></div>
                             {donorsLoading && <p role="status">Loading supporters…</p>}
@@ -131,11 +156,11 @@ export default function CampaignDetails({ project }) {
                             {!donorsLoading && !donorsError && supporterTotal === 0 && <p>Be the first to support this campaign.</p>}
                             <div aria-live="polite">{!donorsLoading && !donorsError && supporters.map(donor => <div className={styles.donor} key={donor.id}><span className={styles.avatar}>{donor.name[0]}</span><div><strong>{donor.name}</strong><small>{donor.time}</small></div><b>₹{donor.amount.toLocaleString('en-IN')}</b></div>)}</div>
                             <div className={styles.pagination}><button aria-label="Previous supporters" disabled={page === 0 || donorsLoading} onClick={() => setPage(page - 1)}>‹</button><span>{supporterTotal ? page * 5 + 1 : 0} – {Math.min(page * 5 + 5, supporterTotal)} of {supporterTotal} donations</span><button aria-label="Next supporters" disabled={(page + 1) * 5 >= supporterTotal || donorsLoading} onClick={() => setPage(page + 1)}>›</button></div>
-                        </section>
-                        <section className={styles.comments} aria-labelledby="comments-title"><h2 id="comments-title"><Icon name="comment" />Words of Support <span>{comments.length}</span></h2>
+                        </section>}
+                        {showCommunitySections && <section className={styles.comments} aria-labelledby="comments-title"><h2 id="comments-title"><Icon name="comment" />Words of Support <span>{comments.length}</span></h2>
                             <form onSubmit={event => { event.preventDefault(); if (comment.trim()) { setComments([...comments, comment.trim()]); setComment(''); } }}><Icon name="comment" /><input aria-label="Words of support" placeholder="Add words of support (this session only)" value={comment} onChange={event => setComment(event.target.value)} required maxLength={500} /><button type="submit">POST</button></form>
                             {comments.length ? <div className={styles.commentList} aria-live="polite">{comments.map((text, i) => <div key={i}><strong>A supporter <small>Just now · This session</small></strong><p>{text}</p></div>)}</div> : <div className={styles.emptyComments}><Icon name="comment" /><p>Be the first to share words of encouragement and support!</p></div>}
-                        </section>
+                        </section>}
                     </div>
                 </div>
                 <section className={styles.aboutProcess}>
