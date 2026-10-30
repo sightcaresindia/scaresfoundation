@@ -27,7 +27,7 @@ export default function CampaignDonationForm({ project, onShare }) {
         async function post(endpoint, body) {
             const response = await fetch(baseUrl + endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body) });
             const result = await response.json();
-            if (!response.ok) throw new Error(result.message || result.error || 'Unable to complete your donation. Please try again.');
+            if (!response.ok) throw new Error(Object.values(result.errors || {}).flat()[0] || result.message || result.error || 'Unable to complete your donation. Please try again.');
             return result;
         }
         try {
@@ -45,14 +45,14 @@ export default function CampaignDonationForm({ project, onShare }) {
                 donation_amount: Number(amount), campaign_id: project.id,
                 contributor_name_display: form.get('anonymous') ? 'anonymous' : 'full_name',
                 form_80G: taxReceipt ? '1' : '0',
-                ...Object.fromEntries(['pan', 'address', 'city', 'state', 'country'].map(key => [key, form.get(key) || ''])),
-                zip: form.get('pin') || '', sourceUrl: window.location.origin + window.location.pathname, ...tracking,
+                pan: form.get('pan') || '', address: form.get('address') || '',
+                sourceUrl: window.location.origin + window.location.pathname, ...tracking,
             });
             const order = result.data;
             if (!order?.order_id || !order?.saveData_id || !order?.uuid) throw new Error('Unable to create payment order. Please try again.');
             const checkout = new window.Razorpay({
                 key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-                amount: Math.round(Number(amount) * 100), currency: 'INR', order_id: order.order_id,
+                amount: order.amount, currency: order.currency, order_id: order.order_id,
                 name: 'Sight Cares India Foundation', description: project.project_name,
                 prefill: { name: form.get('full_name'), email: form.get('email'), contact: form.get('phone') },
                 modal: { ondismiss: () => { setBusy(false); setMessage('Payment was not completed. You can try again.'); } },
@@ -92,9 +92,7 @@ export default function CampaignDonationForm({ project, onShare }) {
                     {project.tax_benefit && <label className={styles.check}><input type="checkbox" name="form_80G" checked={taxReceipt} onChange={event => setTaxReceipt(event.target.checked)} aria-controls="tax-details" aria-expanded={taxReceipt} /> I want 80G Tax Benefit Certificate</label>}
                     {taxReceipt && <div id="tax-details" className={styles.taxFields}>
                         <input aria-label="PAN number" name="pan" placeholder="PAN Number" required pattern="[A-Za-z]{5}[0-9]{4}[A-Za-z]" title="Enter a valid 10-character PAN number" maxLength={10} style={{ textTransform: 'uppercase' }} />
-                        <input aria-label="Address" name="address" autoComplete="street-address" placeholder="Address" required />
-                        <div className={styles.fieldPair}><input aria-label="City" name="city" autoComplete="address-level2" placeholder="City" required /><input aria-label="State" name="state" autoComplete="address-level1" placeholder="State" required /></div>
-                        <div className={styles.fieldPair}><input aria-label="Country" name="country" autoComplete="country-name" placeholder="Country" defaultValue="India" required /><input aria-label="PIN code" name="pin" autoComplete="postal-code" placeholder="PIN Code" required pattern="[0-9]{6}" title="Enter a 6-digit PIN code" /></div>
+                        <input aria-label="Address with Pincode" name="address" autoComplete="street-address" placeholder="Address with Pincode" maxLength={2000} required />
                     </div>}
                 </div>
                 <button className={styles.donateButton} type="submit" disabled={busy || !validAmount}>{busy ? 'Please wait…' : 'Donate ' + (validAmount ? '₹' + money(amount) : '') + ' Now'}</button>

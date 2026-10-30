@@ -35,25 +35,10 @@ const getSchema = () =>
          : schema.notRequired()
     ),
     address: yup.string().when("form_80G", (form_80G, schema) => form_80G[0] === "1" 
-         ? schema.required("Address is required for 80G receipt") 
+         ? schema.required("Address with Pincode is required for 80G receipt").max(2000) 
          : schema.notRequired()
     ),
-    country: yup.string().when("form_80G", (form_80G, schema) => form_80G[0] === "1" 
-         ? schema.required("Country is required for 80G receipt") 
-         : schema.notRequired()
-      ),
-    state: yup.string().when("form_80G", (form_80G, schema) => form_80G[0] === "1" 
-        ? schema.required("state is required for 80G receipt") 
-        : schema.notRequired()
-    ),
-    city: yup.string().when("form_80G", (form_80G, schema) => form_80G[0] === "1" 
-        ? schema.required("City is required for 80G receipt") 
-        : schema.notRequired()
-    ),
-    zip: yup.string().when("form_80G", (form_80G, schema) => form_80G[0] === "1" 
-        ? schema.required("Zip is required for 80G receipt") 
-        : schema.notRequired()
-    ),
+
   })
 
 const DonationForm = ({preferred_slot, campaign_id}) =>{
@@ -138,10 +123,6 @@ const DonationForm = ({preferred_slot, campaign_id}) =>{
                 contributor_name_display: "full_name",
                 pan: data.pan,
                 address: data.address,
-                country: data.country,
-                state: data.state,
-                city: data.city,
-                zip: data.zip,
                 phone: data.phone,
                 form_80G: data.form_80G,
                 frm_products: data.frm_products,
@@ -169,9 +150,7 @@ const DonationForm = ({preferred_slot, campaign_id}) =>{
         const saveData_id = resJson.data?.saveData_id;
         const uuid = resJson.data?.uuid;
 
-        const amountInPaise = resJson.data?.donation_amount
-            ? Number(resJson.data.donation_amount)
-            : Number(data.donation_amount) * 100;
+        const amountInPaise = resJson.data?.amount;
 
         const options = {
             key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
@@ -348,7 +327,7 @@ const DonationForm = ({preferred_slot, campaign_id}) =>{
                     <div className="row mt-2">
                         <div className="col-md-12">
                             <div className="form-group">
-                                <label htmlFor="address">Address <span className="required" title="This field is required.">*</span></label>
+                                <label htmlFor="address">Address with Pincode <span className="required" title="This field is required.">*</span></label>
                                 <input 
                                 type="text" 
                                 id="address" 
@@ -356,58 +335,6 @@ const DonationForm = ({preferred_slot, campaign_id}) =>{
                                 aria-required="true"
                                 className="form-control" />
                                 <p className="form_error mb-0">{errors.address?.message}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row mt-2">
-                        <div className="col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="country">Country <span className="required" title="This field is required.">*</span></label>
-                                <input 
-                                type="text" 
-                                id="country" 
-                                {...register("country")}
-                                aria-required="true"
-                                className="form-control" />
-                                <p className="form_error mb-0">{errors.country?.message}</p>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="state">State <span className="required" title="This field is required.">*</span></label>
-                                <input 
-                                type="text" 
-                                id="state"
-                                {...register("state")} 
-                                aria-required="true"
-                                className="form-control" />
-                                <p className="form_error mb-0">{errors.state?.message}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row mt-2">
-                        <div className="col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="city">City <span className="required" title="This field is required.">*</span></label>
-                                <input 
-                                type="text" 
-                                id="city" 
-                                {...register("city")} 
-                                aria-required="true"
-                                className="form-control" />
-                                <p className="form_error mb-0">{errors.city?.message}</p>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="zip">Zip <span className="required" title="This field is required.">*</span></label>
-                                <input 
-                                type="text" 
-                                id="zip" 
-                                {...register("zip")} 
-                                aria-required="true"
-                                className="form-control" />
-                                <p className="form_error mb-0">{errors.zip?.message}</p>
                             </div>
                         </div>
                     </div>
