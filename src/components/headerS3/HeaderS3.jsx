@@ -4,6 +4,7 @@ import MobileMenu from '@/components/MobileMenu/MobileMenu';
 import HeaderTopbarS3 from '@/components/HeaderTopbarS3/HeaderTopbarS3';
 import FontAwesome from '@/components/UiStyle/FontAwesome';
 import Image from 'next/image';
+import styles from './HeaderS3.module.scss';
 
 
 
@@ -23,22 +24,22 @@ const HeaderS3 = (props) => {
 
 
     return (
-        <header id="header" className="header-s3">
+        <header id="header" className={`header-s3 ${styles.header}`}>
             <HeaderTopbarS3/>
             <div className={"" + props.hclass}>
                 <nav className="navigation navbar navbar-expand-lg navbar-light">
                     <div className="container-fluid">
-                        <div className="row align-items-center">
-                            <div className="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
-                                <MobileMenu />
-                            </div>
-                            <div className="col-lg-2 col-md-6 col-6">
+                        <div className={`row align-items-center ${styles.headerRow}`}>
+                            <div className={`col-lg-2 col-6 ${styles.logoColumn}`}>
                                 <div className="navbar-header">
                                     <Link onClick={ClickHandler} className="navbar-brand" href="/"><Image src={props.Logo}
                                         alt="logo" /></Link>
                                 </div>
                             </div>
-                            <div className="col-lg-8 col-md-1 col-1 px-0">
+                            <div className={`col-auto d-lg-none ${styles.mobileColumn}`}>
+                                <MobileMenu />
+                            </div>
+                            <div className="col-lg-8 d-none d-lg-block px-0">
                                 <div id="navbar" className="collapse navbar-collapse navigation-holder justify-content-center">
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
@@ -80,7 +81,7 @@ const HeaderS3 = (props) => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-2 col-md-2 col-2">
+                            <div className="col-lg-2 d-none d-lg-block">
                                 <div className="header-right">
                                     <div className="close-form ms-0">
                                         <Link onClick={ClickHandler} className="theme-btn" href="/donate">Donate Now</Link>

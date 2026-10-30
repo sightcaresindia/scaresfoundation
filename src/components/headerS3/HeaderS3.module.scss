@@ -1,0 +1,35 @@
+@media (max-width: 991px) {
+    .header {
+        :global(.topbar) { display: none; }
+        :global(.navigation) { padding: 12px 0; }
+
+        .headerRow {
+            width: 100%;
+            margin: 0;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+
+        .logoColumn {
+            width: auto;
+            flex: 1 1 auto;
+            padding-left: 8px;
+            :global(.navbar-header) { text-align: left; }
+            :global(.navbar-brand) {
+                display: inline-flex;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                img { display: block; width: 112px; max-width: 112px; height: auto; }
+            }
+        }
+
+        .mobileColumn {
+            width: auto;
+            flex: 0 0 auto;
+            padding: 0 8px 0 16px;
+            > div { display: flex; align-items: center; }
+            :global(.showmenu) { margin: 0; }
+        }
+    }
+}
