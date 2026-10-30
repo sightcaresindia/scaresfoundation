@@ -134,7 +134,7 @@ export default function Hero2() {
                                 </div>
                             </div>
                             <div className={styles.visual}>
-                                <Image src={slide.image} alt="Community eye care at Sight Cares India Foundation" fill priority={index === 0} sizes="(max-width: 767px) 100vw, 52vw" className={styles.photo} />
+                                <Image src={slide.image} alt="Community eye care at Sight Cares India Foundation" fill priority={index === 0} sizes="100vw" className={styles.photo} />
                                 <div className={styles.imageCaption}><span className={styles.captionMark} aria-hidden="true">&#10022;</span><span>A little care.<br /><strong>A world of possibility.</strong></span></div>
                             </div>
                         </div>
