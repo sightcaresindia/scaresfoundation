@@ -121,7 +121,7 @@ export default function ProjectList({ limit = 3, paginated = false, showTitle = 
                                 const progress = goal > 0 && raised !== null
                                     ? Math.min(100, Math.round((raised / goal) * 100))
                                     : null;
-                                const title = isHome ? (project.project_name || project.heading) : (project.heading || project.project_name);
+                                const title = project.project_name || project.heading;
                                 const description = (project.short_description || project.brief || '').replace(/<[^>]*>/g, ' ').trim();
                                 const image = project.thumbnail_image
                                     ? `${(process.env.NEXT_PUBLIC_IMAGE_URL || '').trim().replace(/\/$/, '')}/${project.thumbnail_image.replace(/^\//, '')}`
