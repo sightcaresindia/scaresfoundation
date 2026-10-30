@@ -18,6 +18,8 @@ const getAmount = (value) => {
 };
 
 export default function ProjectList({ limit = 3, paginated = false, showTitle = true, appearance = 'default', showFunding = false }) {
+    const isHome = appearance === 'home';
+    const hasCampaignStyle = isHome || appearance === 'campaigns';
     const [page, setPage] = useState(1);
     const [projects, setProjects] = useState([]);
     const [total, setTotal] = useState(0);
@@ -77,9 +79,20 @@ export default function ProjectList({ limit = 3, paginated = false, showTitle = 
     };
 
     return (
-        <section className={appearance === 'campaigns' && paginated ? styles.campaignList : "section-padding service-section-s5 pt-5"} aria-label="Campaigns">
+        <section className={isHome ? styles.homeSection : appearance === 'campaigns' && paginated ? styles.campaignList : "section-padding service-section-s5 pt-5"} aria-label="Campaigns">
             <div className="container">
-                {showTitle && (
+                {showTitle && isHome ? (
+                    <div className={styles.homeHeading}>
+                        <div>
+                            <span className={styles.eyebrow}>Together, we bring hope</span>
+                            <h2>Our campaigns.<br /><span>Their brighter tomorrow.</span></h2>
+                        </div>
+                        <div className={styles.headingIntro}>
+                            <p>Behind every campaign is a person hoping to see the world more clearly. Help make their next chapter possible.</p>
+                            <Link href="/our-campaigns">Explore all campaigns <span aria-hidden="true">↗</span></Link>
+                        </div>
+                    </div>
+                ) : showTitle && (
                     <div className="section-title text-center mb-5">
                         <h2>Our <span>Campaigns</span></h2>
                     </div>
@@ -101,22 +114,22 @@ export default function ProjectList({ limit = 3, paginated = false, showTitle = 
                     ) : projects.length === 0 ? (
                         <p className="text-center">No campaigns available at the moment.</p>
                     ) : (
-                        <div className="row">
+                        <div className={isHome ? styles.homeGrid : "row"}>
                             {projects.map(project => {
                                 const goal = getAmount(project.target_amount);
                                 const raised = getAmount(project.raised_amount);
                                 const progress = goal > 0 && raised !== null
                                     ? Math.min(100, Math.round((raised / goal) * 100))
                                     : null;
-                                const title = project.heading || project.project_name;
+                                const title = isHome ? (project.project_name || project.heading) : (project.heading || project.project_name);
                                 const description = (project.short_description || project.brief || '').replace(/<[^>]*>/g, ' ').trim();
                                 const image = project.thumbnail_image
                                     ? `${(process.env.NEXT_PUBLIC_IMAGE_URL || '').trim().replace(/\/$/, '')}/${project.thumbnail_image.replace(/^\//, '')}`
                                     : fallbackImage.src;
 
                                 return (
-                                    <div key={project.id} className="col-lg-4 col-md-6 col-12 mb-4">
-                                        <div className={`causes-card ${styles.card} ${appearance === 'campaigns' ? styles.campaignCard : ''}`}>
+                                    <div key={project.id} className={isHome ? styles.homeItem : "col-lg-4 col-md-6 col-12 mb-4"}>
+                                        <div className={`causes-card ${styles.card} ${hasCampaignStyle ? styles.campaignCard : ''}`}>
                                             <div className="image">
                                                 <Link href={`/campaign/${project.slug}`}>
                                                     <img src={image} alt={project.project_name || title} onError={event => {
@@ -124,10 +137,18 @@ export default function ProjectList({ limit = 3, paginated = false, showTitle = 
                                                         if (!event.currentTarget.src.endsWith(fallbackImage.src)) event.currentTarget.src = fallbackImage.src;
                                                     }} />
                                                 </Link>
+                                                {isHome && <div className={styles.imageCaption}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" /></svg> Every contribution matters</div>}
                                             </div>
                                             <div className="text">
+                                                {isHome && <span className={styles.cardEyebrow}>A story. A chance. A brighter future.</span>}
                                                 <h2><Link href={`/campaign/${project.slug}`}>{title}</Link></h2>
                                                 <p>{description}</p>
+                                                {isHome && goal !== null && raised !== null && (
+                                                    <div className={styles.homeFunding}>
+                                                        <div><strong>{formatAmount(raised)}</strong><span>raised of {formatAmount(goal)}</span></div>
+                                                        {progress !== null && <div className={styles.fundingTrack} role="progressbar" aria-label={`Funding progress for ${title}`} aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}><span style={{ width: `${progress}%` }} /></div>}
+                                                    </div>
+                                                )}
                                             </div>
                                             {showFunding && (
                                                 <div className="progress-wrap">
@@ -146,8 +167,8 @@ export default function ProjectList({ limit = 3, paginated = false, showTitle = 
                                                     </ul>
                                                 </div>
                                             )}
-                                            {appearance === 'campaigns' && (
-                                                <Link href={`/campaign/${project.slug}`} className={styles.supportLink} aria-label={`Support ${title}`}>Support this campaign <span aria-hidden="true">↗</span></Link>
+                                            {hasCampaignStyle && (
+                                                <Link href={`/campaign/${project.slug}`} className={styles.supportLink} aria-label={`Support ${title}`}>{isHome ? 'Give hope today' : 'Support this campaign'} <span aria-hidden="true">↗</span></Link>
                                             )}
                                         </div>
                                     </div>

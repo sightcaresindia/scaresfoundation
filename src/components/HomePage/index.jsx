@@ -18,7 +18,7 @@ const HomePage = () => {
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
             <Hero2 />
             <About hclass={'about-section section-padding'}/>
-            <ProjectList limit={3} appearance="campaigns" />
+            <ProjectList limit={3} appearance="home" />
             <Impact hclass={"impact-section service-section-s5 pt-5"} />
             <Testimonial tClass={'testimonial-section'} />
             <Footer />

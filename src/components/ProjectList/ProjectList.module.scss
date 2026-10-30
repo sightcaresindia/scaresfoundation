@@ -19,6 +19,46 @@
 }
 
 .campaignList { padding: 30px 0 20px; }
+.homeGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+.homeItem {
+    flex: 0 1 calc((100% - 56px) / 3);
+    min-width: 0;
+    .campaignCard :global(.image) img { width: 100%; }
+    .campaignCard :global(.text) h2 { overflow-wrap: anywhere; }
+}
+@media (min-width: 992px) {
+    .homeItem:only-child {
+        flex-basis: 100%;
+        max-width: 1140px;
+        .campaignCard {
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            grid-template-rows: 1fr auto;
+            :global(.image) {
+                grid-row: 1 / -1;
+                a { display: block; height: 100%; }
+                img { height: 100%; min-height: 430px; }
+            }
+            :global(.text) {
+                padding: 42px 40px 24px;
+                h2 { font-size: 32px; }
+                p { -webkit-line-clamp: 4; }
+            }
+            .supportLink { margin: 0 40px 36px; }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .homeItem { flex-basis: calc((100% - 28px) / 2); }
+}
+@media (max-width: 767px) {
+    .homeItem { flex-basis: 100%; max-width: 480px; }
+}
 .listHeading {
     display: flex;
     justify-content: space-between;
@@ -70,4 +110,140 @@
     span { font-size: 21px; }
     &:hover { color: #fff; background: #1d6db2; border-color: #1d6db2; }
 }
-@media (prefers-reduced-motion: reduce) { .campaignCard:global(.causes-card) { transition: none; &:hover { transform: none; } } }
+.homeSection {
+    padding: 88px 0 96px;
+    background: radial-gradient(ellipse at 95% 10%, #fff2d9 0, transparent 42%), #f2f8f6;
+}
+.homeHeading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 42px;
+    h2 {
+        color: #123e50;
+        font-size: clamp(32px, 3.3vw, 48px);
+        font-weight: 800;
+        line-height: 1.16;
+        letter-spacing: -1.5px;
+        margin: 15px 0 0;
+        span { color: #25746c; }
+    }
+}
+.eyebrow, .cardEyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #386c65;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+.eyebrow::before {
+    content: '';
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #efa91e;
+}
+.headingIntro {
+    max-width: 355px;
+    p { color: #5b7477; font-size: 15px; line-height: 1.8; margin: 0 0 16px; }
+    a {
+        display: inline-flex;
+        gap: 24px;
+        align-items: center;
+        color: #124f62;
+        font-size: 14px;
+        font-weight: 700;
+        border-bottom: 1px solid #accac3;
+        padding-bottom: 5px;
+        &:hover { color: #22766b; }
+        span { font-size: 22px; }
+    }
+}
+.homeItem .campaignCard {
+    border-radius: 22px;
+    border-color: #dce9e3;
+    box-shadow: 0 18px 50px rgba(24, 70, 58, .07);
+    :global(.image) {
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 50% 0 0;
+            background: linear-gradient(transparent, rgba(6, 41, 43, .72));
+            pointer-events: none;
+        }
+        img { transition: transform .35s; }
+    }
+    :global(.text) {
+        padding-top: 28px;
+        h2 { margin-top: 16px; letter-spacing: -.6px; }
+        p { font-size: 15px; line-height: 1.85; margin-bottom: 0; }
+    }
+    .supportLink {
+        background: #155e60;
+        color: #fff;
+        border: 0;
+        border-radius: 10px;
+        padding: 16px 20px;
+        margin-top: 22px;
+        font-size: 15px;
+        span {
+            display: grid;
+            place-items: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .13);
+        }
+        &:hover { background: #10494b; }
+    }
+    &:hover :global(.image) img { transform: scale(1.025); }
+    a:focus-visible { outline: 3px solid #dc9714; outline-offset: 4px; }
+}
+.cardEyebrow { font-size: 10px; line-height: 1.6; letter-spacing: 1.2px; }
+.imageCaption {
+    position: absolute;
+    z-index: 1;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    pointer-events: none;
+    svg { width: 24px; height: 24px; flex-shrink: 0; color: #ffd279; }
+}
+.homeFunding {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #e5eeea;
+    > div:first-child { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+    strong { color: #155e60; font-size: 20px; }
+    span { color: #698080; font-size: 12px; }
+}
+.fundingTrack {
+    height: 6px;
+    margin-top: 12px;
+    background: #e8f0ec;
+    border-radius: 8px;
+    overflow: hidden;
+    > span { display: block; height: 100%; background: #d9a13b; border-radius: inherit; }
+}
+@media (max-width: 767px) {
+    .homeSection { padding: 56px 0; }
+    .homeHeading { flex-direction: column; align-items: flex-start; gap: 22px; margin-bottom: 30px; h2 { letter-spacing: -.8px; } }
+    .headingIntro { max-width: 480px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .campaignCard:global(.causes-card) { transition: none; &:hover { transform: none; } }
+    .homeItem .campaignCard :global(.image) img { transition: none; }
+    .homeItem .campaignCard:hover :global(.image) img { transform: none; }
+}
