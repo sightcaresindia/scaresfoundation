@@ -6,6 +6,16 @@ import styles from './CampaignDetails.module.scss';
 
 const showCommunitySections = false;
 
+const hasVisibleContent = value => {
+    if (typeof value !== 'string') return false;
+    const html = value.replace(/<!--[\s\S]*?-->/g, '')
+        .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '');
+    if (/<(?:img|video|audio|iframe)\b[^>]*\bsrc\s*=\s*["']?[^\s"'>]/i.test(html)) return true;
+    return html.replace(/<[^>]*>/g, '')
+        .replace(/&(?:nbsp|ensp|emsp|thinsp|#0*160|#x0*a0|#0*32|#x0*20|#0*8203|#x0*200b);/gi, ' ')
+        .replace(/[\s\u200B-\u200D\uFEFF]/g, '').length > 0;
+};
+
 const getVideoId = value => {
     if (typeof value !== 'string') return '';
     const input = value.trim();
@@ -56,6 +66,7 @@ export default function CampaignDetails({ project }) {
         .filter((value, index, items) => value && items.indexOf(value) === index)
         .map(src => ({ src: imageUrl(src), alt: project.heading || project.project_name }));
     const faqs = project.faqs || [];
+    const documents = Array.isArray(project.campaign_documents) ? project.campaign_documents : [];
     const [supporters, setSupporters] = useState([]);
     const [supporterTotal, setSupporterTotal] = useState(project.supporters_count || 0);
     const [donorsLoading, setDonorsLoading] = useState(true);
@@ -145,7 +156,20 @@ export default function CampaignDetails({ project }) {
                                 </div>
                                 <div className={styles.readMore}><button onClick={() => setExpanded(!expanded)} aria-expanded={expanded} aria-controls="campaign-story">{expanded ? 'Read Less' : 'Read More'}</button></div>
                             </>}
-                            {tab === 'Documents' && <><h2>Campaign documents</h2>{project.campaign_documents?.length ? project.campaign_documents.map(item => <div className={styles.documentPlaceholder} key={item.path}><Icon name="document" /><a href={imageUrl(item.path)} target="_blank" rel="noopener noreferrer">{item.name}</a></div>) : <p>No documents have been published yet.</p>}</>}
+                            {tab === 'Documents' && <>
+                                <h2>Campaign documents</h2>
+                                {documents.length ? <div className={styles.documentsGrid}>{documents.map(item => {
+                                    const isImage = /\.(jpe?g|png|webp)(?:[?#]|$)/i.test(item.path || '') || /\.(jpe?g|png|webp)$/i.test(item.name || '');
+                                    return isImage ? (
+                                        <a className={styles.documentImage} href={imageUrl(item.path)} target="_blank" rel="noopener noreferrer" key={item.path}>
+                                            <img src={imageUrl(item.path)} alt={item.name || 'Campaign document'} loading="lazy" />
+                                            <span>{item.name || 'View image'} <span aria-hidden="true">↗</span></span>
+                                        </a>
+                                    ) : (
+                                        <div className={styles.documentPlaceholder} key={item.path}><Icon name="document" /><a href={imageUrl(item.path)} target="_blank" rel="noopener noreferrer">{item.name || 'View document'}</a></div>
+                                    );
+                                })}</div> : <p>No documents have been published yet.</p>}
+                            </>}
                             {tab === 'Updates' && <><h2>Campaign updates</h2>{project.campaign_updates ? <div className={styles.update} dangerouslySetInnerHTML={{ __html: project.campaign_updates }} /> : <p>No updates have been published yet.</p>}</>}
                         </article>
                         {showCommunitySections && <section className={styles.supportersCard} ref={supportersRef} aria-labelledby="supporters-title">
@@ -167,7 +191,7 @@ export default function CampaignDetails({ project }) {
                     <div className={styles.about}><h2>About Sight Cares</h2><img src="/images/sight_care_logo.png" alt="Sight Cares India Foundation" /><p>Sight Cares India Foundation brings people together to help families access essential medical care. Through the generosity of contributors like you, we can help make treatment and a brighter future possible.</p><ul><li>Every campaign follows a review process to help build a trusted and caring community.</li><li>Campaign progress and treatment updates are shared with supporters.</li></ul></div>
                     <div className={styles.process}><h2>Process</h2>{processSteps.map(([icon, title, description], i) => <div className={styles.processStep} key={title}><span className={styles.processIcon}><Icon name={icon} /></span><div><h3>{i + 1}. {title}</h3><p>{description}</p></div></div>)}</div>
                 </section>
-                {project.terms_declarations && <details className={styles.terms}><summary>◈ &nbsp;IMPORTANT TERMS &amp; DECLARATIONS</summary><div dangerouslySetInnerHTML={{ __html: project.terms_declarations }} /></details>}
+                {hasVisibleContent(project.terms_declarations) && <details className={styles.terms}><summary>◈ &nbsp;IMPORTANT TERMS &amp; DECLARATIONS</summary><div dangerouslySetInnerHTML={{ __html: project.terms_declarations }} /></details>}
                 {faqs.length > 0 && <section className={styles.faqs}><h2>FREQUENTLY ASKED QUESTIONS</h2>{faqs.slice(0, moreFaqs ? faqs.length : 4).map(faq => <details key={faq.id}><summary>{faq.question}</summary><div dangerouslySetInnerHTML={{ __html: faq.answer }} /></details>)}{faqs.length > 4 && <button className={styles.showMore} onClick={() => setMoreFaqs(!moreFaqs)}>{moreFaqs ? 'Show Less' : 'Show More'}</button>}</section>}
             </main>
             <a href="#donation" className={styles.mobileDonate}>Donate Now</a>

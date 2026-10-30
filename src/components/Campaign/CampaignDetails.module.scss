@@ -79,6 +79,26 @@ $green: #219967;
 .readMore { text-align: center; border-top: 1px solid #f4f5f6; padding-top: 22px; margin-top: 5px; button { background: white; color: $teal; border: 2px solid $teal; border-radius: 30px; padding: 10px 45px; font-weight: 750; font-size: .95em; &:hover { background: #f0f7f7; } } }
 .sampleNotice { color: #879196 !important; font-size: .85em !important; margin: 20px 0 0 !important; }
 .documentPlaceholder { display: flex; gap: 20px; background: #f3f7f8; border: 1px dashed #cbdadd; padding: 24px; border-radius: 12px; margin: 24px 0; svg { width: 36px; height: 36px; color: $teal; } p { margin: 5px 0; } small { color: #78858b; } }
+.documentsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+    align-items: start;
+    .documentPlaceholder { margin: 0; min-width: 0; align-items: center; a { overflow-wrap: anywhere; } }
+}
+.documentImage {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #dce7f1;
+    border-radius: 12px;
+    background: #f4f8fc;
+    img { display: block; width: 100%; height: 300px; object-fit: contain; background: #fff; }
+    > span { display: flex; justify-content: space-between; gap: 12px; padding: 14px; color: #114778; font-size: .85em; overflow-wrap: anywhere; }
+    &:hover { border-color: #1D6EB1; }
+}
+@media (max-width: 600px) { .documentsGrid { grid-template-columns: 1fr; } }
 .update { padding: 22px 0 10px 22px; border-left: 3px solid $teal; margin: 20px 0; span { color: $teal; font-size: .82em; } h3 { margin: 12px 0; } }
 .supportersCard { margin-top: 48px; padding: 16px; scroll-margin-top: 24px; h2 { display: flex; align-items: center; gap: 10px; font-size: 1.12em; margin: 0 0 18px; svg { color: $green; } } }
 .donorTabs { display: grid; grid-template-columns: repeat(2, 1fr); background: #f6f7f9; border-radius: 25px; padding: 4px; margin-bottom: 20px; button { border: 0; background: transparent; border-radius: 24px; color: #71849d; font-size: .8em; font-weight: 700; padding: 7px; &.donorSelected { color: $teal; background: white; box-shadow: 0 2px 6px #20383c20; } span { margin-right: 6px; } } }
