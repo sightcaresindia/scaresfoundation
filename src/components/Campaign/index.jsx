@@ -1,28 +1,19 @@
-'use client'
+'use client';
+
 import React from 'react';
-import NavbarS3 from '@/components/NavbarS3/NavbarS3'
-import PageBanner from '@/components/PageBanner/PageBanner';
-import CampaignDetails from './CampaignDetails';
-import CtaSection from '@/components/CtaSection/CtaSection';
+import NavbarS3 from '@/components/NavbarS3/NavbarS3';
 import Footer from '@/components/footer/Footer';
 import Scrollbar from '@/components/scrollbar/scrollbar';
+import Logo from '/public/images/sight_care_logo.png';
+import CampaignDetails from './CampaignDetails';
 
-import Logo from '/public/images/sight_care_logo.png'
-
-const Campaign = () => {
-    
-
+export default function Campaign({ project }) {
     return (
         <>
-            <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
-            <PageBanner title={'Our Campaign'} />
-            <CampaignDetails hclass={'about-section-s4 mt-5 pt-3'} />
-            <CtaSection hclass={'cta-section'} />
+            <NavbarS3 hclass="wpo-site-header" Logo={Logo} />
+            <CampaignDetails key={project.id} project={project} />
             <Footer />
             <Scrollbar />
         </>
     );
 }
-
-export default Campaign;
-
