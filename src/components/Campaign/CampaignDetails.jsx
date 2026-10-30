@@ -160,13 +160,14 @@ export default function CampaignDetails({ project }) {
                                 <h2>Campaign documents</h2>
                                 {documents.length ? <div className={styles.documentsGrid}>{documents.map(item => {
                                     const isImage = /\.(jpe?g|png|webp)(?:[?#]|$)/i.test(item.path || '') || /\.(jpe?g|png|webp)$/i.test(item.name || '');
+                                    const documentName = (item.name || '').replace(/\.(jpe?g|png|webp|pdf)$/i, '').replace(/[-_]+/g, ' ').trim().toUpperCase() || 'VIEW DOCUMENT';
                                     return isImage ? (
                                         <a className={styles.documentImage} href={imageUrl(item.path)} target="_blank" rel="noopener noreferrer" key={item.path}>
-                                            <img src={imageUrl(item.path)} alt={item.name || 'Campaign document'} loading="lazy" />
-                                            <span>{item.name || 'View image'} <span aria-hidden="true">↗</span></span>
+                                            <img src={imageUrl(item.path)} alt={documentName} loading="lazy" />
+                                            <span>{documentName} <span aria-hidden="true">↗</span></span>
                                         </a>
                                     ) : (
-                                        <div className={styles.documentPlaceholder} key={item.path}><Icon name="document" /><a href={imageUrl(item.path)} target="_blank" rel="noopener noreferrer">{item.name || 'View document'}</a></div>
+                                        <div className={styles.documentPlaceholder} key={item.path}><Icon name="document" /><a href={imageUrl(item.path)} target="_blank" rel="noopener noreferrer">{documentName}</a></div>
                                     );
                                 })}</div> : <p>No documents have been published yet.</p>}
                             </>}
