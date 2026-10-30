@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 /* image */
-import Img1 from '/public/images/about/about-1.jpg'
-import Img2 from '/public/images/about/about-2.jpg'
+import Img1 from '/public/images/about/sg-camp.jpg'
+import Img2 from '/public/images/about/about-anamika.jpg'
 import shape1 from '/public/images/about/shape1.svg'
 import shape3 from '/public/images/about/shape3.svg'
 import shape4 from '/public/images/about/shape4.svg'
@@ -17,7 +17,7 @@ const ClickHandler = () => {
 
 const about = (props) => {
     return (
-        <section className={"" +props.hclass}>
+        <section className={"" + props.hclass}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-12">
@@ -49,7 +49,7 @@ const about = (props) => {
                 <Image src={shape1} alt="" />
             </div>
             <div className="shape-3">
-                <Image src={shape3}alt="" />
+                <Image src={shape3} alt="" />
             </div>
             <div className="shape-4">
                 <Image src={shape4} alt="" />
