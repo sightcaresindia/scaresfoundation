@@ -73,6 +73,7 @@ export default function CampaignDetails({ project }) {
     const [donorsError, setDonorsError] = useState('');
     const [donorRetry, setDonorRetry] = useState(0);
     const [slide, setSlide] = useState(0);
+    const [videoPlaying, setVideoPlaying] = useState(false);
     const [taxBenefitOpen, setTaxBenefitOpen] = useState(false);
     const [urgentOpen, setUrgentOpen] = useState(false);
     const [tab, setTab] = useState('Story');
@@ -107,11 +108,17 @@ export default function CampaignDetails({ project }) {
                 <div className={styles.layout}>
                     <div className={styles.campaignLead}>
                         <div className={styles.hero}>
-                            {videoId ? (
+                            {videoId && !videoPlaying ? (
+                                // Load the heavy YouTube player only once the visitor asks for it.
+                                <button type="button" className={styles.heroVideo + ' ' + styles.videoPoster} onClick={() => setVideoPlaying(true)} aria-label={`Play campaign video: ${project.heading || project.project_name}`}>
+                                    <img src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`} alt="" />
+                                    <span className={styles.playButton} aria-hidden="true" />
+                                </button>
+                            ) : videoId ? (
                                 <iframe
                                     key={videoId}
                                     className={styles.heroVideo}
-                                    src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+                                    src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`}
                                     title={`Campaign video: ${project.heading || project.project_name}`}
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerPolicy="strict-origin-when-cross-origin"

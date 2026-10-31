@@ -23,6 +23,16 @@ $green: #219967;
 .hero { position: relative; border: 9px solid white; border-radius: 20px; overflow: visible; background: #dce4e4; box-shadow: 0 7px 20px #20383c08; }
 .heroImage { border-radius: 11px; width: 100%; aspect-ratio: 2.03; object-fit: cover; display: block; }
 .heroVideo { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 11px; background: #000; }
+.videoPoster {
+    position: relative; padding: 0; overflow: hidden; cursor: pointer;
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    &:focus-visible { outline: 3px solid #168957; outline-offset: 3px; }
+}
+.playButton {
+    position: absolute; top: 50%; left: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%); border-radius: 12px; background: #e93951e6; transition: background .2s;
+    &::after { content: ''; position: absolute; top: 50%; left: 54%; transform: translate(-50%, -50%); border-style: solid; border-width: 10px 0 10px 18px; border-color: transparent transparent transparent #fff; }
+    .videoPoster:hover & { background: #e93951; }
+}
 .urgent, .taxBadge { position: absolute; top: 0; color: #fff; font-size: clamp(11px, .88vw, 17px); font-weight: 800; padding: 8px 16px; line-height: 1.2; }
 .urgent { left: 0; background: #e93951; border-radius: 11px 0 5px 0; }
  .taxBenefit { position: absolute; top: 0; right: 0; z-index: 5; }

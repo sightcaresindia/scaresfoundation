@@ -1,5 +1,5 @@
 'use client'
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense } from 'react';
 import NavbarS3 from '@/components/NavbarS3/NavbarS3'
 import PageBanner from '@/components/PageBanner/PageBanner';
 import ThankYou from '@/components/ThankYou/ThankYou';
@@ -15,7 +15,7 @@ const AboutPage = () => {
         <Fragment>
             <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
             <PageBanner title={'Thank You'} />
-            <ThankYou hclass={'section-padding'} />
+            <Suspense fallback={null}><ThankYou hclass={'section-padding'} /></Suspense>
             <CtaSection hclass={'cta-section'} />
             <Footer />
             <Scrollbar />
