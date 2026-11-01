@@ -25,7 +25,7 @@ const Footer = () => {
                             <div className="widget-title"><h3 id="footer-foundation-title">Sight Cares India Foundation</h3></div>
                             <p>Providing crowdfunding services for medical, social and charitable causes. We facilitate transactions between contributors and campaigners.</p>
                             <address className={styles.contactDetails}>
-                                <p>KH NO. 18/19, 3rd Floor, Village Burari,<br />Street no.19 Block- A1,<br />Amrit Vihar, North Delhi- 110084</p>
+                                <p>KH NO. 18/19, 3rd Floor, Village Burari,<br />Street no.19 Block- A1,<br />Amrit Vihar, <br />North Delhi- 110084</p>
                                 <a href="mailto:info@sightcares.org">info@sightcares.org</a>
                                 <a href="tel:+919310606469">+91-931-060-6469</a>
                             </address>
@@ -44,7 +44,10 @@ const Footer = () => {
                                 <li><Link onClick={ClickHandler} href="/">Home</Link></li>
                                 <li><Link onClick={ClickHandler} href="/about-us">About us</Link></li>
                                 <li><Link onClick={ClickHandler} href="/our-campaigns">Campaigns</Link></li>
+                                <li><Link onClick={ClickHandler} href="/programs">Programs</Link></li>
+                                <li><Link onClick={ClickHandler} href="/get-involved">Get Involved</Link></li>
                                 <li><Link onClick={ClickHandler} href="/contact-us">Contact us</Link></li>
+                                <li><Link onClick={ClickHandler} href="/blogs">Blogs</Link></li>
                                 <li><Link onClick={ClickHandler} href="/faqs">FAQs on Eye Health</Link></li>
                             </ul>
                         </section>
