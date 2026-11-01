@@ -1,11 +1,12 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
+import styles from './Footer.module.scss'
 
 import shape1 from '/public/images/f-shape1.svg';
 import shape2 from '/public/images/f-shape-2.svg';
 import shape3 from '/public/images/f-shape3.svg';
-import shape4 from '/public/images/f-shape4.svg';
+import shape4 from '/public/images/f-shape4.webp';
 import Image from 'next/image';
 
 
@@ -14,18 +15,13 @@ const ClickHandler = () => {
 }
 
 
-const Footer = (props) => {
-    const [email, setEmail] = useState('');
-
-    const handleReset = () => {
-        setEmail('');
-    };
+const Footer = () => {
     return (
         <footer className="wpo-site-footer">
             <div className="wpo-upper-footer">
                 <div className="container">
                     <div className="row">
-                        <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div className="col col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div className="widget newsletter-s2">
                                 <div className="widget-title">
                                     <h3>Sight Cares India Foundation</h3>
@@ -41,21 +37,7 @@ const Footer = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div className="widget link-widget ">
-                                <div className="widget-title">
-                                    <h3>Programs</h3>
-                                </div>
-                                <ul>
-                                    <li><Link onClick={ClickHandler} href="/programs/medical-guidance">Medical Guidance</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/programs/subsidized-surgeries">Subsidized Surgeries</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/programs/medicines-assistive-devices">Medicines & Assistive Devices</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/programs/eye-camps-screenings">Eye Camps & Screenings</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/programs/awareness-advocacy">Awareness & Advocacy</Link></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div className="col col-xl-2 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div className="widget link-widget ">
                                 <div className="widget-title">
                                     <h3>Useful links</h3>
@@ -69,7 +51,7 @@ const Footer = (props) => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div className="col col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div className="widget locations-widget ">
                                 <div className="widget-title">
                                     <h3>Locations</h3>
@@ -82,6 +64,27 @@ const Footer = (props) => {
                                 </ul>
                             </div>
                         </div>
+                        <div className="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div className="widget">
+                                <div className="widget-title">
+                                    <h3>Support Our Work</h3>
+                                </div>
+                                <div className={styles.donationContent}>
+                                    <figure className={styles.qrCode}>
+                                        <a href="/images/qr-code.png" target="_blank" rel="noopener noreferrer" aria-label="Open donation QR code at full size">
+                                            <img src="/images/qr-code.png" alt="Donation QR code for Sight Cares India Foundation" width="468" height="796" loading="lazy" />
+                                        </a>
+                                        <figcaption>Scan to donate</figcaption>
+                                    </figure>
+                                    <dl className={styles.bankDetails}>
+                                        <div><dt>Account Holder Name</dt><dd>Sight Cares India Foundation</dd></div>
+                                        <div><dt>Account Number</dt><dd>502001047899809</dd></div>
+                                        <div><dt>IFSC Code</dt><dd>HDFC0003961</dd></div>
+                                        <div><dt>Bank Name</dt><dd>HDFC Bank</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,7 +92,7 @@ const Footer = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col col-xs-12">
-                             <p className='mb-1 policy-links'>
+                            <p className='mb-1 policy-links'>
                                 <Link onClick={ClickHandler} href="/privacy-policy">Privacy Policy</Link> |&nbsp;
                                 <Link onClick={ClickHandler} href="/terms-and-conditions">Terms & Conditions</Link> |&nbsp;
                                 <Link onClick={ClickHandler} href="/refund-cancellation-policy">Refund Policy</Link> |&nbsp;
@@ -110,10 +113,17 @@ const Footer = (props) => {
                 <Image src={shape3} alt="" />
             </div>
             <div className="shape3">
-                <Image src={shape4} alt="" />
+                <Image src={shape4} width={175} height={217} alt="" />
             </div>
         </footer>
     )
 }
 
 export default Footer;
+
+
+
+
+
+
+

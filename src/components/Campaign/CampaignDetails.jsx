@@ -176,7 +176,7 @@ export default function CampaignDetails({ project }) {
                                     ) : (
                                         <div className={styles.documentPlaceholder} key={item.path}><Icon name="document" /><a href={imageUrl(item.path)} target="_blank" rel="noopener noreferrer">{documentName}</a></div>
                                     );
-                                })}</div> : <p>We will update you with further details very soon. Thank you.</p>}
+                                })}</div> : <p>We’ll share more details with you soon. Thank you for your patience and support.</p>}
                             </>}
                             {tab === 'Updates' && <><h2>Campaign updates</h2>{project.campaign_updates ? <div className={styles.update} dangerouslySetInnerHTML={{ __html: project.campaign_updates }} /> : <p>No updates have been published yet.</p>}</>}
                         </article>

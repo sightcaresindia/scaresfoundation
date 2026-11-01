@@ -1,0 +1,43 @@
+.donationContent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 16px;
+    color: #fff;
+}
+
+.qrCode {
+    flex: 0 0 160px;
+    width: 160px;
+    margin: 0;
+
+    a { display: block; }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        background: #fff;
+        border-radius: 8px;
+    }
+
+    figcaption {
+        margin-top: 8px;
+        font-size: 13px;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+.bankDetails {
+    flex: 1 1 170px;
+    min-width: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+
+    div + div { margin-top: 10px; }
+    dt { color: #d1d5d6; font-size: 12px; font-weight: 400; }
+    dd { margin: 2px 0 0; font-weight: 600; overflow-wrap: anywhere; }
+}
