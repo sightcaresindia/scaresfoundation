@@ -7,7 +7,7 @@ export default async function Page({ params }) {
     if (!baseUrl) throw new Error('Campaign API URL is not configured.');
     // The project endpoint already includes FAQs, so one request is enough.
     const response = await fetch(baseUrl + '/project-details/' + encodeURIComponent(slug), {
-        next: { revalidate: 60 },
+        cache: 'no-store',
         headers: { Accept: 'application/json' },
         signal: AbortSignal.timeout(10000),
     });
