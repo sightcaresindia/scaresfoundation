@@ -17,16 +17,18 @@ const ClickHandler = () => {
 
 const Footer = () => {
     return (
-        <footer className="wpo-site-footer">
+        <footer className={`wpo-site-footer ${styles.footer}`}>
             <div className="wpo-upper-footer">
                 <div className="container">
-                    <div className="row">
-                        <div className="col col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                            <div className="widget newsletter-s2">
-                                <div className="widget-title">
-                                    <h3>Sight Cares India Foundation</h3>
-                                </div>
-                                <p>Providing crowdfunding services for medical, social and charitable causes. We facilitate transactions between contributors and campaigners.</p>
+                    <div className={styles.columns}>
+                        <section className={styles.foundation} aria-labelledby="footer-foundation-title">
+                            <div className="widget-title"><h3 id="footer-foundation-title">Sight Cares India Foundation</h3></div>
+                            <p>Providing crowdfunding services for medical, social and charitable causes. We facilitate transactions between contributors and campaigners.</p>
+                            <address className={styles.contactDetails}>
+                                <p>KH NO. 18/19, 3rd Floor, Village Burari, Street no.19 Block- A1, Amrit Vihar, North Delhi- 110084</p>
+                                <a href="mailto:info@sightcares.org">info@sightcares.org</a>
+                                <a href="tel:+919310606469">+91-931-060-6469</a>
+                            </address>
                                 <div className='footerSocialLinks'>
                                     <ul>
                                         <li><Link onClick={ClickHandler} href="https://www.facebook.com/SightCares" target='_blank'><i className="flaticon-facebook-app-symbol"></i></Link></li>
@@ -35,56 +37,37 @@ const Footer = () => {
                                         <li><Link onClick={ClickHandler} href="https://x.com/SightCares" target='_blank'><i className="flaticon-twitter"></i></Link></li>
                                     </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col col-xl-2 col-lg-6 col-md-6 col-sm-12 col-12">
-                            <div className="widget link-widget ">
-                                <div className="widget-title">
-                                    <h3>Useful links</h3>
-                                </div>
-                                <ul>
-                                    <li><Link onClick={ClickHandler} href="/">Home</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/about-us">About us</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/our-campaigns">Campaigns</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/contact-us">Contact us</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/faqs">FAQs on Eye Health</Link></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                            <div className="widget locations-widget ">
-                                <div className="widget-title">
-                                    <h3>Locations</h3>
-                                </div>
-                                <p>KH NO. 18/19, 3rd Floor, Village Burari, Street no.19 Block- A1, Amrit Vihar, North Delhi- 110084</p>
-                                <ul>
-                                    <li>Contact</li>
-                                    <li>info@sightcares.org</li>
-                                    <li>+91-931-060-6469</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                            <div className="widget">
-                                <div className="widget-title">
-                                    <h3>Support Our Work</h3>
-                                </div>
-                                <div className={styles.donationContent}>
-                                    <figure className={styles.qrCode}>
-                                        <a href="/images/qr-code.png" target="_blank" rel="noopener noreferrer" aria-label="Open donation QR code at full size">
-                                            <img src="/images/qr-code.png" alt="Donation QR code for Sight Cares India Foundation" width="468" height="796" loading="lazy" />
-                                        </a>
-                                        <figcaption>Scan to donate</figcaption>
-                                    </figure>
-                                    <dl className={styles.bankDetails}>
-                                        <div><dt>Account Holder Name</dt><dd>Sight Cares India Foundation</dd></div>
-                                        <div><dt>Account Number</dt><dd>502001047899809</dd></div>
-                                        <div><dt>IFSC Code</dt><dd>HDFC0003961</dd></div>
-                                        <div><dt>Bank Name</dt><dd>HDFC Bank</dd></div>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
+                        </section>
+                        <section className={styles.links} aria-labelledby="footer-links-title">
+                            <div className="widget-title"><h3 id="footer-links-title">Useful Links</h3></div>
+                            <ul>
+                                <li><Link onClick={ClickHandler} href="/">Home</Link></li>
+                                <li><Link onClick={ClickHandler} href="/about-us">About us</Link></li>
+                                <li><Link onClick={ClickHandler} href="/our-campaigns">Campaigns</Link></li>
+                                <li><Link onClick={ClickHandler} href="/contact-us">Contact us</Link></li>
+                                <li><Link onClick={ClickHandler} href="/faqs">FAQs on Eye Health</Link></li>
+                            </ul>
+                        </section>
+                        <section aria-labelledby="footer-bank-title">
+                            <div className="widget-title"><h3 id="footer-bank-title">Bank Info</h3></div>
+                            <dl className={styles.bankDetails}>
+                                <div><dt>Account Holder Name:</dt><dd>Sight Cares India Foundation</dd></div>
+                                <div><dt>Account Number:</dt><dd>502001047899809</dd></div>
+                                <div><dt>IFSC Code:</dt><dd>HDFC0003961</dd></div>
+                                <div><dt>Bank Name:</dt><dd>HDFC Bank</dd></div>
+                            </dl>
+                            <p className={styles.receiptNote}><strong><em>Note: If you have transferred funds to our account, kindly email your Name, Address and PAN Number for an 80G receipt to <a href="mailto:info@sightcares.org">info@sightcares.org</a>.</em></strong></p>
+                        </section>
+                        <section aria-labelledby="footer-qr-title">
+                            <div className="widget-title"><h3 id="footer-qr-title">QR Code – Please Contribute Here</h3></div>
+                            <figure className={styles.qrCode}>
+                                <a href="/images/qr-code.png" target="_blank" rel="noopener noreferrer" aria-label="Open donation QR code at full size">
+                                    <img src="/images/qr-code.png" alt="Donation QR code for Sight Cares India Foundation" width="468" height="796" loading="lazy" />
+                                </a>
+                                <figcaption>Scan to donate</figcaption>
+                            </figure>
+                            <p className={styles.receiptNote}><strong><em>Note: In case you have donated directly through UPI/QR code, kindly email your Name, Address and PAN Number for an 80G receipt to <a href="mailto:info@sightcares.org">info@sightcares.org</a>.</em></strong></p>
+                        </section>
                     </div>
                 </div>
             </div>
