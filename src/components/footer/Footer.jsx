@@ -56,7 +56,7 @@ const Footer = () => {
                                 <div><dt>IFSC Code:</dt><dd>HDFC0003961</dd></div>
                                 <div><dt>Bank Name:</dt><dd>HDFC Bank</dd></div>
                             </dl>
-                            <p className={styles.receiptNote}><strong><em>Note: If you have transferred funds to our account, kindly email your Name, Address and PAN Number for an 80G receipt to <a href="mailto:info@sightcares.org">info@sightcares.org</a>.</em></strong></p>
+                            <p className={styles.receiptNote}><strong>Note:</strong> If you have transferred funds to our account, kindly email your Name, Address and PAN Number for an 80G receipt to <a href="mailto:info@sightcares.org">info@sightcares.org</a>.</p>
                         </section>
                         <section aria-labelledby="footer-qr-title">
                             <div className="widget-title"><h3 id="footer-qr-title">QR Code – Please Contribute Here</h3></div>
@@ -66,7 +66,7 @@ const Footer = () => {
                                 </a>
                                 <figcaption>Scan to donate</figcaption>
                             </figure>
-                            <p className={styles.receiptNote}><strong><em>Note: In case you have donated directly through UPI/QR code, kindly email your Name, Address and PAN Number for an 80G receipt to <a href="mailto:info@sightcares.org">info@sightcares.org</a>.</em></strong></p>
+                            <p className={styles.receiptNote}><strong>Note:</strong> In case you have donated directly through UPI/QR code, kindly email your Name, Address and PAN Number for an 80G receipt to <a href="mailto:info@sightcares.org">info@sightcares.org</a>.</p>
                         </section>
                     </div>
                 </div>
