@@ -20,6 +20,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PRHK54GX"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            `,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link
@@ -39,10 +49,13 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-F38D31KELJ');
           `}
         </Script>
+
+
+
       </head>
       <body>
         <Providers>{children}</Providers>
-         {/* Load Bootstrap JS from CDN */}
+        {/* Load Bootstrap JS from CDN */}
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           strategy="afterInteractive"
