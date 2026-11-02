@@ -132,7 +132,7 @@ export default function ProjectList({ limit = 3, paginated = false, showTitle = 
                                         <div className={`causes-card ${styles.card} ${hasCampaignStyle ? styles.campaignCard : ''}`}>
                                             <div className="image">
                                                 <Link href={`/campaign/${project.slug}`}>
-                                                    <img src={image} alt={project.project_name || title} onError={event => {
+                                                    <img src={image} loading="lazy" decoding="async" alt={project.project_name || title} onError={event => {
                                                         event.currentTarget.onerror = null;
                                                         if (!event.currentTarget.src.endsWith(fallbackImage.src)) event.currentTarget.src = fallbackImage.src;
                                                     }} />

@@ -1,14 +1,11 @@
 import React, { Fragment, useState } from 'react';
-import List from "@mui/material/List";
-import ListItem from "@mui/material/List";
-import Collapse from "@mui/material/Collapse";
 import Link from "next/link";
 
 const menus = [
     {
         id: 1,
         title: 'Home',
-        link: '#',
+        link: '/',
         submenu: ""
     },
     {
@@ -93,6 +90,7 @@ const MobileMenu = () => {
     const [menuActive, setMenuState] = useState(false);
 
     const ClickHandler = () => {
+        setMenuState(false);
         window.scrollTo(10, 0);
     }
 
@@ -106,31 +104,33 @@ const MobileMenu = () => {
                 <ul className="responsivemenu">
                     {menus.map((item, mn) => {
                         return (
-                            <ListItem className={item.id === openId ? 'active' : null} key={mn}>
+                            <li className={item.id === openId ? 'active' : undefined} key={item.id}>
                                 {item.submenu ?
                                     <Fragment>
-                                        <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>{item.title}
+                                        <button type="button" className="mobile-submenu-toggle"
+                                            aria-expanded={item.id === openId} aria-controls={`mobile-submenu-${item.id}`}
+                                            onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>{item.title}
                                             <i className={item.id === openId ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>
-                                        </p>
-                                        <Collapse in={item.id === openId} timeout="auto" unmountOnExit>
-                                            <List className="subMenu">
+                                        </button>
+                                        {item.id === openId && (
+                                            <ul className="subMenu" id={`mobile-submenu-${item.id}`}>
                                                 <Fragment>
                                                     {item.submenu.map((submenu, i) => {
                                                         return (
-                                                            <ListItem key={i}>
+                                                            <li key={submenu.id}>
                                                                 <Link onClick={ClickHandler} className="active"
                                                                     href={submenu.link}>{submenu.title}</Link>
-                                                            </ListItem>
+                                                            </li>
                                                         )
                                                     })}
                                                 </Fragment>
-                                            </List>
-                                        </Collapse>
+                                            </ul>
+                                        )}
                                     </Fragment>
-                                    : <Link className="active"
+                                    : <Link onClick={ClickHandler} className="active"
                                         href={item.link}>{item.title}</Link>
                                 }
-                            </ListItem>
+                            </li>
                         )
                     })}
                 </ul>
@@ -150,7 +150,7 @@ const MobileMenu = () => {
             </div>
 
             <div className="showmenu mobail-menu" onClick={() => setMenuState(!menuActive)}>
-                <button type="button" className="navbar-toggler open-btn">
+                <button type="button" className="navbar-toggler open-btn" aria-label="Toggle navigation" aria-expanded={menuActive}>
                     <span className="icon-bar first-angle"></span>
                     <span className="icon-bar middle-angle"></span>
                     <span className="icon-bar last-angle"></span>

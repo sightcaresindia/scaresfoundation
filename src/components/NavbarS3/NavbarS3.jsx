@@ -3,16 +3,16 @@ import React from "react";
 import HeaderS3 from "@/components/headerS3/HeaderS3";
 
 export default function Navbar(props) {
-    const [scroll, setScroll] = React.useState(0);
-
-    const handleScroll = () => setScroll(document.documentElement.scrollTop);
+    const [isSticky, setIsSticky] = React.useState(false);
 
     React.useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
+        const handleScroll = () => setIsSticky(window.scrollY > 80);
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const className = scroll > 80 ? "fixed-navbar active" : "fixed-navbar";
+    const className = isSticky ? "fixed-navbar active" : "fixed-navbar";
 
     return (
         <div className={className}>

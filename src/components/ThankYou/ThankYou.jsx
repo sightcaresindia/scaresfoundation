@@ -23,9 +23,9 @@ const ThankYou = () => {
                 <div className="wrape">
                     <div className='row justify-content-center'>
                         <div className="col-12 col-lg-9 text-center">
-                            <h4>Your generosity helps us empower blind people with education and opportunities.</h4>
-                            <h4>A confirmation email has been sent to your inbox. Stay connected with us to see how your support is changing lives."</h4>
-                            <p className='mt-4 fw-bold'>For any queries, please reach out to us at <a href="mailto:info@sightcaresfoundation.org">info@sightcaresfoundation.org</a></p>
+                            <h4 style={{ fontSize: '18px', fontWeight: '500', lineHeight: '1.4' }}>Your generous contribution can bring hope, relief and access to essential medical care to someone in need. Every donation, big or small, helps make critical treatments, surgeries and other medical support possible for individuals and families who cannot afford them.Together, we can help ease their burden and give them a chance to move forward with dignity and hope.</h4>
+                            <h4 className="mb-3" style={{ fontStyle: 'italic', color: '#FBAD17', fontWeight: '700' }}>Thank you for making a difference.</h4>
+                            <p className='mt-4 fw-bold'>A confirmation email has been sent to your inbox. Stay connected with us to see how your support is changing lives. For any queries, please reach out to us at <a href="mailto:info@sightcaresfoundation.org">info@sightcaresfoundation.org</a></p>
                             <p className="pt-5 text-center">
                                 <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/donation-receipt/${donationID}`} className="donation_button" download="">Download Receipt </Link>
                             </p>
