@@ -14,7 +14,7 @@ export default function Support() {
                     <p className={styles.message}><strong>Together, we can help more people access the care and support they need, regardless of their financial circumstances.</strong></p>
                     <div className={styles.actions}>
                         <Link href="/our-campaigns" className={styles.campaigns}>Explore Campaigns <span aria-hidden="true">&#8594;</span></Link>
-                        <Link href="/donate" className={styles.donate}>Donate Now</Link>
+                        <Link href="/campaign/be-the-light-in-anamika-s-world" className={styles.donate}>Donate Now</Link>
                     </div>
                 </div>
             </div>

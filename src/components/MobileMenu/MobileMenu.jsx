@@ -134,6 +134,18 @@ const MobileMenu = () => {
                         )
                     })}
                 </ul>
+                <div className="mobile-menu-donate">
+                    <Link
+                        href="/campaign/be-the-light-in-anamika-s-world"
+                        className="mobile-menu-donate-button"
+                        onClick={() => {
+                            setMenuState(false);
+                            ClickHandler();
+                        }}
+                    >
+                        Donate Now
+                    </Link>
+                </div>
 
             </div>
 

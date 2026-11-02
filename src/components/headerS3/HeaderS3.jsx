@@ -84,7 +84,7 @@ const HeaderS3 = (props) => {
                             <div className="col-lg-2 d-none d-lg-block">
                                 <div className="header-right">
                                     <div className="close-form ms-0">
-                                        <Link onClick={ClickHandler} className="theme-btn" href="/donate">Donate Now</Link>
+                                        <Link onClick={ClickHandler} className="theme-btn" href="/campaign/be-the-light-in-anamika-s-world">Donate Now</Link>
                                     </div>
                                 </div>
                             </div>
