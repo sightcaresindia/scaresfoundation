@@ -9,7 +9,7 @@ import shape1 from '/public/images/about/shape1.svg'
 import shape3 from '/public/images/about/shape3.svg'
 import shape4 from '/public/images/about/shape4.svg'
 import shape5 from '/public/images/about/shape5.svg'
-import shape6 from '/public/images/about/shape6.svg'
+import shape6 from '/public/images/about/shape6.webp'
 import Image from 'next/image';
 
 const ClickHandler = () => {
@@ -154,7 +154,7 @@ const MedicalSteps = (props) => {
                 <Image src={shape5} alt="" />
             </div>
             <div className="shape-6">
-                <Image src={shape6} alt="" />
+                <Image src={shape6} width={280} height={259} alt="" />
             </div>
         </section>
     );

@@ -1,0 +1,106 @@
+.card {
+    position: relative;
+    // Keeps the card above the section's decorative shapes, like .process-section .item.
+    z-index: 11;
+    margin-top: 48px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0px 6px 41px 0px rgb(0 0 0 / 7%);
+    overflow: hidden;
+    text-align: left;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 32px;
+    background: #1d6db2;
+    border-bottom: 4px solid #FBAD17;
+    color: #fff;
+
+    @media (max-width:575px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+}
+
+.title {
+    margin: 0;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.amount {
+    text-align: right;
+
+    @media (max-width:575px) {
+        text-align: left;
+    }
+
+    span {
+        display: block;
+        font-size: 14px;
+    }
+
+    strong {
+        display: block;
+        font-family: "Nunito", sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+}
+
+.table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+
+    tr + tr {
+        border-top: 1px solid #EBEBEB;
+    }
+
+    th,
+    td {
+        padding: 14px 32px;
+        font-size: 16px;
+        line-height: 1.5;
+        vertical-align: top;
+    }
+
+    th {
+        width: 38%;
+        color: #636776;
+        font-weight: 500;
+    }
+
+    td {
+        color: #16171A;
+        font-weight: 600;
+        overflow-wrap: anywhere;
+    }
+
+    @media (max-width:575px) {
+        th,
+        td {
+            display: block;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        th {
+            padding-top: 12px;
+            font-size: 14px;
+        }
+
+        td {
+            padding-bottom: 12px;
+        }
+    }
+}
