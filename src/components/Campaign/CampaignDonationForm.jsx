@@ -81,7 +81,7 @@ export default function CampaignDonationForm({ project }) {
                     {amounts.map(value => <button key={value} type="button" aria-pressed={!custom && amount === String(value)} className={!custom && amount === String(value) ? styles.selected : ''} onClick={() => { setAmount(String(value)); setCustom(false); setMessage(''); }}>₹{value}</button>)}
                     <button type="button" aria-pressed={custom} className={custom ? styles.selected : ''} onClick={() => { setCustom(true); setAmount(''); setMessage(''); }}>Custom</button>
                 </div>
-                {custom && <label className={styles.customAmount}>Donation amount (₹)<input autoFocus aria-label="Custom donation amount in rupees" type="number" min={minimum} max="10000000" step="1" required value={amount} onChange={event => setAmount(event.target.value)} placeholder="Enter amount" /></label>}
+                {custom && <label className={styles.customAmount}>Donation amount (₹)<input autoFocus aria-label="Custom donation amount in rupees" type="number" min={minimum} max="10000000" step="1" required value={amount} onChange={event => setAmount(event.target.value)} placeholder={`Enter other amount ₹ ${minimum} or more`} /></label>}
                 <div className={styles.personalFields}>
                     <input aria-label="Full name" name="full_name" autoComplete="name" placeholder="Full Name" required maxLength={100} />
                     <label className={styles.check}><input type="checkbox" name="anonymous" /> Contribute anonymously</label>
