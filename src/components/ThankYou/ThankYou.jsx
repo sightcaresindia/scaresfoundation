@@ -24,7 +24,7 @@ const donationRows = donation => [
     ['Email', donation.email],
     ['Mobile', donation.phone],
     ['PAN', donation.pan],
-    ['Address with Pincode', donation.address],
+    // ['Address with Pincode', donation.address],
     ['Transaction ID', donation.payment_id],
     ['Payment order', donation.order_id],
     ['80G receipt requested', donation.form_80G ? 'Yes' : 'No'],
@@ -95,8 +95,7 @@ const ThankYou = () => {
                                     </table>
                                 </div>
                             )}
-                            {detailsFailed && <p className="mt-5" role="alert">We couldn&apos;t load your donation details right now. Please refresh this page.</p>}
-
+                            {detailsFailed && <p className="mt-5" role="alert">We couldn&apos;t load your donation details right now. Please try the receipt download below or refresh this page.</p>}
                             <p className="pt-5 text-center">
                                 <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/donation-receipt/${donationID}`} className="donation_button" download="">Download Receipt </Link>
                             </p>
