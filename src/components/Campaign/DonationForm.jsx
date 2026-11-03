@@ -1,5 +1,6 @@
 'use client';
 import React from "react";
+import { donationThankYouUrl } from '@/lib/donationTracking';
 import * as yup from "yup";
 import { set, useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -180,10 +181,9 @@ const DonationForm = ({preferred_slot, campaign_id}) =>{
 
                     if (updateResponse.ok) {
                         const updateData = await updateResponse.json();
-                        console.log("Donation successful:", updateData);
 
                         setLoading(false);
-                        window.location.href = `/thank-you?donation-id=${uuid}`;
+                        window.location.href = donationThankYouUrl(updateData.data);
                         //console.log("Donation successful:", updateData);
                     } else {
                         console.error(

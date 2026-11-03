@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import CampaignDonationForm from './CampaignDonationForm';
 import styles from './CampaignDetails.module.scss';
 
@@ -202,7 +203,7 @@ export default function CampaignDetails({ project }) {
                 {hasVisibleContent(project.terms_declarations) && <details className={styles.terms}><summary>◈ &nbsp;IMPORTANT TERMS &amp; DECLARATIONS</summary><div dangerouslySetInnerHTML={{ __html: project.terms_declarations }} /></details>}
                 {faqs.length > 0 && <section className={styles.faqs}><h2>FREQUENTLY ASKED QUESTIONS</h2>{faqs.slice(0, moreFaqs ? faqs.length : 4).map(faq => <details key={faq.id}><summary>{faq.question}</summary><div className={styles.faqAnswer} dangerouslySetInnerHTML={{ __html: faq.answer }} /></details>)}{faqs.length > 4 && <button className={styles.showMore} onClick={() => setMoreFaqs(!moreFaqs)}>{moreFaqs ? 'Show Less' : 'Show More'}</button>}</section>}
             </main>
-            <a href="#donation" className={styles.mobileDonate}>Donate Now</a>
+            <Link href="/campaign/be-the-light-in-anamika-s-world" className={styles.mobileDonate}>Donate Now</Link>
         </div>
     );
 }

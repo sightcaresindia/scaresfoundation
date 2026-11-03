@@ -1,4 +1,7 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
+import { trackDonationSuccess } from '@/lib/donationTracking';
 
 import shapeArrow from '/public/images/process-arrow-shape.svg'
 import shape1 from '/public/images/process/shape1.svg'
@@ -14,10 +17,14 @@ const ThankYou = () => {
     const searchParams = useSearchParams();
     const donationID = searchParams.get('donation-id');
 
+    useEffect(() => {
+        trackDonationSuccess(donationID);
+    }, [donationID]);
+
     return (
         <section className="process-section">
             <div className="container">
-                <div class="section-title text-center">
+                <div className="section-title text-center">
                     <h2>Thank you for your kind contribution</h2>
                 </div>
                 <div className="wrape">

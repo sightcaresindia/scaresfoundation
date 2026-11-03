@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { donationThankYouUrl } from '@/lib/donationTracking';
 import styles from './CampaignDetails.module.scss';
 
 const money = value => Number(value).toLocaleString('en-IN');
@@ -58,8 +59,8 @@ export default function CampaignDonationForm({ project }) {
                 modal: { ondismiss: () => { setBusy(false); setMessage('Payment was not completed. You can try again.'); } },
                 handler: async payment => {
                     try {
-                        await post('/update-donation-status', { order_id: payment.razorpay_order_id, payment_id: payment.razorpay_payment_id, signature: payment.razorpay_signature, saveData_id: order.saveData_id });
-                        window.location.assign('/thank-you?donation-id=' + encodeURIComponent(order.uuid));
+                        const verification = await post('/update-donation-status', { order_id: payment.razorpay_order_id, payment_id: payment.razorpay_payment_id, signature: payment.razorpay_signature, saveData_id: order.saveData_id });
+                        window.location.assign(donationThankYouUrl(verification.data));
                     } catch (error) { setMessage(error.message); setBusy(false); }
                 },
                 theme: { color: '#155b92' },
