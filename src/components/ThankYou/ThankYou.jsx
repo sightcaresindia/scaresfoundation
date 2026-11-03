@@ -96,11 +96,10 @@ const ThankYou = () => {
                                 </div>
                             )}
                             {detailsFailed && <p className="mt-5" role="alert">We couldn&apos;t load your donation details right now. Please refresh this page.</p>}
-                            {donation?.form_80G && (
-                                <p className="pt-5 text-center">
-                                    <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/donation-receipt/${donationID}`} className="donation_button" download="">Download Receipt </Link>
-                                </p>
-                            )}
+
+                            <p className="pt-5 text-center">
+                                <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/donation-receipt/${donationID}`} className="donation_button" download="">Download Receipt </Link>
+                            </p>
                         </div>
                     </div>
                 </div>
